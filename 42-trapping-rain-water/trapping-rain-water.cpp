@@ -14,7 +14,7 @@ public:
                 if (height[j] > rightMax) rightMax = height[j];
                 suffixMax[j] = rightMax;
             }
-        for (int i = 0; i < height.size() - 1; i++) { // calculate water for trapped at each index(bar)(building)
+        for (int i = 0; i < height.size() - 1; i++) { // calculate water trapped at each index(bar)(building)
             water += min(prefixMax[i], suffixMax[i]) - height[i];
         }
         return water;
