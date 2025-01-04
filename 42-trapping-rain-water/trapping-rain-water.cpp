@@ -5,16 +5,16 @@ public:
         int water = 0;
         int leftMax = INT_MIN, rightMax = INT_MIN;
         vector <int> prefixMax(height.size());
-        for (int j = 0; j < height.size(); j++) {
+        for (int j = 0; j < height.size(); j++) { // build prefixMax Array
                 if (height[j] > leftMax) leftMax = height[j];
                 prefixMax[j] = leftMax;
             }
         vector <int> suffixMax(height.size());
-        for (int j = height.size() - 1; j >= 0; j--) {
+        for (int j = height.size() - 1; j >= 0; j--) { // build suffixMax Array
                 if (height[j] > rightMax) rightMax = height[j];
                 suffixMax[j] = rightMax;
             }
-        for (int i = 0; i < height.size() - 1; i++) {
+        for (int i = 0; i < height.size() - 1; i++) { // calculate water for trapped at each index(bar)(building)
             water += min(prefixMax[i], suffixMax[i]) - height[i];
         }
         return water;
