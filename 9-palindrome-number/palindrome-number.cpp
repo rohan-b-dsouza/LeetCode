@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        if (x < 0) return false; // eg. as given in example 2 in leetcode qn 9
+        if (x < 0) return false; // as given in example 2 in leetcode qn 9
         int original = x, digit = 0;
         long long rev = 0; // using long long as reverse number can exceed the int range for larger int values(x) as
                            // constraints for x are [-2^31 <= x <= 2^31 - 1]
