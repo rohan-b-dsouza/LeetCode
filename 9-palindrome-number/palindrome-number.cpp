@@ -14,3 +14,5 @@ public:
         return false;
     }
 };
+
+// T.C => O(log(N)) -> {log to the base 10}
