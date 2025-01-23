@@ -14,3 +14,6 @@ public:
         return newfib;
     }
 };
+
+// T.C => O(N)
+// S.C => O(1)
