@@ -1,26 +1,17 @@
 class Solution {
 public:
+    bool isPal(string &str, int i) {
+        if (i >= str.length() / 2) return true;
+        if (tolower(str[i]) != tolower(str[str.length() - 1 - i])) return false;
+        return isPal(str, i + 1);
+    }
+
     bool isPalindrome(string s) {
-        int i = 0;
-        int j = s.length() - 1;
-        while (i < j) {
-            if (!isalnum(s[i])) {
-                i++;
-                continue;
-            }
-            if (!isalnum(s[j])) {
-                j--;
-                continue;
-            }
-            if (tolower(s[i]) != tolower(s[j])) return false;
-            else {
-                i++;
-                j--;
-            } 
+        string str = "";
+        for (int i = 0; i < s.length(); i++) {
+            if (isalnum(s[i])) str += s[i];
         }
-        return true;
+        return isPal(str, 0);
+
     }
 };
-
-// T.C => O(n)
-// S.C => O(1)
