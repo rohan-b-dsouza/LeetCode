@@ -1,3 +1,5 @@
+// Brute - Force Approach =>
+
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
@@ -13,3 +15,6 @@ public:
         return index;
     }
 };
+
+// T.C => O(nlog(n)) + O(n) = O(n)
+// S.C => O(n) for the extra set used
