@@ -16,5 +16,5 @@ public:
     }
 };
 
-// T.C => O(nlog(n)) + O(n) = O(n)
+// T.C => O(nlog(n)) + O(n) = O(nlog(n))
 // S.C => O(n) for the extra set used
