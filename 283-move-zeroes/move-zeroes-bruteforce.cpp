@@ -17,4 +17,4 @@ public:
 };
 
 // T.C => O(n) + O(x) + O(n - x) = O(2n) where x = no. of non-zero numbers
-// S.C => O(1)
+// S.C => O(x)
