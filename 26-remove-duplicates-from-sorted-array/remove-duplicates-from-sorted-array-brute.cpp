@@ -13,3 +13,5 @@ public:
         return index;
     }
 };
+// T.C => nlog(n) + O(n) = O(nlog(n))
+// S.C => O(n) for the extra set D.S
