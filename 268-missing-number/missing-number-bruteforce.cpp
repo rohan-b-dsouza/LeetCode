@@ -1,3 +1,5 @@
+// Brute - Force Approach =>
+
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
@@ -17,3 +19,6 @@ public:
         return -1;
     }
 };
+
+// T.C => O(n^2)
+// S.C => O(1)
