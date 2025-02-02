@@ -1,15 +1,9 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        map <int, int> mpp;
-        int n = nums.size();
-        for (int i = 0; i < n; i++) {
-            mpp[nums[i]]++;
-        }
-        for (int i = 0; i <= n; i++) {
-            if (mpp[i] == 0)
-            return i;
-        }
-        return -1;
+       int n = nums.size();
+       int sum1 = accumulate(nums.begin(), nums.end(), 0);
+       int sum2 = (n * (n + 1)) / 2;
+       return sum2 - sum1;
     }
 };
