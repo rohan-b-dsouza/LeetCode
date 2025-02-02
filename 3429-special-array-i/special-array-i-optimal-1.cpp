@@ -1,4 +1,5 @@
-// Optimal - Solution 1 (Bitwise - Operation Solution is more efficient, refer leetcode editorial)
+// Optimal - Solution 1 :  Modulo Comparisons
+// (Bitwise - Operation Solution is more efficient, refer leetcode editorial)
 
 class Solution {
 public:
