@@ -5,11 +5,14 @@ public:
         int maxones = 0;
         int n = nums.size();
         for (int i = 0; i < n; i++) {
-            if (nums[i] == 0) cnt = 0;
-            else {
+            if (nums[i] == 1) {
                 cnt++;
+                maxones = max(cnt, maxones);
             }
-            maxones = max(cnt, maxones);
+            else {
+               cnt = 0;
+            }
+            
         }
         return maxones;
     }
