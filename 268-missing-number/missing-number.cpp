@@ -2,8 +2,16 @@ class Solution {
 public:
     int missingNumber(vector<int>& nums) {
        int n = nums.size();
-       int sum1 = accumulate(nums.begin(), nums.end(), 0);
-       int sum2 = (n * (n + 1)) / 2;
-       return sum2 - sum1;
+       vector <int> hash(n + 1, 0);
+       for (int i = 0; i < nums.size(); i++) {
+        hash[nums[i]]++;
+       }
+       for (int i = 0; i < hash.size(); i++) {
+        if (hash[i] == 0) return i;
+       }
+       return -1;
     }
+
+    // T.C => O(n)
+    // S.C => O(1)
 };
