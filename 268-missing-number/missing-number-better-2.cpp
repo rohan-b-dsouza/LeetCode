@@ -1,5 +1,5 @@
 // Better - Approach 2 
-// Using unordered Map
+// Using unordered Map (less - better than hash array, refer internet for reason)
 
 class Solution {
 public:
