@@ -1,5 +1,5 @@
 // Optimal - Solution 2 =>
-// Using Bit-Operations (XOR)
+// Using Bit-Manipulation (XOR)
 
 class Solution {
 public:
