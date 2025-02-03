@@ -17,4 +17,4 @@ public:
 };
 
 // T.C => O(n) + O(n) = O(2n) = O(n)
-// S.C => O(1)
+// S.C => O(n) for extra hash array used
