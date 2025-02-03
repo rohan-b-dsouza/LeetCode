@@ -1,3 +1,6 @@
+// Better - Approach 2 
+// Using unordered Map
+
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
@@ -13,3 +16,6 @@ public:
         return -1;
     }
 };
+
+// T.C => O(n) + O(n) = O(2n) = O(n)
+// S.C => O(n) for extra unordered map used
