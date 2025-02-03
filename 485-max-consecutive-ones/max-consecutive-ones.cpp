@@ -1,3 +1,5 @@
+// Optimal - Solution =>
+
 class Solution {
 public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
@@ -17,3 +19,6 @@ public:
         return maxones;
     }
 };
+
+// T.C => O(n)
+// S.C => O(1)
