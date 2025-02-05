@@ -1,3 +1,5 @@
+// Optimal Solution (Using Bit-Manipulation) =>
+
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
@@ -9,3 +11,6 @@ public:
         return xor1;
     }
 };
+
+// T.C => O(n)
+// S.C => O(1)
