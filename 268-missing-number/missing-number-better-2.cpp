@@ -17,5 +17,5 @@ public:
     }
 };
 
-// T.C => O(n) + O(n) = O(2n) = O(n)
+// T.C => O(n * 1) + O(n * 1) = O(2n) = O(n) .............as for unordered map operations take O(1) T.C in avg and best case & worst case rarely happens so not considered.
 // S.C => O(n) for extra unordered map used
