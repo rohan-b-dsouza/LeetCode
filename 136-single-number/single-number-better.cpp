@@ -14,5 +14,5 @@ public:
     }
 };
 
-// T.C => O(n) + O(x) = O(n) ....................{where x is the number of key - value pairs in map}
+// T.C => O(n) + O(x) = O(n) ....................{where x is the number of key - value pairs in map}......[Note- In unordered map all operations take O(1) T.C]
 // S.C => O(x) ...................{where x is the number of key - value pairs in map}
