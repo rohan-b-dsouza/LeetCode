@@ -1,4 +1,4 @@
-// Better - Approach - 1 => (Using unordered map) =>
+// Better - Approach => (Using unordered map) =>
 
 class Solution {
 public:
