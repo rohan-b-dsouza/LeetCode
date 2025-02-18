@@ -1,6 +1,7 @@
 // Optimal - Approach (Moore's Voting Algorithm) =>
 // Note:- For a qn where the majority element is not guaranteed, a second pass for verification 
 // of whether the element left in the 'element' variable is a majority element or not has to be done.
+// In that case, T.C = O(2n) = O(n) & S.C = O(1)
 // Second Pass -> 
 
 // int cntnew = 0;
