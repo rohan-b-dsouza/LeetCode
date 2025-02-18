@@ -1,5 +1,5 @@
 // Optimal - Approach => (Using unordered map i.e hashing/hashmap)
-// Note:- Check out another variant of this qn on code 360 - Two Sum. It has brute, better, optimal approach as there instead of returning indices "yes" or "no" is to be returned.
+// Note:- Check out another variant of this qn on code 360 - Two Sum. It has brute, optimal-1, optimal-2 approach as there instead of returning indices, "yes" or "no" is to be returned.
 
 class Solution {
 public:
