@@ -1,6 +1,6 @@
 // Optimal - Approach (Moore's Voting Algorithm) =>
 // Note:- For a qn where the majority element is not guaranteed, a second pass for verification 
-// of whether the element left in the 'element' is a majority element or not has to be done, for that refer Code 360 - 
+// of whether the element left in the 'element' variable is a majority element or not has to be done, for that refer Code 360 - 
 // Majority Element
 
 class Solution {
