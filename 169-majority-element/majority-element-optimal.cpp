@@ -1,7 +1,15 @@
 // Optimal - Approach (Moore's Voting Algorithm) =>
 // Note:- For a qn where the majority element is not guaranteed, a second pass for verification 
-// of whether the element left in the 'element' variable is a majority element or not has to be done, for that refer Code 360 - 
-// Majority Element
+// of whether the element left in the 'element' variable is a majority element or not has to be done.
+// Second Pass -> 
+
+// for (int i = 0; i < nums.size(); i++) {
+//     if (nums[i] == element) {
+//         cntnew++;
+//     }
+//     if (cntnew > nums.size() / 2) return element;
+//     return -1;
+// }
 
 class Solution {
 public:
