@@ -8,9 +8,9 @@
 //     if (nums[i] == element) {
 //         cntnew++;
 //     }
-//     if (cntnew > nums.size() / 2) return element;
-//     return -1;
 // }
+// if (cntnew > nums.size() / 2) return element;
+// return -1;
 
 class Solution {
 public:
