@@ -3,6 +3,7 @@
 // of whether the element left in the 'element' variable is a majority element or not has to be done.
 // Second Pass -> 
 
+// int cntnew = 0;
 // for (int i = 0; i < nums.size(); i++) {
 //     if (nums[i] == element) {
 //         cntnew++;
