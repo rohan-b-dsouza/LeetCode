@@ -1,4 +1,4 @@
-// Better - Approach =>
+// Better - Approach (Hashing) =>
 
 class Solution {
 public:
