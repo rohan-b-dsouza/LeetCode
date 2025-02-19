@@ -1,5 +1,5 @@
 // Optimal - Solution => (Kadane's Algorithm) =>
-// Refer Code-360 Qn. Maximum Subarray Sum where there is a slight variation (empty subarray return 0) =>
+// Refer Code-360 Qn. Maximum Subarray Sum where there is a slight variation (empty subarray, return 0) =>
 
 class Solution {
 public:
