@@ -1,23 +1,23 @@
-// Brute-Force Approach =>
-
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
-        vector<int> posi;
-        vector<int> nega;
+        vector <int> ans(n);
+        int posIdx = 0;
+        int negIdx = 1;
         for (int i = 0; i < n; i++) {
-            if (nums[i] >= 0) posi.push_back(nums[i]);
-            else
-                nega.push_back(nums[i]);
+            if (nums[i] > 0) {
+                ans[posIdx] = nums[i];
+                posIdx += 2;
+            }
+            else {
+                ans[negIdx] = nums[i];
+                negIdx += 2;
+            }
         }
-        for (int i = 0; i < n / 2; i++) {
-            nums[2 * i] = posi[i];
-            nums[2 * i + 1] = nega[i];
-        }
-        return nums;
+        return ans;   
     }
 };
 
-// T.C => O(2n) = O(n)
+// T.C => O(n)
 // S.C => O(n)
