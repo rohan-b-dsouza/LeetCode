@@ -1,3 +1,5 @@
+// Optimal - Approach =>
+
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
@@ -22,3 +24,6 @@ public:
         }
     }
 };
+
+// T.C => O(3n)
+// S.C => O(1)
