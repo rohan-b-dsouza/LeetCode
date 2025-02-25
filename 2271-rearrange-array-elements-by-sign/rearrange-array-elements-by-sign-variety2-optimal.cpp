@@ -6,6 +6,8 @@ There’s an array ‘A’ of size ‘N’ with positive and negative elements (
 Note: Start the array with positive elements.
 */
 
+// Optimal Solution => 
+
 #include <iostream>
 #include <vector>
 using namespace std;
