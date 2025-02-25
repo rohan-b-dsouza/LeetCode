@@ -46,6 +46,9 @@ vector <int> alternateNumbers(vector <int> &a) {
     return a;
 }
 
+// T.C => O(n) + O(min(pos.size(), nega.size()) + O(leftovers) = O(n) + O(n) = O(2n)
+// S.C => O(n)
+
 int main() {
     int n;
     cout << "Enter the number of elements : ";
