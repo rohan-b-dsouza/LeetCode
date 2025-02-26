@@ -13,13 +13,19 @@ public:
             if (nums[i] - nums[i - 1] == 1) {
                 cnt++;
                 maxcnt = max(maxcnt, cnt);
-            } else if (nums[i] != nums[i - 1]) {
+            } 
+            else if (nums[i] == nums[i - 1]){
+                continue;
+            }
+            else {
                 cnt = 1;
             }
         }
         return maxcnt;
     }
 };
+
+
 
 // T.C => O(n*log(n)) + O(n) = O(n*log(n))
 // S.C => O(1)
