@@ -4,21 +4,16 @@ public:
         if (nums.empty()) return 0;
         int n = nums.size();
         sort(nums.begin(), nums.end());
-        int cnt = 0;
-        int maxcnt = 0;
+        int cnt = 1;
+        int maxcnt = 1;
         for (int i = 1; i < n; i++) {
             if (nums[i] - nums[i - 1] == 1) {
                 cnt++;
                 maxcnt = max(maxcnt, cnt);
-            } else if (nums[i] - nums[i - 1] == 0) {
-                {
-                    continue;
-                }
-            }
-            else {
-                cnt = 0;
+            } else if (nums[i] != nums[i - 1]) {
+                cnt = 1;
             }
         }
-        return maxcnt + 1;
+        return maxcnt;
     }
 };
