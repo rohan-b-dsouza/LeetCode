@@ -1,3 +1,5 @@
+// Optimal - Solution =>
+
 class Solution {
     public int longestConsecutive(int[] nums) {
         if (nums.length == 0) return 0;
@@ -23,5 +25,8 @@ class Solution {
         return maxcnt;
     }
 }
-// T.C => O(n) + O(2n) = O(3n)
+// T.C => O(n) + O(2n) = O(3n) = O(n) ...{For the best and average case}
+// Note:- However, if the worst case can occur due to collisions then its better to use the 'Better' solution as using 
+// ordered set(TreeSet) will also be inefficient}
+
 // S.C => O(n)
