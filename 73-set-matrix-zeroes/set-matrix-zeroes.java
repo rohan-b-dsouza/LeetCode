@@ -12,8 +12,7 @@ class Solution {
         }
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if(row.contains(i)) matrix[i][j] = 0;
-                else if(col.contains(j)) matrix[i][j] = 0;
+                if(row.contains(i) || col.contains(j)) matrix[i][j] = 0;
             }
         }
     }
