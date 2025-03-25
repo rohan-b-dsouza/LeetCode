@@ -1,3 +1,5 @@
+// Brute-Force Solution => (Works for Binary as well as Integer Matrix)
+
 class Solution {
     public void setZeroes(int[][] matrix) {
         int m = matrix.length;
@@ -27,3 +29,6 @@ class Solution {
         }
     }
 }
+
+// T.C => O(n^3)
+// S.C => O(m * n)
