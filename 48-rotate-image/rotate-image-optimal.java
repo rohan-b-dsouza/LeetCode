@@ -8,7 +8,7 @@ class Solution {
     public void rotate(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < m - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 swap(matrix, i, j);
             }
