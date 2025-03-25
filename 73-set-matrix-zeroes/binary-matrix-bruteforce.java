@@ -35,3 +35,6 @@ class Solution {
         }
     }
 }
+
+// T.C => O(n^3)
+// S.C => O(1)
