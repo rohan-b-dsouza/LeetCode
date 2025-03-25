@@ -30,5 +30,5 @@ class Solution {
     }
 }
 
-// T.C => O(n*m) + O(n*m) * O(n + m) + O(n*m) => O(n^3)
+// T.C => O(n*m) + O(n*m) * O(n + m) + O(n*m) => O((n*m)*(n+m))
 // S.C => O(m * n)
