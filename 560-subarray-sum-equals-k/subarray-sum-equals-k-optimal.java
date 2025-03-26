@@ -14,3 +14,6 @@ class Solution {
         return cnt;
     }
 }
+
+// T.C => O(n)
+// S.C => O(n)
