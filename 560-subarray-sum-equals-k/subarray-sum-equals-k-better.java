@@ -1,4 +1,4 @@
-// Optimal - Approach =>
+// Better - Approach =>
 
 class Solution {
     public int subarraySum(int[] nums, int k) {
