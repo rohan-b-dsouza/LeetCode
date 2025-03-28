@@ -17,3 +17,6 @@ public class Variety2Optimal {
         s1.Pascal(4);
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
