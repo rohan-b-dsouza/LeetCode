@@ -21,5 +21,5 @@ class Solution {
     }
 }
 
-// T.C => O(n^3) approx.
+// T.C => O(n * r * c) => O(n^3) approx.
 // S.C => O(1) as the extra list is used only to store the answer not to solve the problem
