@@ -1,3 +1,5 @@
+// Optimal - Approach 
+
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
         int n = nums.length;
@@ -37,3 +39,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(2n) => O(n)
+// S.C => O(2) => O(1) as a list of size 2 is reqd, though its not reqd to solve problem but only to return the answer.
