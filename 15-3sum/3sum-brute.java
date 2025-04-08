@@ -26,4 +26,4 @@ class Solution {
 }
 
 // T.C => O(n^3) + O(3log3) = O(n^3) + O(1) => O(n^3)
-// S.C => O(2*x) = O(x) where x = no. of unique triplets -> as we are using a set data structure and a list to store the triplets.
+// S.C => O(2*x) = O(x) where x = no. of unique triplets -> as we are using a set data structure and a list to store the triplets. But the list space (x) is used to return ans not to solve problem therefore S.C can be considered as O(x).
