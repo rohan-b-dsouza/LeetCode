@@ -23,5 +23,5 @@ class Solution {
 }
 
 // T.C => O(n^4)
-// S.C => O(x) + O(n) => O(x) --> as the list 'ans' is used only for returning ans not to solve the problem.
+// S.C => O(x) + O(x) => O(x) --> as the list 'ans' is used only for returning ans not to solve the problem.
 
