@@ -36,5 +36,5 @@ class Solution {
     }
 }
 
-// T.C => O(n^2)
-// S.C => O(x) where x = no. of unique triplets
+// T.C => O(n^2) + O(nlogn) = O(n^2)
+// S.C => O(x) where x = no. of unique triplets ----{This space is only used to store and return the answer. We are not using any extra space to solve this problem. So, from that perspective, space complexity can be written as O(1).}
