@@ -1,3 +1,5 @@
+// Optimal - Approach (Sorting + Two Pointer Approach) => 
+
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         int N = nums.length;
@@ -35,3 +37,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(nlogn) + O(n^3) = O(n^3)
+// S.C => O(x) where x = no. of unique quadraplets
