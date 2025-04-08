@@ -26,3 +26,4 @@ class Solution {
 
 // T.C => O(n^2) + O(3log3) = O(n^2) + O(1) => O(n^2)
 // S.C => O(x) + O(n) + O(x) = O(2*x) => O(x) as we are using a set data structure and a list to store the triplets and extra O(n) for storing the array elements in another set in every iteration.(maximum in any iteration n elements can be stored in the hash therefore we consider O(n))
+// But the list is used only to return the ans thereforce S.C = O(n + x) = O(max(n, x)).
