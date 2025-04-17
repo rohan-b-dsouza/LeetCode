@@ -8,7 +8,7 @@ class Solution {
             for (int j = i + 1; j < n; j++) {
                 for (int k = j + 1; k < n; k++) {
                     for (int l = k + 1; l < n; l++) {
-                        if ((long) nums[i] + nums[j] + nums[k] + nums[l] == target) {
+                        if ((long) nums[i] + nums[j] + nums[k] + nums[l] == target) { // to prevent integer overflow 'long' is used here
                             List<Integer> quad = Arrays.asList(nums[i], nums[j], nums[k], nums[l]);
                             quad.sort(null);
                             set.add(quad);
