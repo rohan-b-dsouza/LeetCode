@@ -39,4 +39,4 @@ class Solution {
 }
 
 // T.C => O(nlogn) + O(n^3) = O(n^3)
-// S.C => O(x) where x = no. of unique quadraplets
+// S.C => O(x) where x = no. of unique quadraplets, but this space is used to return the ans not to solve the problem so from that perspective S.C = O(1)
