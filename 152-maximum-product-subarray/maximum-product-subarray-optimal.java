@@ -1,4 +1,4 @@
-// Optimal - Solution 
+// Optimal - Solution (Note :- There is one more optimal solution using a variation of Kadane's Algorithm, however its not that intuitive therefore use this solution in interviews, instead of Kadane's) =>
 
 class Solution {
     public int maxProduct(int[] nums) {
