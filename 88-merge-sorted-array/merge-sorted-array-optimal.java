@@ -1,3 +1,5 @@
+// Optimal - Solution =>
+
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1;
@@ -14,5 +16,5 @@ class Solution {
     }
 }
 
-// T.C => O(n)
+// T.C => O(n + m)
 // S.C => O(1)
