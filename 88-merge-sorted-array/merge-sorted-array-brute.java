@@ -1,3 +1,5 @@
+// Brute - Force =>
+
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i = 0; i < n; i++) {
@@ -6,3 +8,6 @@ class Solution {
         Arrays.sort(nums1);
     }
 }
+
+// T.C => O(n) + O((n+m)log(n+m)) = O((n+m)log(n+m))
+// S.C => O(1)
