@@ -29,5 +29,5 @@ class Solution {
     }
 }
 
-// T.C => O(nlogn) + O(n^2) = O(n^2) -----------------{we dont consider the last for loop as its required to return the ans not to solve it}
+// T.C => O(nlogn) + O(2n) = O(2n) -----------------{we dont consider the last for loop as its required to return the ans not to solve it, also explanation for why O(2n) and not O(n^2) for the nested for loop is given in notebook} 
 // S.C => O(2n) ------------But here both the list 'ans' and array 'finalans' are not required for solving the question but to store and return the ans therefore S.C can be considered as O(1)
