@@ -1,3 +1,5 @@
+// Optimal Solution => 
+
 class Solution {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));
@@ -21,3 +23,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(nlogn) + O(n) = O(nlogn) -------------{we dont consider the last for loop as its required to return the ans not to solve the problem}
+// S.C => O(n) for the list used
