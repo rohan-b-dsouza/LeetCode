@@ -1,3 +1,5 @@
+// Optimal - Solution 
+
 class Solution {
     public int maxProduct(int[] nums) {
         int n = nums.length;
@@ -14,3 +16,6 @@ class Solution {
         return maxprod;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
