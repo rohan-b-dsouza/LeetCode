@@ -57,5 +57,5 @@ class Solution {
     }
 }
 
-// T.C => O(logn * (n + n)) = O(2* n * log(n)) -------------------{Explanation in notebook}
+// T.C => O(logn * (n + n)) = O(2* n * log(n)) = O(n * log(n)) -------------------{Explanation in notebook}
 // S.C => O(n) for the extra list
