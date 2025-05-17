@@ -1,16 +1,12 @@
 class Solution {
     public int binarySearch(int low, int high, int[] nums, int target) {
-        int ans = -1;
-        if (low > high) return ans;
+        if (low > high) return -1;
         int mid = (low + high) / 2;
-        if (nums[mid] == target) ans = mid;
+        if (nums[mid] == target) return mid;
         else if (nums[mid] < target) {
-            ans = binarySearch(mid + 1, high, nums, target);
+            return binarySearch(mid + 1, high, nums, target);
         }
-        else {
-            ans = binarySearch(low, high - 1,  nums, target);
-        }
-        return ans;
+        return binarySearch(low, mid - 1,  nums, target);
     }
     public int search(int[] nums, int target) {
         int low = 0;
