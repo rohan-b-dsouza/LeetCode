@@ -1,3 +1,5 @@
+// Recursive ->
+
 class Solution {
     public int binarySearch(int low, int high, int[] nums, int target) {
         if (low > high) return -1;
@@ -15,3 +17,6 @@ class Solution {
     }
     
 }
+
+// T.C => O(nlogn)
+// S.C => O(1)
