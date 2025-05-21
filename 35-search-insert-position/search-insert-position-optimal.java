@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int searchInsert(int[] nums, int target) {
          int ans = nums.length;
@@ -16,4 +18,8 @@ class Solution {
         return ans;
     
     }
+    
     }
+
+// T.C => O(logn)
+// S.C => O(1)
