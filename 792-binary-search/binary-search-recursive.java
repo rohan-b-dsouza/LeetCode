@@ -3,7 +3,7 @@
 class Solution {
     public int binarySearch(int low, int high, int[] nums, int target) {
         if (low > high) return -1;
-        int mid = (low + high) / 2;
+        int mid = low + ((high-low) / 2);
         if (nums[mid] == target) return mid;
         else if (nums[mid] < target) {
             return binarySearch(mid + 1, high, nums, target);
@@ -18,5 +18,6 @@ class Solution {
     
 }
 
+
 // T.C => O(logn)
-// S.C => O(1)
+// S.C => O(logn) for recursive call stack
