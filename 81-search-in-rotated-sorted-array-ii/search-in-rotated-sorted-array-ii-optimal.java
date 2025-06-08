@@ -30,5 +30,5 @@ class Solution {
     }
 }
 
-// T.C => O(log(n))
+// T.C => O(log(n)) in best and avg case, but O(n/2) in worst case i.e when all elements are same.
 // S.C => O(1)
