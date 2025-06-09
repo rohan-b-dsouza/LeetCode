@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     public int findMin(int[] nums) {
         int result = Integer.MAX_VALUE;
@@ -7,5 +9,8 @@ class Solution {
       return result;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
 
 
