@@ -14,10 +14,10 @@ class Solution {
             low = mid + 1;
         }
         else {
-            high = mid - 1;
+            high = mid - 1; 
         }
       }
-      return (int)sqrt; 
+      return (int)sqrt; // Its important to note that we can even return 'high' instead of maintaining a variable 'sqrt' as 'high' will also be storing the sqrt at last. The reason for this is mentioned in tuf notes and notebook.
     }
 }
 
