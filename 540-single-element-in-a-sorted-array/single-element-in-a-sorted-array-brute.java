@@ -1,3 +1,4 @@
+// Brute 1
 
 class Solution {
     public int singleNonDuplicate(int[] nums) {
@@ -16,3 +17,6 @@ class Solution {
       return -1;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
