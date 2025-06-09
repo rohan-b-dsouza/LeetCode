@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     public int mySqrt(int x) {
     if (x == 0 || x == 1) return x;
@@ -8,3 +10,6 @@ class Solution {
       return (int)sqrt;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
