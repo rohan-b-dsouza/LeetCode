@@ -1,4 +1,3 @@
-
 // Optimal
 
 class Solution {
