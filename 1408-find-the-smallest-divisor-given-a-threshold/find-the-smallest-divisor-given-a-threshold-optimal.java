@@ -26,10 +26,11 @@ class Solution {
         high = mid - 1;
       }
       else {
-        low = mid + 1;
+        low = mid + 1;  // V.I.M.P Note -> We actually dont require to maintain a separate variable 'result', instead we can also return low at last.This is because of how binary search works due to which low will actually be storing the answer at the end.
+                        // This is very imp to understand so refer notebook and platform note for thorough explanation.
       }
     }
-    if (result == Integer.MAX_VALUE) return -1;
+    if (result == Integer.MAX_VALUE) return -1;  
     return result;
   }
 }
