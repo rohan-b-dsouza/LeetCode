@@ -27,7 +27,7 @@ class Solution {
       }
       else {
         low = mid + 1;  // V.I.M.P Note -> We actually dont require to maintain a separate variable 'result', instead we can also return low at last.This is because of how binary search works due to which low will actually be storing the answer at the end.
-                        // This is very imp to understand so refer notebook and platform note for thorough explanation. (In finding sqrt qn also 'high' was storing result so we could return high instead of separate variable 'ans')
+                        // This is very imp to understand so refer notebook and platform note for thorough explanation. (In finding sqrt qn also 'high' was storing result so we could return high instead of maintaining separate variable 'sqrt')
       }
     }
     if (result == Integer.MAX_VALUE) return -1;  
