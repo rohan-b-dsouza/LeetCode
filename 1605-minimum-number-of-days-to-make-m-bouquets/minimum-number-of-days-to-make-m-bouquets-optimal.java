@@ -40,5 +40,5 @@ class Solution {
     }
 }
 
-// T.C => 
-// S.C => 
+// T.C => O(log(max - min + 1) * n) where n is size of array
+// S.C => O(1)
