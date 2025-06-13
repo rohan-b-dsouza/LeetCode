@@ -1,6 +1,8 @@
+// Brute
+
 class Solution {
     public double findMedianSortedArrays(int[] arr1, int[] arr2) {
-        int n = arr1.length;
+    int n = arr1.length;
     int m = arr2.length;
     List<Integer> mergedArr = new ArrayList<>();
     int left = 0;
@@ -31,4 +33,5 @@ class Solution {
     }
 }
 
-
+// T.C => O(n + m)
+// S.C => O(n + m)
