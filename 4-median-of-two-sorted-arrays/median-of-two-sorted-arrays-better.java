@@ -1,3 +1,5 @@
+// Better 
+
 class Solution {
     public double findMedianSortedArrays(int[] arr1, int[] arr2) {
         int n1 = arr1.length;
@@ -48,3 +50,6 @@ class Solution {
         return (double) second_elem;
     }
 }
+
+// T.C => O(n1 + n2)
+// S.C => O(1)
