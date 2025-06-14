@@ -1,6 +1,7 @@
 // Brute
 
 class Solution {
+    class Solution {
     public int noOfSubarrayFormed(int[] a, int maxSum) {
         int n = a.length;
         int sum = a[0];
@@ -27,13 +28,14 @@ class Solution {
             high += nums[i];
         }
         for (int i = low; i <= high; i++) {
-            if (noOfSubarrayFormed(nums, i) == k) {
+            if (noOfSubarrayFormed(nums, i) <= k) {
                 return i;
             }
         }
         return -1;
     }
 }
+
 
 // T.C => O((max - sum) * (n))
 // S.C => O(1)
