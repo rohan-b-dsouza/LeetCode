@@ -38,5 +38,5 @@ class Solution {
     }
 }
 
-// T.C => O(log (sum - max + 1) * n) where n is size of array
+// T.C => O(log (sum - max) * n) where n is size of array
 // S.C => O(1)
