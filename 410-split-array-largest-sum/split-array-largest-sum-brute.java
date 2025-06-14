@@ -1,4 +1,4 @@
-// Brute
+// Brute (Same as Book Allocation Problem and Painter Partition Problem)
 
 class Solution {
     class Solution {
