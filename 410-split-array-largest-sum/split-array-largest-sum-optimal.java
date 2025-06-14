@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Same as Book Allocation Problem and Painter Partition Problem)
 
 class Solution {
     public int noOfSubarraysFormed(int[] a, int maxSum, int m) {
