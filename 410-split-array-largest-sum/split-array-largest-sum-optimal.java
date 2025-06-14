@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int noOfSubarraysFormed(int[] a, int maxSum, int m) {
         int n = a.length;
@@ -35,3 +37,6 @@ class Solution {
         return low;
     }
 }
+
+// T.C => O(log (sum - max + 1) * n) where n is size of array
+// S.C => O(1)
