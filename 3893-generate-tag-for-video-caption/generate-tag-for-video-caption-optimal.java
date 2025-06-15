@@ -1,3 +1,5 @@
+// Weekly contest 454 (Has Only Optimal Solution)
+
 class Solution {
     public String generateTag(String caption) {
         StringBuilder ans = new StringBuilder("#");
@@ -22,3 +24,6 @@ class Solution {
         return ans.toString();
     }
 }
+
+// T.C => O(n) where n is length of string
+// S.C => O(1)
