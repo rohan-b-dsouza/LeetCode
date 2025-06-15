@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int specialTriplets(int[] nums) {
         HashMap<Integer, Integer> leftFreq = new HashMap<>();
@@ -20,3 +22,6 @@ class Solution {
     }
 
 }
+
+// T.C => O(n) + O(n) = O(n) 
+// S.C => O(2 * n) => O(n) ----------{for two hashmaps used}
