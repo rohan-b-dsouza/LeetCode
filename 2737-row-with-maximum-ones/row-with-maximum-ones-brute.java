@@ -1,5 +1,5 @@
 // Optimal (As rows are not sorted) (If rows are already in sorted order, use binary search as the better, and top-right traversal for optimal)
-// In this question if we ourselves sort anyways it will be like O(m * n log n) so O(m * n) is the optimal one here.
+// In this question if we ourselves sort anyways it will be like O(n * m log m) so O(n * m) is the optimal one here.
 
 
 class Solution {
@@ -21,5 +21,5 @@ class Solution {
     }
 }
 
-// T.C => O(m * n) where m is no of rows and m is no of columns
+// T.C => O(n * m) where n is no of rows and m is no of columns
 // S.C => O(1)
