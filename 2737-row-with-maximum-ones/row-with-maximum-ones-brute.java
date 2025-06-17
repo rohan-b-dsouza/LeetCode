@@ -1,4 +1,4 @@
-// Brute
+// Optimal (As rows are not sorted) (If rows are already in sorted order, use binary search)
 
 
 class Solution {
