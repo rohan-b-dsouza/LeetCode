@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     public int[] rowAndMaximumOnes(int[][] mat) {
         int resultIdx = 0;
@@ -18,3 +20,6 @@ class Solution {
         return new int[] {resultIdx, maxCnt};
     }
 }
+
+// T.C => O(m * n) where m is no of rows and m is no of columns
+// S.C => O(1)
