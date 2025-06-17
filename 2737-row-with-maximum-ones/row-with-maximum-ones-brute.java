@@ -1,4 +1,5 @@
-// Optimal (As rows are not sorted) (If rows are already in sorted order, use binary search as the optimal, and this one becomes brute)
+// Optimal (As rows are not sorted) (If rows are already in sorted order, use binary search as the better, and top-right traversal for optimal)
+// In this question if we ourselves sort anyways it will be like O(m * n log n) so O(m * n) is the optimal one here.
 
 
 class Solution {
