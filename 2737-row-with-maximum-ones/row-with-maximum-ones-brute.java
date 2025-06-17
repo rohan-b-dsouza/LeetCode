@@ -7,9 +7,7 @@ class Solution {
         for (int i = 0; i < mat.length; i++) {
             int cntOne = 0;
             for (int j = 0; j < mat[0].length; j++) {
-                if (mat[i][j] == 1) {
-                    cntOne++;
-                }
+                cnt+=mat[i][j];
             }
             if (cntOne > maxCnt) {
                 maxCnt = cntOne;
