@@ -27,5 +27,5 @@ class Solution {
     }
 }
 
-// T.C => O(n + log(m))
+// T.C => O(n + log(m)) -----------------{ Binary search is applied only once for a particular row, resulting in a time complexity of O(n + logm) instead of O(n*logm) }
 // S.C => O(1)
