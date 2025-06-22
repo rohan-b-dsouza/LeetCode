@@ -1,3 +1,5 @@
+// Better
+
 class Solution {
     public boolean binarySearch(int[] nums, int target) {
         int low = 0;
@@ -22,3 +24,6 @@ class Solution {
       return false;
     }
 }
+
+// T.C => O(n * log (m))
+// S.C => O(1)
