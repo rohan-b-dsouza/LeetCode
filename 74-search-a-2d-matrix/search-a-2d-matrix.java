@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int n = matrix.length;
@@ -15,3 +17,6 @@ class Solution {
       return false;
     }
 }
+
+// T.C => O(log (n * m))
+// S.C => O(1)
