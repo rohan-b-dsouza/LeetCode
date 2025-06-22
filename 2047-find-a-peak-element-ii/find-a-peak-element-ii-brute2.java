@@ -1,3 +1,5 @@
+// Brute - 2
+
 class Solution {
   public int[] findPeakGrid(int[][] mat) {
     int n = mat.length;
@@ -16,3 +18,6 @@ class Solution {
     return new int[] {-1, -1};
   }
 }
+
+// T.C => O(n * m)
+// S.C => O(1)
