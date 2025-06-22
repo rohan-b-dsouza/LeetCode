@@ -1,3 +1,5 @@
+// Optimal (Inspired from the approach applied in 'Find a Peak Element I')
+
 class Solution {
     public int findMaxElement(int[][] mat, int mid, int n, int m) {
         int max = Integer.MIN_VALUE;
@@ -31,3 +33,6 @@ class Solution {
       return new int[] {-1, -1};
     }
 }
+
+// T.C => O(n * log (m))
+// S.C => O(1)
