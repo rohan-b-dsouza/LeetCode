@@ -35,4 +35,4 @@ class Solution {
 }
 
 // T.C => O(n^2)
-// S.C => O()
+// S.C => O(n) for extra array
