@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
       int n = matrix.length; int m = matrix[0].length;
@@ -9,3 +11,6 @@ class Solution {
       return false;
     }
 }
+
+// T.C => O(n * m)
+// S.C => O(1)
