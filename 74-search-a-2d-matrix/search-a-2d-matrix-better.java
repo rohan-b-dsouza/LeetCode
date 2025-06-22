@@ -27,5 +27,5 @@ class Solution {
     }
 }
 
-// T.C => O(n * log(m))
+// T.C => O(n + log(m))
 // S.C => O(1)
