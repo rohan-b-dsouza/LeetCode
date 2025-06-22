@@ -25,5 +25,5 @@ class Solution {
     }
 }
 
-// T.C => O(n + u * sqrt(f)) ------------{n is no. of elements in input array, u is no. of unique elements and f is freq of an unique element}
+// T.C => O(n * sqrt(n)) 
 // S.C => O(N) where N is no. of distinct elements in the input array
