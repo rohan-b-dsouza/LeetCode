@@ -25,4 +25,4 @@ class Solution {
 
 
 // T.C => O(log (n)) as in almost each step we do '/ 2'
-// S.C => O(log (n)) due to recursive call stack depth
+// S.C => O(log (n)) due to recursive call stack depth -------{due to log (n) no of calls}
