@@ -35,4 +35,5 @@ class Solution {
     }
 }
 
-// T.C => O()
+// T.C => O(4^n / sqrt(n)) -----------{derived from Catalan number; explained in notebook}
+// S.C => O(4^n / sqrt(n)) -----------{derived from Catalan number; explained in notebook}
