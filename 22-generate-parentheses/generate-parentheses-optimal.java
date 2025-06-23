@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public void generateCombinations(int open, int close, int n, String curr, List<String> result) {
         /**
