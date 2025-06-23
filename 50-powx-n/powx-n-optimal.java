@@ -1,3 +1,5 @@
+// Optimal (Recursive)
+
 class Solution {
   public double power(double x, long n) {
     if (n == 0) return 1; // base condition
@@ -18,6 +20,9 @@ class Solution {
     return power(x, n);
   }
 }
+
+// T.C => O(log (n)) as in almost each step we do '/ 2'
+// S.C => O(log (n)) due to recursive call stack depth
 
 
 
