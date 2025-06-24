@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public void generateSubsets(int index, List<Integer> list, List<List<Integer>> ans, int n, int[] nums) {
         // Base case : If the index reaches array length, add curr subset to answer
@@ -22,3 +24,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(2^n * n)
+// S.C => O(2^n * n)
