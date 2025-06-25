@@ -31,4 +31,4 @@ class Solution {
 }
 
 // T.C => O(2^T * k) where T is the target and k is the avg length of the combination list
-// S.C => O(x * k) where x is no of combinations and k is the avg length of the combination list
+// S.C => O(x * k) + O(T) -------------- where x is no of combinations and k is the avg length of the combination list, O(T) is the recursion stack depth
