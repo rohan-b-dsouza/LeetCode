@@ -1,3 +1,4 @@
+// ('Magnetic Force between two Balls' and 'Aggressive Cows' both are same problems just different wordings.
 // Brute
 
 class Solution {
