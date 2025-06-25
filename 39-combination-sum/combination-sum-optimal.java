@@ -1,3 +1,4 @@
+// Optimal 
 
 class Solution {
     public void getCombinationsOfSumTarget(int index, List<Integer> combination, int target, int n, int[] candidates,
@@ -28,3 +29,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(2^T * k) where T is the target and k is the avg length of the combination list
+// S.C => O(x * k) where x is no of combinations and k is the avg length of the combination list
