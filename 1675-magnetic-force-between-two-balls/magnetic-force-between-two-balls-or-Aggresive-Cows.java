@@ -1,3 +1,6 @@
+// ('Magnetic Force between two Balls' and 'Aggressive Cows' both are same problems just different wordings.
+// Optimal
+
 class Solution {
     public boolean canWeAssignCows(int[] position, int minDist, int cows) {
         int lastcow = position[0];
@@ -33,3 +36,6 @@ class Solution {
         return high;
     }
 }
+
+// T.C => O(n log (n)) + O(n * (max - min))
+// S.C => O(1)
