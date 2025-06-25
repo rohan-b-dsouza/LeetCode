@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int upperBound(int[] arr, int target) {
         
@@ -21,7 +23,7 @@ class Solution {
         return ans;
     }
     public void getPowerSet(int index, List<Integer> subset, List<List<Integer>> ans,  int n, int[] nums) {
-      if (index == n) { // Add subset to the ans list
+      if (index == n) { // Base Case :- Add subset to the ans list
         ans.add(new ArrayList<>(subset));
         return;
       }
@@ -43,3 +45,6 @@ class Solution {
       return ans;
     }
 }
+
+// T.C => O(2^n * k) -------{2^n as there are two choices for each element & k for copying list at base case (k is considered as avg len of the subsets)}
+// S.C => O(n) + O(x * k) = O(n) ---------------- {where O(n) is reqd for recursion stack, x is no. of unique combinations and k is avg len of subsets, we neglect O(x * k) as its reqd for output not for solving the qn}
