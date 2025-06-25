@@ -47,4 +47,4 @@ class Solution {
 }
 
 // T.C => O(2^n * n) -------{2^n as there are two choices for each element & n for copying list at base case (n is worst case length of a subset)}
-// S.C => O(n) + O(x * n) = O(n) ---------------- {where O(n) is reqd for recursion stack, x is no. of unique combinations and n is  len of subset in worst case, we can neglect O(n * k) as its reqd for output not for solving the qn}
+// S.C => O(n) + O(x * n) = O(n) ---------------- {where O(n) is reqd for recursion stack, x is no. of unique combinations and n is  len of subset in worst case, we can neglect O(x * n) as its reqd for output not for solving the qn}
