@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
 
     // Recursive helper function to find combinations
@@ -44,3 +46,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(2^n * k) where 2^n is no of combinations and k is avg len of each combination
+// S.C => O(x * k) where x is no of unique combinations and k is avg len of each combination
