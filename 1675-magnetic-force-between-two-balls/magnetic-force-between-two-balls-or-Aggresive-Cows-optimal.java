@@ -37,5 +37,5 @@ class Solution {
     }
 }
 
-// T.C => O(n log (n)) + O(n * (max - min))
+// T.C => O(n log (n)) + O(n * log(max - min))
 // S.C => O(1)
