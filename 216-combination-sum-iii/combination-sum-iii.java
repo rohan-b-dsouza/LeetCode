@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public void getValidcombinations(int lastElement, int sum,  int k, List<Integer> combination, List<List<Integer>> ans) {
         // Base Case : // If subset of sum n with size k found, add to ans
@@ -29,3 +31,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(C(9,k) * k) as we are selecting k distinct nos from 1 to 9.
+// S.C => O(k) + O(C(9,k) * k) + O(k) ---------{Here, for solving the problem only O(k) is reqd, hence O(C(9,k) * k) reqd for result storage can be ignored but mention this in interviews}
