@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
   public void getLetterCombinations(
       int index, String combination, String[] map, List<String> ans, String digits) {
@@ -23,3 +25,6 @@ class Solution {
     return ans;
   }
 }
+
+// T.C => O(4^n * n) 
+// S.C => O(n) for recursion depth and O(4^n * n) for result storage
