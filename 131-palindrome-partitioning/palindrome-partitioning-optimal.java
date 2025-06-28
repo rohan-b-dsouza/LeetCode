@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     // Check if substring is a palindrome
     public boolean isPalindrome(String s, int start, int end) { 
@@ -33,3 +35,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(2^n * n) in the worst case (eg. "aaaa")
+// S.C => O(n) auxiliary space + O(2^n * n) output space
