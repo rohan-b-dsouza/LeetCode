@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
   public boolean wordSearch(int index, int i, int j, char[][] board, String word, int n, int m) {
     // Base Case : Word is found
@@ -44,3 +46,6 @@ class Solution {
     return findFirstLetter(board, word);
   }
 }
+
+// T.C => O(4^L * n * m) where L is length of the word
+// S.C => O(L) for recursion stack 
