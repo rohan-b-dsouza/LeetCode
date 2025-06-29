@@ -1,4 +1,4 @@
-// Optimal
+// Brute
 
 class Solution {
     public boolean canPlaceQueen(int row, int col, char[][] board, int n) {
