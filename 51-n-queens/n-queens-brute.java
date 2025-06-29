@@ -11,14 +11,14 @@ class Solution {
             r--;
         }
         r = row; c = col;
-        // check if queen is present in any cell in the left diagonal of current cell
+        // check if queen is present in any cell in the upper diagonal of current cell
         while (r >= 0 && c >= 0) { 
             if (board[r][c] == 'Q') {
                 return false;
             }
             r--; c--;
         }
-        // check if queen is present in any cell in the right diagonal of current cell
+        // check if queen is present in any cell in the lower diagonal of current cell
         r = row; c = col; 
         while (r >= 0 && c < n) {
             if (board[r][c] == 'Q') {
