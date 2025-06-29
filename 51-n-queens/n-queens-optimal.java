@@ -47,3 +47,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n!) approx.
+// S.C => O(n) recursive stack space + O(n^2) for board array + O(n) for visited array and upper and lower diag array each + O(k * n^2) for result storage where k is no. of solutions
