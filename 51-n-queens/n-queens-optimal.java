@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     // function to copy char[][] board to a List<String> as we need to return List<List<String>>
     public List<String> construct (int n, char[][] board) {
@@ -8,40 +10,40 @@ class Solution {
         return listboard;
     }
 
-    public void arrangeNQueens(int row, int n, List<List<String>> ans, char[][] board, int[] visitedCol, int[] leftDiag,
-            int[] rightDiag) {
+    public void arrangeNQueens(int row, int n, List<List<String>> ans, char[][] board, int[] visitedCol, int[] lowerDiag,
+            int[] upperDiag) {
         // Base Case : Add arrangement to the answer
         if (row == n) {
             ans.add(construct(n, board));
             return;
         }
         for (int col = 0; col < n; col++) {
-            if (visitedCol[col] != 1 && leftDiag[row + col] != 1 && rightDiag[(row - col) + (n - 1)] != 1) { // check if queen can be placed in that cell
+            if (visitedCol[col] != 1 && lowerDiag[row + col] != 1 && upperDiag[(row - col) + (n - 1)] != 1) { // check if queen can be placed in that cell
                 visitedCol[col] = 1; // mark corresponding column as visited
-                leftDiag[row + col] = 1; // mark corresponding left diagonal as visited
-                rightDiag[(row - col) + (n - 1)] = 1; // mark corresponding right diagonal as visited
+                lowerDiag[row + col] = 1; // mark corresponding left diagonal as visited
+                upperDiag[(row - col) + (n - 1)] = 1; // mark corresponding right diagonal as visited
                 board[row][col] = 'Q'; // if yes then add Queen to that cell
-                arrangeNQueens(row + 1, n, ans, board, visitedCol, leftDiag, rightDiag); // recursively place Queens on further rows
+                arrangeNQueens(row + 1, n, ans, board, visitedCol, lowerDiag, upperDiag); // recursively place Queens on further rows
                 // backtrack to explore other paths (cols) by removing the earlier Queen Placements and visited col and diagonal marks
                 board[row][col] = '.'; 
                 visitedCol[col] = 0; 
-                leftDiag[row + col] = 0; 
-                rightDiag[(row - col) + (n - 1)] = 0;
+                lowerDiag[row + col] = 0; 
+                upperDiag[(row - col) + (n - 1)] = 0;
             }
         }
     }
 
     public List<List<String>> solveNQueens(int n) {
         int[] visitedCol = new int[n];
-        int[] leftDiag = new int[2 * n - 1];
-        int[] rightDiag = new int[2 * n - 1];
+        int[] lowerDiag = new int[2 * n - 1];
+        int[] upperDiag = new int[2 * n - 1];
         List<List<String>> ans = new ArrayList<>();
         char[][] board = new char[n][n];
         String str = ".".repeat(n); // fills str with "." (O(n))
         for (int i = 0; i < n; i++) { // fills board with "."
             board[i] = str.toCharArray();
         }
-        arrangeNQueens(0, n, ans, board, visitedCol, leftDiag, rightDiag);
+        arrangeNQueens(0, n, ans, board, visitedCol, lowerDiag, upperDiag);
         return ans;
     }
 }
