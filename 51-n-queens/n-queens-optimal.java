@@ -20,8 +20,8 @@ class Solution {
         for (int col = 0; col < n; col++) {
             if (visitedCol[col] != 1 && lowerDiag[row + col] != 1 && upperDiag[(row - col) + (n - 1)] != 1) { // check if queen can be placed in that cell
                 visitedCol[col] = 1; // mark corresponding column as visited
-                lowerDiag[row + col] = 1; // mark corresponding left diagonal as visited
-                upperDiag[(row - col) + (n - 1)] = 1; // mark corresponding right diagonal as visited
+                lowerDiag[row + col] = 1; // mark corresponding lower diagonal as visited
+                upperDiag[(row - col) + (n - 1)] = 1; // mark corresponding upper diagonal as visited
                 board[row][col] = 'Q'; // if yes then add Queen to that cell
                 arrangeNQueens(row + 1, n, ans, board, visitedCol, lowerDiag, upperDiag); // recursively place Queens on further rows
                 // backtrack to explore other paths (cols) by removing the earlier Queen Placements and visited col and diagonal marks
