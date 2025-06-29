@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public boolean canPlaceQueen(int row, int col, char[][] board, int n) {
         int r = row; int c = col;
@@ -59,3 +61,23 @@ class Solution {
         return ans;
     }
 }
+
+// Time Complexity:
+// ----------------
+// Worst-case time = O(n · n!)
+// - For each of the n rows, you try up to n columns
+// - Pruned by safety checks, but worst-case explores all n! permutations
+// - Each placement involves O(n) checks for column & diagonals
+
+// Space Complexity:
+// -----------------
+// Auxiliary Space = O(n²) 
+// - char[][] board of size n x n
+// - Recursion depth = O(n) (1 call per row)
+//
+// Output Space (ans) = O(n² × k)
+// - Each solution is n strings of length n → O(n²) per solution
+// - k = number of valid solutions (can be up to n! in worst case)
+//
+// Total Space (including output) = O(n² × k) → worst-case O(n² × n!)
+ 
