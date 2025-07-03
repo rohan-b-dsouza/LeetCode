@@ -55,5 +55,5 @@ class Solution {
   }
 }
 
-// T.C => O(9 ^ E) as for every empty cell we can try about 9 digits
+// T.C => O(9 ^ E) as for every empty cell we can try about 9 digits ---(the use of nested loops (total 9 * 9 = 81 iterations) is negligible as recursion T.C itself is exponential)
 // S.C => O(E) is the recursion stack space
