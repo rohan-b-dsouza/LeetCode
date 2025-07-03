@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
   // Function to check whether the current digit can be placed in the empty cell or not
   public boolean canPlaceDigit(char digit, int row, int col, char[][] board) {
@@ -52,3 +54,6 @@ class Solution {
     solve(board); // calling function which solves the sudoku board
   }
 }
+
+// T.C => O(9 ^ E) as for every empty cell we can try about 9 digits
+// S.C => O(E) is the recursion stack space
