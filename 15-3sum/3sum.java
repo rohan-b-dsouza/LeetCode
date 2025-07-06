@@ -1,20 +1,26 @@
 class Solution {
   public List<List<Integer>> threeSum(int[] nums) {
-    HashSet<List<Integer>> ans = new HashSet<>();
-    Arrays.sort(nums);
     int n = nums.length;
+    Arrays.sort(nums);
+    HashSet<List<Integer>> ans = new HashSet<>();
     for (int i = 0; i < n; i++) {
-      int target = -nums[i];
-      HashSet<Integer> st = new HashSet<>();
-      for (int j = i + 1; j < n; j++) {
-        if (st.contains(target - nums[j])) {
-            List<Integer> triplet = new ArrayList<>(Arrays.asList(nums[i], nums[j], target-nums[j]));
-            ans.add(triplet);
+      int j = i + 1;
+      int k = n - 1;
+
+      while (j < k) {
+        int sum = nums[i] + nums[j] + nums[k];
+        if (sum == 0) {
+          ans.add(Arrays.asList(nums[i], nums[j], nums[k]));
+            j++;
+            k--;
         }
-        st.add(nums[j]);
+        else if (sum > 0) {
+            k--;
+        }
+        else j++;
       }
     }
-    List<List<Integer>> finalans = new ArrayList(ans);
-    return finalans;
+    List<List<Integer>> list = new ArrayList<>(ans);
+    return list;
   }
 }
