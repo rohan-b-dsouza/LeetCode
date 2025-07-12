@@ -1,3 +1,5 @@
+// Better - 1
+
 class Solution {
     public int minBitFlips(int start, int goal) {
         int ans = start ^ goal;
@@ -9,3 +11,6 @@ class Solution {
         return cntBits;
     }
 }
+
+// T.C => O(log(n))
+// S.C => O(1)
