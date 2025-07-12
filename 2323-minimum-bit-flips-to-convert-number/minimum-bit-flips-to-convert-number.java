@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     public int minBitFlips(int start, int goal) {
         int ans = start ^ goal;
@@ -10,3 +12,6 @@ class Solution {
         return cntBits;
     }
 }
+
+// T.C => O(31)
+// S.C => O(1)
