@@ -1,4 +1,4 @@
-// Better - 2 (Better than Better - 2)
+// Better - 2 (Better than Better - 1)
 
 class Solution {
     public int minBitFlips(int start, int goal) {
