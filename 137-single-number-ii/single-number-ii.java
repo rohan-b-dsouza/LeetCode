@@ -1,3 +1,5 @@
+// Better - 1
+
 class Solution {
     public int singleNumber(int[] nums) {
         int n = nums.length;
@@ -11,3 +13,6 @@ class Solution {
         return -1;
     }
 }
+
+// T.C => O(n)
+// S.C => O(n)
