@@ -1,3 +1,5 @@
+// Better - 3
+
 class Solution {
     public int singleNumber(int[] nums) {
         int n = nums.length;
@@ -10,3 +12,6 @@ class Solution {
         return nums[n - 1];
     }
 }
+
+// T.C => O(n * log(n))
+// S.C => O(1)
