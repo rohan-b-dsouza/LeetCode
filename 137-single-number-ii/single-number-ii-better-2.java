@@ -1,3 +1,5 @@
+// Better - 2
+
 class Solution {
     public int singleNumber(int[] nums) {
         int n = nums.length;
@@ -16,3 +18,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(32 * n)
+// S.C => O(1)
