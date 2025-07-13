@@ -23,5 +23,5 @@ class Solution {
     }
 }
 
-// T.C => O(n)
+// T.C => O(dividend)
 // S.C => O(1)
