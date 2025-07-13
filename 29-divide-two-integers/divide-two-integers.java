@@ -8,7 +8,7 @@ class Solution {
         if (dividend >= 0 && divisor < 0) sign = false;
         long absdividend =  Math.abs((long) dividend);
         long absDivisor = Math.abs((long) divisor);
-        long ans = 0;
+        int ans = 0;
         while (absdividend >= absDivisor) {
             int power = 0;
             while (absdividend >= (absDivisor << (power + 1))) {
@@ -18,9 +18,9 @@ class Solution {
             absdividend -= (absDivisor << (power));
         }
         if (sign) {
-            return (int) ans;
+            return  ans;
         }
-        return (int) -ans;
+        return -ans;
         
     }
 }
