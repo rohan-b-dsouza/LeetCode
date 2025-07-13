@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     public int divide(int dividend, int divisor) {
         if(dividend == divisor) return 1;
@@ -20,3 +22,6 @@ class Solution {
         return (int) -cnt;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
