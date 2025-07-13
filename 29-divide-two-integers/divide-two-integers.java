@@ -1,3 +1,5 @@
+// Optimal 
+
 class Solution {
     public int divide(int dividend, int divisor) {
         if (dividend == divisor) return 1;
@@ -18,9 +20,16 @@ class Solution {
             absdividend -= (absDivisor << (power));
         }
         if (sign) {
-            return  ans;
+            return ans;
         }
         return -ans;
         
     }
 }
+
+// Time Complexity:
+// Worst-case: O((log N)^2), due to nested loop where both outer and inner loops can go up to log N
+// Amortized: O(log N), because dividend is reduced exponentially, and total number of inner iterations is bounded
+
+// Space Complexity:
+// O(1) – uses constant extra space
