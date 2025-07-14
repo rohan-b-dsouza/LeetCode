@@ -1,4 +1,4 @@
-// Optimal 1 
+// Optimal - 1 
 
 class Solution {
     public void generateSubsets(int index, List<Integer> list, List<List<Integer>> ans, int n, int[] nums) {
