@@ -1,3 +1,5 @@
+// Optimal - 2
+
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         int n = nums.length;
@@ -14,3 +16,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(2^n * n)
+// S.C => O(2^n * n)
