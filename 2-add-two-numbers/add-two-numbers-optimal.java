@@ -1,3 +1,5 @@
+// Optimal
+
 /*Definition for singly Linked List
 class ListNode {
     int val;
@@ -43,3 +45,6 @@ class Solution {
     return dummyHead.next;
   }
 }
+
+// T.C => O(max(n, m)) where n and m are size of linked list l1 & l2 respectively
+// S.C => O(max(n, m)) where n and m are size of linked list l1 & l2 respectively
