@@ -1,12 +1,12 @@
 class Solution {
-    public StringBuilder getChar(int num) {
+    public char getChar(int num) {
         if (num >= 0 && num <= 9) {
-            return new StringBuilder().append((char) (num + '0'));
+            return (char) (num + 48);
         }
         if (num >= 10 && num <= 35) {
-            return new StringBuilder().append((char) (num + 55));
+            return (char) (num + 55);
         }
-        return new StringBuilder();
+        return ' ';
     }
     public String concatHex36(int n) {
         int hexa = n * n;
