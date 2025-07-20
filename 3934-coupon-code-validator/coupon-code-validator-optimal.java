@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public boolean isAlphaN(String code) {
         if (code.length() == 0)
@@ -42,3 +44,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n log (n)) approx.
+// S.C => O(n)
