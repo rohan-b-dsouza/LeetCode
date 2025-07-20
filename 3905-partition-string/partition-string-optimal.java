@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Trie solution is pending, and its the most optimal)
 
 class Solution {
     public List<String> partitionString(String s) {
