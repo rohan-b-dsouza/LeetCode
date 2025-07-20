@@ -1,3 +1,5 @@
+// Optimal - 1 (If interviewer allows usage of inbuilt-library functions then go for optimal - 2)
+
 class Solution {
     public char getChar(int num) {
         if (num >= 0 && num <= 9) {
@@ -28,3 +30,6 @@ class Solution {
         return (hexstr.toString() + tristr.toString());
     }
 }
+
+// T.C => O(log(n))
+// S.C => O(log(n))
