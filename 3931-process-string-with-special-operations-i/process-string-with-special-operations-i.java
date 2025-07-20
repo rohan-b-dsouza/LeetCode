@@ -23,5 +23,5 @@ class Solution {
     }
 }
 
-// T.C => O(2^k) in the worst case i.e when except one character all others are #, where k is the number of # characters 
-// S.C => O(2^k) in the worst case i.e when except one character all others are #, where k is the number of # characters 
+// T.C => O(2^k) in the worst case where k is the number of # characters; since each # doubles the current string
+// S.C => O(2^k) in the worst case where k is the number of # characters; since each # doubles the current string
