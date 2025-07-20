@@ -1,4 +1,4 @@
-// Optimal (Trie solution is pending, and its the most optimal)
+// Optimal (Trie solution is pending, and its the most optimal, however since it was not studied until this point therefore not applied here)
 
 class Solution {
     public List<String> partitionString(String s) {
