@@ -1,30 +1,11 @@
 class Solution {
-    public StringBuilder getChar(int num) {
-        if (num >= 0 && num <= 9) {
-            return new StringBuilder().append((char) (num + '0'));
-        }
-        if (num >= 10 && num <= 35) {
-            return new StringBuilder().append((char) (num + 55));
-        }
-        return new StringBuilder();
-    }
     public String concatHex36(int n) {
-        int hexa = n * n;
-        int tri = n * n * n;
-        StringBuilder hexstr = new StringBuilder();
-        StringBuilder tristr = new StringBuilder();
-        while (hexa != 0) {
-            int rem = hexa % 16;
-            hexstr.append(getChar(rem));
-            hexa = hexa / 16;
-        }
-        while (tri != 0) {
-            int rem = tri % 36;
-            tristr.append(getChar(rem));
-            tri = tri / 36;
-        }
-        hexstr.reverse();
-        tristr.reverse();
-        return (hexstr.toString() + tristr.toString());
+        int a = n*n;
+        int b = n*n*n;
+    
+        String hex = Integer.toHexString(a).toUpperCase();       
+        String base36 = Integer.toString(b, 36).toUpperCase();    
+    
+        return hex + base36; 
     }
 }
