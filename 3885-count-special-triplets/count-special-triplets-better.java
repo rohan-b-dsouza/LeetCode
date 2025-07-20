@@ -8,12 +8,12 @@ class Solution {
         for (int j = 0; j < n; j++) {
             int left = 0, right = 0;
             for (int i = 0; i < j; i++) {
-                if (nums[i] == nums[j] * 2) {
+                if (nums[i] == (long)nums[j] * 2) {
                     left++;
                 }
             }
             for (int k = j + 1; k < n; k++) {
-                if (nums[k] == nums[j] * 2) {
+                if (nums[k] == (long)nums[j] * 2) {
                     right++;
                 }
             }
