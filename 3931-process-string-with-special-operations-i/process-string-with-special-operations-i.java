@@ -1,3 +1,5 @@
+// Optimal 
+
 class Solution {
     public String processStr(String s) {
         StringBuilder str = new StringBuilder();
@@ -20,3 +22,6 @@ class Solution {
         return str.toString();
     }
 }
+
+// T.C => O(2^k) in the worst case i.e when except one character all others are #, where k is the number of # characters 
+// S.C => O(2^k) in the worst case i.e when except one character all others are #, where k is the number of # characters 
