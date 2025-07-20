@@ -1,3 +1,5 @@
+// Optimal - 1 (Imp Note :- The most optimal solution is by using Sieve of Eratosthenes instead of the isPrime() function we used here ; since sieves was not studied until this point therefore not applied)
+
 class Solution {
     public boolean isPrime(int n) {
     if (n <= 1) return false;
@@ -22,3 +24,6 @@ class Solution {
         return Math.abs(sumA - sumB);
     }
 }
+
+// T.C => O(n * sqrt(n))
+// S.C => O(1)
