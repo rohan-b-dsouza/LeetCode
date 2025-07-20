@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public String concatHex36(int n) {
         int a = n*n;
@@ -9,3 +11,6 @@ class Solution {
         return hex + base36; 
     }
 }
+
+// T.C => O(log(n))
+// S.C => O(log(n))
