@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public boolean checkDivisibility(int n) {
         long digsum = 0;
@@ -15,3 +17,6 @@ class Solution {
         return false;
     } 
 }
+
+// T.C => O(log (n)) since we divide by 10 in each step
+// S.C => O(1)
