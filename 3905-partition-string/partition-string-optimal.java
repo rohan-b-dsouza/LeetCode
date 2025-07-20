@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public List<String> partitionString(String s) {
         StringBuilder str = new StringBuilder();
@@ -14,3 +16,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n^2) when all characters are unique 
+// S.C => O(n) 
