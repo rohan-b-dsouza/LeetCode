@@ -1,3 +1,5 @@
+// Optimal
+
 /*
 Definition for singly linked list:
 class ListNode {
@@ -46,3 +48,6 @@ class Solution {
         return head;
     }
 }
+
+// T.C => O(n / 2) + O(n / 2) + O(n) = O(2 * n) = O(n)
+// S.C => O(n)
