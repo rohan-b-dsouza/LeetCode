@@ -1,4 +1,4 @@
-// Optimal
+// Brute
 
 /*
 Definition for singly linked list:
