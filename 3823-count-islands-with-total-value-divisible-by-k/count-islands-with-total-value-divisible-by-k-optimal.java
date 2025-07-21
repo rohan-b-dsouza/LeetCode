@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int getIslandSum (int row, int col, int[][] grid, int n, int m) {
         // Base Condition :- If row,col are out of bounds or cell is visited or cell has zero, return 0
@@ -31,3 +33,6 @@ class Solution {
         return cnt;
     }
 }
+
+// T.C => O(n * m) — each cell is visited once at most.
+// S.C => O(n * m) for recursive calls (i.e worst case -> when entire grid is one big valid island)
