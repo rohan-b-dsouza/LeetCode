@@ -1,3 +1,4 @@
+// Brute 
 
 /*Definition for Singly Linked List
 class ListNode {
@@ -48,3 +49,6 @@ class Solution {
         return head;
     }
 }
+
+// T.C => O(2 * n) = O(n)
+// S.C => O(1)
