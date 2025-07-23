@@ -27,18 +27,20 @@ class Solution {
         if (head == null) return head;
         ListNode fast = head;
         ListNode slow = head;
-        int cnt = 1;
-        while(cnt <= n) {
+        // Move the fast pointer n nodes ahead
+        for (int i = 1; i <= n; i++) {
             fast = fast.next;
-            cnt++;
         }
+        // If fast becomes null, then the node to be deleted is head
         if (fast == null) {
             return head.next;
         }
+        // Move both fast and slow pointer till fast reaches the last node
         while (fast.next != null) {
             fast = fast.next;
             slow = slow.next;
         }
+        // Delete the nth node from the end
         slow.next = slow.next.next;
         return head;
     }
