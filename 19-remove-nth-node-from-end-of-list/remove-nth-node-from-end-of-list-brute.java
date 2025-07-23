@@ -50,5 +50,5 @@ class Solution {
     }
 }
 
-// T.C => O(2 * n) = O(n)
+// T.C => O(2 * L) = O(L) where L is length of the LL (worst case i.e last node is to be deleted)
 // S.C => O(1)
