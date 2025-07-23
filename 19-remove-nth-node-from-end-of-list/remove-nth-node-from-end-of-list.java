@@ -1,3 +1,4 @@
+// Optimal
 
 /*Definition for Singly Linked List
 class ListNode {
@@ -42,3 +43,6 @@ class Solution {
         return head;
     }
 }
+
+// T.C => O(L) where L is the length of the LL
+// S.C => O(1)
