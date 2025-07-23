@@ -41,6 +41,7 @@ class Solution {
             temp = temp.next.next; // take only even nodes 
         }
         temp = head;
+        // overwrite the linked list with the anslist node values
         for (int num : anslist) {
             temp.val = num;
             temp = temp.next;
