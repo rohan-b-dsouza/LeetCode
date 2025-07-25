@@ -1,3 +1,5 @@
+// Recursive
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -33,3 +35,6 @@ class Solution {
         return newHead; // return head of reverse list
     }
 }
+
+// T.C => O(n) due to n nodes (n depth)
+// S.C => O(n) for recursive stack space 
