@@ -1,3 +1,5 @@
+// Optimal (Iterative)
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
