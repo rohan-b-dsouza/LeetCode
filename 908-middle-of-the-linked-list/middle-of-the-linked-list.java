@@ -1,3 +1,5 @@
+// Optimal
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -21,3 +23,6 @@ class Solution {
         return slow;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
