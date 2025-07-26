@@ -15,14 +15,17 @@ class Solution {
         if (head == null) return head;    
         ListNode temp = head;
         int cnt = 0;
+        // Calculate the no. of nodes
         while (temp != null) {
             cnt++;
             temp = temp.next;
         }
         temp = head;
+        // Traverse to the middle node
         for (int i = 1; i < (cnt / 2 + 1); i++) {
             temp = temp.next;
         }
+        // Return the middle node
         return temp;
     }
 }
