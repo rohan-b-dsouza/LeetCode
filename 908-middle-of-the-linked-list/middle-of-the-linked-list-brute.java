@@ -1,3 +1,5 @@
+// Brute
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -24,3 +26,6 @@ class Solution {
         return temp;
     }
 }
+
+// T.C => O(n) + O(n / 2) = O(n)
+// S.C => O(1)
