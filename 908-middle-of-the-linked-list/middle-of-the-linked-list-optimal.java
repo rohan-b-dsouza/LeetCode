@@ -24,5 +24,5 @@ class Solution {
     }
 }
 
-// T.C => O(n)
+// T.C => O(n / 2)
 // S.C => O(1)
