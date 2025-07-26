@@ -13,7 +13,6 @@
 class Solution {
     public ListNode middleNode(ListNode head) {
          if (head == null) return head;
-        ListNode temp = head;
         ListNode fast = head;
         ListNode slow = head; 
         while (fast != null && fast.next != null) {
