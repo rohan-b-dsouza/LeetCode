@@ -1,3 +1,5 @@
+// Brute
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -44,3 +46,6 @@ class Solution {
 
     }
 }
+
+// T.C => O(2 * n) = O(n)
+// S.C => O(n) for the extra stack used
