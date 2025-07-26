@@ -1,3 +1,5 @@
+// Optimal
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -40,19 +42,28 @@ class Solution {
     if (head == null || head.next == null) return true;
     ListNode fast = head;
     ListNode slow = head;
+      // This loop helps in finding the middle node
     while (fast != null && fast.next != null) {
       fast = fast.next.next;
       slow = slow.next;
     }
+      // Divide the linked list into two parts, left part having elements before middle node and right part having middle node and elements after it
     ListNode left = head;
     ListNode right = reverseList(slow);
-    ListNode secondHalfHead = right;
+    ListNode secondHalfHead = right; // store the head of reversed right part, this is reqd to later restore original list
+      // Check if LL is a palindrome
     while (left != null && right != null) {
         if (left.val != right.val) return false;
         left = left.next;
         right = right.next;
     }
+      // Restore original list
     reverseList(secondHalfHead);
     return true;
   }
 }
+
+// T.C => O(n / 2) + O(n / 2) + O(n / 2) + O(n / 2) = O(2 * n) = O(n)
+// S.C => O(1)
+
+// T.C => O()
