@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Tortoise and Hare Algorithm)
 
 /**
  * Definition for singly-linked list.
@@ -15,11 +15,12 @@ class Solution {
          if (head == null) return head;
         ListNode fast = head;
         ListNode slow = head; 
+        // Traverse till fast is not null and not at the last node
         while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
+            fast = fast.next.next; // increment fast by 2 steps
+            slow = slow.next; // increment slow by one step
         }
-        return slow;
+        return slow; // Return the middle node
     }
 }
 
