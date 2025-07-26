@@ -27,14 +27,17 @@ class Solution {
         if (head == null || head.next == null) return null;    
         ListNode temp = head;
         int cnt = 0;
+        // Calculate the no. of nodes
         while (temp != null) {
             cnt++;
             temp = temp.next;
         }
         temp = head;
+        // Traverse to node before middle node
         for (int i = 1; i < (cnt / 2); i++) {
             temp = temp.next;
         }
+        // Delete the middle node
         temp.next = temp.next.next;
         return head;
     }
