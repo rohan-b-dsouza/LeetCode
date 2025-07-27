@@ -1,3 +1,5 @@
+// Better
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -57,3 +59,8 @@ class Solution {
         return getIntersection(headB, headA, n1 - n2);
     }
 }
+
+
+// T.C => O(n1) + O(n2) + O(n2 - n1) + O(min(n1, n2)) = O(n1) + O(n2) + O(n2 - n1) + O(n1) ..{since in worst case both lists will be of same size, thus min(n1, n2) = n1} 
+// Final T.C => O(n1) + O(2 * n2)
+// S.C => O(1)
