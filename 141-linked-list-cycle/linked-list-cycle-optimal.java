@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Floyd's cycle detection Algorithm (Tortoise and Hare))
 
 /*Definition of singly linked list:
 class ListNode {
