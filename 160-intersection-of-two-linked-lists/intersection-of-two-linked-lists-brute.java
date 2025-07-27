@@ -43,5 +43,5 @@ class Solution {
     }
 }
 
-// T.C => O(n + m)
+// T.C => O(n + m) where n and m is size of LL A and LL B respectively
 // S.C => O(n) for the extra hashset
