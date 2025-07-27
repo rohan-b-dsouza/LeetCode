@@ -1,3 +1,5 @@
+// Brute
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -17,7 +19,7 @@ public class Solution {
         HashSet<ListNode> st = new HashSet<>();
         ListNode temp = head;
         while (temp != null) {
-            // If visited node appears, cycle exists return starting node
+            // If visited node appears then cycle exists, return the node
             if (st.contains(temp)) {
                 return temp;
             }
@@ -29,3 +31,6 @@ public class Solution {
         return null;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
