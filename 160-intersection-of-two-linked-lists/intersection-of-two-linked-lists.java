@@ -1,3 +1,5 @@
+// Optimal
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -42,3 +44,7 @@ class Solution {
         return tempA;
     }
 }
+
+
+// T.C => O(n + m) where n and m is the size of LL A and LL B respectively
+// S.C => O(1)
