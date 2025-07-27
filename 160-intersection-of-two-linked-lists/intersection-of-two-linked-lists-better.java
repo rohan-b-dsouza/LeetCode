@@ -62,5 +62,5 @@ class Solution {
 
 
 // T.C => O(n1) + O(n2) + O(n2 - n1) + O(min(n1, n2)) = O(n1) + O(n2) + O(n2 - n1) + O(n1) ..{since in worst case both lists will be of same size, thus min(n1, n2) = n1} 
-// Final T.C => O(n1) + O(2 * n2)
+// Final T.C => O(n1) + O(2 * n2) = O(n + m) where n and m is the size of LL A and LL B respectively
 // S.C => O(1)
