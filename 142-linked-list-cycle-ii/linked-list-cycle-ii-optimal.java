@@ -1,5 +1,5 @@
-// Optimal
-
+// Optimal (Tortoise and Hare algorithm)
+ 
 /**
  * Definition for singly-linked list.
  * class ListNode {
