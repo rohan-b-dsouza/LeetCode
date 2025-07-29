@@ -90,4 +90,5 @@ class Solution {
   }
 }
 
-// T.C => O()
+// T.C => O(2 * n) = O(n) ---------{O(n) for reversing and O(n) for finding kth node}
+// S.C => O(1)
