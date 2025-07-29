@@ -53,5 +53,5 @@ class Solution {
 }
 
 
-// T.C => O(N) + O(N * log(N)) + O(N) -------{where N = n + m}
-// S.C => O(N) + O(N) for the extra ArrayList and Linked List
+// T.C => O(N) + O(N * log(N)) + O(N) = O(N * log(N)) -------{where N = n + m}
+// S.C => O(N) + O(N) = O(N) for the extra ArrayList and Linked List
