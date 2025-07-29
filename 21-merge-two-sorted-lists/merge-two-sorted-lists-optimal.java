@@ -30,6 +30,7 @@ class Solution {
         ListNode temp2 = list2;
         ListNode dummyNode = new ListNode(-1);
         ListNode temp = dummyNode;
+        // Using the logic of merge function in merge sort, change the links of the nodes in the input LL using a dummynode
         while (temp1 != null && temp2 != null) {
             if (temp1.val <= temp2.val) {
                 temp.next = temp1;
@@ -42,6 +43,7 @@ class Solution {
                 temp2 = temp2.next;
             }
         }
+        // Link the remaining nodes to the LL
         temp.next = temp1 != null ? temp1 : temp2;
         return dummyNode.next;
     }
