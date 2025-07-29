@@ -1,3 +1,5 @@
+// Optimal
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -87,3 +89,5 @@ class Solution {
     return head;
   }
 }
+
+// T.C => O()
