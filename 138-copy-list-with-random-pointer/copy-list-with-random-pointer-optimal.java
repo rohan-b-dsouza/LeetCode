@@ -47,7 +47,7 @@ class Solution {
         temp = head;
         Node dummyNode = new Node(-1);
         Node dummy = dummyNode;
-        // Restore the original list and also simultaneously link the copied node's to their corresponding next nodes
+        // Restore the original list's node's next connections and also simultaneously link the copied node's to their corresponding next nodes
         while (temp != null) {
             dummy.next = temp.next;
             dummy = dummy.next;
