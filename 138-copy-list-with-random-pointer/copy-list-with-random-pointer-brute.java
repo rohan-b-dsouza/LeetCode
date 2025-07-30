@@ -1,3 +1,5 @@
+// Brute
+
 /*Definition of singly linked list:
 class Node {
     int val;
@@ -47,3 +49,6 @@ class Solution {
         return map.get(head);
     }
 }
+
+// T.C => O(n) + O(n) = O(2 * n) = O(n)
+// S.C => O(n) + O(n) = O(2 * n) = O(n) --------{It's imp to note that the extra map is used to solve the problem however the new LL creation is a requirement of the problem itself so the new LL is not used to solve qn but to return the ans}
