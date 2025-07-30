@@ -59,5 +59,5 @@ class Solution {
     }
 }
 
-// T.C => O(3 * n)
+// T.C => O(3 * n) = O(n)
 // S.C => O(1)
