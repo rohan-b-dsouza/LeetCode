@@ -21,46 +21,57 @@ class ListNode {
  */
 
 class Solution {
-    public ListNode findMiddle(ListNode head) {
+    // Function to get middle node of a LL
+    public ListNode getMiddleNode (ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode temp = head;
+        ListNode slow = head;
         ListNode fast = head.next.next;
-        ListNode slow = head; 
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
         return slow;
     }
-  public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-    if (list1 == null) return list2;
-    if (list2 == null) return list1;
-    ListNode temp1 = list1;
-    ListNode temp2 = list2;
-    ListNode dummyNode = new ListNode(-1);
-    ListNode temp = dummyNode;
-    while (temp1 != null && temp2 != null) {
-      if (temp1.val <= temp2.val) {
-        temp.next = temp1;
-        temp = temp1;
-        temp1 = temp1.next;
-      } else {
-        temp.next = temp2;
-        temp = temp2;
-        temp2 = temp2.next;
-      }
+    // Function to merge two lists
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if (list1 == null) return list2;
+        if (list2 == null) return list1;
+        ListNode temp1 = list1;
+        ListNode temp2 = list2;
+        ListNode dummyNode = new ListNode(-1);
+        ListNode temp = dummyNode;
+        while (temp1 != null && temp2 != null) {
+            if (temp1.val <= temp2.val) {
+                temp.next = temp1;
+                temp = temp1;
+                temp1 = temp1.next;
+            }
+            else {
+                temp.next = temp2;
+                temp = temp2;
+                temp2 = temp2.next;
+            }
+        }
+        temp.next = temp1 != null ? temp1 : temp2;
+        return dummyNode.next;
     }
-    temp.next = temp1 != null ? temp1 : temp2;
-    return dummyNode.next;
-  }
-  public ListNode sortList(ListNode head) {
-    if (head == null || head.next == null) return head;
-    ListNode middle = findMiddle(head);
-    ListNode right = middle.next;
-    ListNode left = head;
-    middle.next = null;
-    left = sortList(left);
-    right = sortList(right);
-    return mergeTwoLists(left, right);
-  }
+    // Recursive function to sort the LL using merge sort
+    public ListNode sortList(ListNode head) {
+        // If the list is empty or there is only one node
+        if (head == null || head.next == null) return head;
+        // Get the middle node of the current LL
+        ListNode middle = getMiddleNode(head);
+        // Get the start node of right list
+        ListNode right = middle.next;
+        // Get the start node of left list
+        ListNode left = head;
+        // Break the link between left and right list
+        middle.next = null;
+        // Recursively sort the left list
+        left = sortList(left);
+        // Recursively sort the right list
+        right = sortList(right);
+        // Merge the two lists
+        return mergeTwoLists(left, right);
+    }
 }
