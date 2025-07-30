@@ -60,4 +60,4 @@ class Solution {
 }
 
 // T.C => O(3 * n) = O(n)
-// S.C => O(1)
+// S.C => O(1) --------{The O(n) required for building the new linked list is the requirement of the problem}
