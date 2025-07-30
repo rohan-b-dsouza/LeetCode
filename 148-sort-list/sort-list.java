@@ -1,3 +1,5 @@
+// Brute
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -41,3 +43,6 @@ class Solution {
         return head;
     }
 }
+
+// T.C => O(n + (n * log(n)) + O(n)) = O(n * log(n))
+// S.C => O(n) for the extra list used
