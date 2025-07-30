@@ -1,3 +1,5 @@
+// Optimal
+
 /*Definition of singly linked list:
 class Node {
     int val;
@@ -56,3 +58,6 @@ class Solution {
         return dummyNode.next;
     }
 }
+
+// T.C => O(3 * n)
+// S.C => O(1)
