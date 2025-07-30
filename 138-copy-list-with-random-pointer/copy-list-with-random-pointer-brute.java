@@ -33,15 +33,24 @@ class Solution {
         Node temp = head;
         // Store {original node, copied node} pair
         while (temp != null) {
+            // Create new node with same value as original
             Node newNode = new Node (temp.val);
+            // Map to original node
             map.put(temp, newNode);
             temp = temp.next;
         }
         // Link the newly created copied nodes to their corresponding next and random nodes using the map 
         temp = head;
         while (temp != null) {
+            // Get copied node from the map
             Node copiedNode = map.get(temp);
+            /*Set next pointer of copied node 
+            to the copied node of the next 
+            original node*/
             copiedNode.next = map.get(temp.next);
+            /*Set the random pointer of the 
+            copied node to the copied node of 
+            the random original node*/
             copiedNode.random = map.get(temp.random);
             temp = temp.next; 
         }
