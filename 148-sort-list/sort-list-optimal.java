@@ -1,3 +1,5 @@
+// Optimal
+
 /*Definition of singly linked list:
 class ListNode {
     int val;
@@ -75,3 +77,6 @@ class Solution {
         return mergeTwoLists(left, right);
     }
 }
+
+// T.C => O(log (n) * (n + n / 2)) = O(n * log (n)) ------------- {as there are log(n) calls and for each call we take approx. O(n) for finding middle node and O(n) for merging two lists}
+// S.C => O(log (n)) for the recursive stack (merge sort)
