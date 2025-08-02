@@ -8,6 +8,7 @@ class Solution {
             minLand = Math.min(minLand, landStartTime[i] + landDuration[i]);
         }
         for (int j = 0; j < w1; j++) {
+            
             if (minLand < waterStartTime[j]) {
                 minTime = Math.min(minTime, waterStartTime[j] + waterDuration[j]);
             }
