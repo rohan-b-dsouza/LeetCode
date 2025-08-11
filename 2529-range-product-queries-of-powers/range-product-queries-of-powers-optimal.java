@@ -17,7 +17,7 @@ class Solution {
         }
         return result;
     }
-
+    // Function to find powers
     public void findPowers(int n, List<Integer> powers) {
         while (n > 0) {
             int rightmostSetBit = n & -n;
@@ -67,7 +67,7 @@ class Solution {
 //   For q queries, total = O(q * log MOD) ≈ O(q).
 
 // Overall Time Complexity:
-// O(q)
+// O(q + 2k)
 
 
 // Space Complexity (SC):
@@ -77,7 +77,7 @@ class Solution {
 // - Result array for queries: size q → O(q).
 
 // Overall Space Complexity:
-// O(q)
+// O(q + 2k)
 
 
 
