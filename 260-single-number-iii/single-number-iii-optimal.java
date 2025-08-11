@@ -9,7 +9,7 @@ class Solution {
         for (int i = 0; i < n; i++) {
             xor ^= nums[i];
         }
-        int rightmostSetBit = xor & ~(xor - 1);
+        int rightmostSetBit = xor & -(xor);
         for (int i = 0; i < n; i++) {
             if ((nums[i] & rightmostSetBit) != 0) {
                 ones ^= nums[i];
