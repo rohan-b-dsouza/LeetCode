@@ -7,11 +7,13 @@ class Solution {
     private long modPow(long base, long exp) {
         long result = 1;
         while (exp > 0) {
-            if ((exp & 1) == 1) {
+            if (exp % 2 == 1) {
+                exp--;
                 result = (result * base) % MOD;
+            } else {
+                exp /= 2;
+                base = (base * base) % MOD;
             }
-            base = (base * base) % MOD;
-            exp >>= 1;
         }
         return result;
     }
