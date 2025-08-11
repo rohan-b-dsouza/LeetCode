@@ -35,5 +35,29 @@ class Solution {
     }
 }
 
-// T.C => O(no. of set bits in n) + O(m * (right - left + 1)) where m is size of query array
-// S.C => O(no. of powers) + O(m) where m is size of query array (ans array will always be of size m as mentioned in qn)
+// Time Complexity
+
+// Building powers list:
+// n can have at most log₂(n) set bits.
+// Extracting each set bit → O(log n)
+
+// Answering each query:
+// For a query [left, right], you iterate from left to right.
+// Worst-case length = O(log n) (since powers.size() ≤ log₂(n)), and you do this for m queries.
+// Total = O(m · log n)
+
+// Overall:
+// O(log n + m · log n) → O(m · log n) (since m can be large)
+
+// Space Complexity
+
+// powers list: at most log₂(n) elements → O(log n)
+
+// Answer array: size = m → O(m)
+
+// Other variables: O(1)
+
+// Overall:
+// O(log n + m)
+
+
