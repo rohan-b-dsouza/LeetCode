@@ -52,3 +52,32 @@ class Solution {
         return ans;
     }
 }
+
+// Time Complexity (TC):
+
+// - Extracting powers of two from n:
+//   Runs in O(k), where k = number of set bits in n.
+
+// - Building prefix product array:
+//   Iterates over k powers → O(k) 
+
+// - Answering queries:
+//   Each query requires modular inverse calculation using fast exponentiation.
+//   Modular exponentiation takes O(log MOD) time, where MOD = 10^9 + 7 (~30 operations).
+//   For q queries, total = O(q * log MOD) ≈ O(q).
+
+// Overall Time Complexity:
+// O(q)
+
+
+// Space Complexity (SC):
+
+// - Powers list: stores up to k elements (set bits) → O(k) 
+// - Prefix product array: size k + 1 → O(k)
+// - Result array for queries: size q → O(q).
+
+// Overall Space Complexity:
+// O(q)
+
+
+
