@@ -47,6 +47,7 @@ class Solution {
 //   O(q * k)
 
 // Since k ≤ 30, this can be up to 30 * q operations, which might be slow for large q.
+// Overall :- O(q * k)
 
 
 // Space Complexity (SC):
@@ -56,7 +57,7 @@ class Solution {
 // - No extra significant space used.
 
 // Overall space:
-// O(q + k) ≈ O(q)
+// O(q + k)
 
 
 
