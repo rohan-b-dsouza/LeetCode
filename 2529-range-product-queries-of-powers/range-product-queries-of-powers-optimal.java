@@ -1,4 +1,4 @@
-import java.util.*;
+// Optimized (Pre-requisite :- Inverse Modulo and Fermat's Little Theorem)
 
 class Solution {
     private static final int MOD = 1_000_000_007;
@@ -27,20 +27,26 @@ class Solution {
     }
 
     public int[] productQueries(int n, int[][] queries) {
+        // List to store the powers
         List<Integer> powers = new ArrayList<>();
+        // Call the function to find powers
         findPowers(n, powers);
 
-        // Prefix product array
+        // Build a prefix Prod Array, for optimizing query processing which was lacking in the brute force method
         long[] prefixProd = new long[powers.size() + 1];
         prefixProd[0] = 1;
         for (int i = 0; i < powers.size(); i++) {
             prefixProd[i + 1] = (prefixProd[i] * powers.get(i)) % MOD;
         }
-
+        // Array to store the answer
         int[] ans = new int[queries.length];
+        // Process each query and store the answer in 'ans' array
         for (int i = 0; i < queries.length; i++) {
             int left = queries[i][0];
             int right = queries[i][1];
+            // Use Inverse Modulo to do ((x / y) % MOD) as Normal Integer Division can't be done as according to modulo mathematics -> (a / b) % MOD = (a * b^-1) % MOD) ---> And further applying fermat's little theorem we get => (a * b^(M-2)) % MOD
+            // Thus, due to MOD we have to multiply x with MODULO INVERSE OF y
+            // In our problem x is prefixProd[right + 1] and y is prefixProd[left] 
             ans[i] = (int) ((prefixProd[right + 1] * modPow(prefixProd[left], MOD - 2)) % MOD);
         }
         return ans;
