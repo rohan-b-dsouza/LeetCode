@@ -35,29 +35,29 @@ class Solution {
     }
 }
 
-// Time Complexity
+// Time Complexity (TC):
 
-// Building powers list:
-// n can have at most log₂(n) set bits.
-// Extracting each set bit → O(log n)
+// - Extracting powers of two from n:
+//   Runs in O(k), where k = number of set bits in n (≤ 30).
 
-// Answering each query:
-// For a query [left, right], you iterate from left to right.
-// Worst-case length = O(log n) (since powers.size() ≤ log₂(n)), and you do this for m queries.
-// Total = O(m · log n)
+// - For each query:
+//   calcPow runs from left to right indices, up to k iterations per query.
 
-// Overall:
-// O(log n + m · log n) → O(m · log n) (since m can be large)
+// - For q queries, worst-case time:
+//   O(q * k)
 
-// Space Complexity
+// Since k ≤ 30, this can be up to 30 * q operations, which might be slow for large q.
 
-// powers list: at most log₂(n) elements → O(log n)
 
-// Answer array: size = m → O(m)
+// Space Complexity (SC):
 
-// Other variables: O(1)
+// - Powers list stores k elements → O(k) ≈ O(1).
+// - Result array stores q elements → O(q).
+// - No extra significant space used.
 
-// Overall:
-// O(log n + m)
+// Overall space:
+// O(q + k) ≈ O(q)
+
+
 
 
