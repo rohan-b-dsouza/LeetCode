@@ -20,5 +20,5 @@ class Solution {
     }
 }
 
-// T.C => O(n*log(n) + m*log(m) + O(min(n, m))
+// T.C => O(n*log(n) + m*log(m) + O(min(n, m)) = O(n*log(n) + m*log(m)
 // S.C => O(1)
