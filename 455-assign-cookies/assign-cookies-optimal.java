@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
         int n = g.length;
@@ -15,3 +17,6 @@ class Solution {
         return i;
     }
 }
+
+// T.C => O(n*log(n) + m*log(m) + O(min(n, m))
+// S.C => O(1)
