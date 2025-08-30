@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public boolean canJump(int[] nums) {
         int n = nums.length;
