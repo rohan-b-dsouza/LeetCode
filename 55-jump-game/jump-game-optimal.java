@@ -17,6 +17,9 @@ class Solution {
     }
 }
 
+// T.C => O(n)
+// S.C => O(1)
+
 // Greedy Approach :-
 /* At each index i, you look at how far you can currently jump (i + nums[i]) and update maxIdx to be the farthest reachable index so far.
 
