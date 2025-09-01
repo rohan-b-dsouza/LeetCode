@@ -37,5 +37,5 @@ class Solution {
     }
 }
 
-// T.C => O()
-// S.C => 
+// T.C => O(extraStudents * n)
+// S.C => O(1)
