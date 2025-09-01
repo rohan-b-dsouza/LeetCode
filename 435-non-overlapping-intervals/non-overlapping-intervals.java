@@ -21,3 +21,6 @@ class Solution {
         return n - NonOverlappingPairsCnt;
     }
 }
+
+// T.C => O(n * (log n)) + O(n) = O(n * log(n))
+// S.C => O(1)
