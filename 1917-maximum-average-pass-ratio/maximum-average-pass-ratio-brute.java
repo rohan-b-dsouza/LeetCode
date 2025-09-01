@@ -2,6 +2,7 @@
 
 // Note :- Gain basically refers to how much increment a class shows in its pass ratio when an extra student is added
 // We greedily choose the class with max possible gain in each step and add student to it, to ensure that globally we get optimal (maximum) avg pass ratio
+
 class Solution {
     public double maxAverageRatio(int[][] classes, int extraStudents) {
         int n = classes.length;
