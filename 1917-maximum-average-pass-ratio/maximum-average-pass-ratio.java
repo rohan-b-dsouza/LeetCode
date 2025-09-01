@@ -1,27 +1,26 @@
-import java.util.PriorityQueue;
-
 class Solution {
+    private double gain(int pass, int total) {
+        return (pass + 1.0) / (total + 1) - pass * 1.0 / total;
+    }
+
     public double maxAverageRatio(int[][] classes, int extraStudents) {
-        PriorityQueue<int[]> pq = new PriorityQueue<>(
-            (a, b) -> Double.compare((b[0]+1.0)/(b[1]+1) - (b[0]*1.0)/b[1],
-                                     (a[0]+1.0)/(a[1]+1) - (a[0]*1.0)/a[1])
-        );
-
-        for (int[] c : classes) pq.offer(c);
-
-        while (extraStudents-- > 0) {
+        int n = classes.length;
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> Double.compare(gain(b[0], b[1]), gain(a[0], a[1])));
+        for (int[] c : classes) {
+            pq.offer(c);
+        }
+        while (extraStudents > 0) {
             int[] top = pq.poll();
-            top[0] += 1;
-            top[1] += 1;
+            top[0]++;
+            top[1]++;
             pq.offer(top);
+            extraStudents--;
         }
-
-        double res = 0;
-        while (!pq.isEmpty()) {
-            int[] c = pq.poll();
-            res += (double)c[0]/c[1];
+        double maxAvgPassRatio = 0;
+        for (int[] x : pq) {
+            maxAvgPassRatio += ((double) x[0] / x[1]);
         }
+        return maxAvgPassRatio / n;
 
-        return res / classes.length;
     }
 }
