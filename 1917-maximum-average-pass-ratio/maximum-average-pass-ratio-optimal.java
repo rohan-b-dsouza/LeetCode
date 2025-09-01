@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Greedy)
 
 class Solution {
     // Function to calculate gain i.e increase in pass ratio of individual class on adding an extra student
@@ -14,7 +14,7 @@ class Solution {
         for (int[] c : classes) {
             pq.offer(c);
         }
-        // Step 2 : At each step, add the student to the class with maximum gain possible
+        // Step 2 : At each step, add the student to the class with maximum gain possible (Greedy Choice)
         while (extraStudents > 0) {
             // Pop and get the class with max possible gain
             int[] top = pq.poll();
@@ -37,5 +37,5 @@ class Solution {
     }
 }
 
-// T.C => O(n * log(n)) for adding all classes to PQ + O(extraStudents * n * log n) for the while loop + O(n) to iterate over the PQ
+// T.C => O(n * log(n)) for building the PQ + O(extraStudents * log n) for the while loop + O(n) to iterate over the PQ
 // S.C => O(2 * n) for storing all the classes
