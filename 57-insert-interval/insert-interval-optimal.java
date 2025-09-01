@@ -36,4 +36,4 @@ class Solution {
 
 // T.C => O(n)
 // S.C => O(2 * n) for the List of arrays and O(2 * n) for the 2D array to return final ans 
-// However, auxiliary space is O(1) as it was'nt reqd to solve the problem
+// However, auxiliary space is O(1) as space was'nt reqd to solve the problem
