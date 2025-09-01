@@ -37,6 +37,6 @@ class Solution {
     }
 }
 
-// T.C => O(n * log(n)) for building the PQ + O(extraStudents * log n) for the while loop + O(n) to iterate over the PQ
-// Overall T.C => O(n * log(n))
+// T.C => O(n * log(n)) for building the PQ + O(extraStudents * (2 * log (n)) for the while loop + O(n) to iterate over the PQ
+// Overall T.C => O((n + extraStudents) * log n)
 // S.C => O(2 * n) = O(n) for storing all the classes
