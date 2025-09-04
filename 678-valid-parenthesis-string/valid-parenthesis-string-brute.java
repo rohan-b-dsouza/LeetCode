@@ -29,4 +29,4 @@ class Solution {
 }
 
 // T.C => O(3^k) where k is the number of asterisks as for every asterisk we need to explore 3 paths (-1,+0,+1)
-// S.C => O(1)
+// S.C => O(n) due to recursion stack
