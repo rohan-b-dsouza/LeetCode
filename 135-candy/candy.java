@@ -7,7 +7,7 @@ class Solution {
        int[] right = new int[n];
        left[0] = 1;
        right[n - 1] = 1;
-        // First give candies by considering only the left neighbour
+        // Step 1 : Give candies by considering only the left neighbour
        for (int i = 1; i < n; i++) {
         if (ratings[i] > ratings[i - 1]) {
             left[i] = left[i - 1] + 1;
@@ -16,7 +16,7 @@ class Solution {
             left[i] = 1;
         }
        }
-        
+        // Step 2 : Give candies by considering only the right neighbour
        for (int i = n - 2; i >= 0; i--) {
         if (ratings[i] > ratings[i + 1]) {
             right[i] = right[i + 1] + 1;
@@ -26,9 +26,11 @@ class Solution {
         }
        }
        int sum = 0;
+        // Sum the candies by taking max of left and right 
        for (int i = 0; i < n; i++) {
         sum += Math.max(left[i], right[i]);
        }
+        // Return the minimum required candies
        return sum;
     }
 }
