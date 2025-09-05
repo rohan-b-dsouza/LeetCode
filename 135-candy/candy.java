@@ -26,7 +26,7 @@ class Solution {
         }
        }
        int sum = 0;
-        // Sum the candies by taking max of left and right 
+        // Step 3 : Sum the candies by taking max of left and right 
        for (int i = 0; i < n; i++) {
         sum += Math.max(left[i], right[i]);
        }
