@@ -18,7 +18,7 @@ class Solution {
        }
        int sum = left[n - 1];
        int rightCandies = 1;
-        // Simulate the process of taking candies by considering right neighbours like in brute force but use a variable rightCandies instead of right array, simultaneously accumulating the sum
+        // Step 2 : Simulate the process of taking candies by considering right neighbours like in brute force but use a variable rightCandies instead of right array, simultaneously accumulating the sum
        for (int i = n - 2; i >= 0; i--) {
         if (ratings[i] > ratings[i + 1]) {
             // If rating is higher than right neighbour, add a candie to rightCandies
