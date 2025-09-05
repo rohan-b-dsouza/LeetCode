@@ -39,5 +39,5 @@ class Solution {
 }
 
 // T.C => O(2 * n) = O(n)
-// S.C => O(n) for the left array
+// S.C => O(n) for the 'left' array
 
