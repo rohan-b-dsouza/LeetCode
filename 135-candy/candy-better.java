@@ -5,11 +5,13 @@ class Solution {
        int n = ratings.length;
        int[] left = new int[n];
        left[0] = 1;
-        // Step 1 : Take candies considering only the left neighbours
+        // Step 1 : Give candies considering only the left neighbours
        for (int i = 1; i < n; i++) {
+           // If rating is higher than left neighbour, give one candy more than left neighbour
         if (ratings[i] > ratings[i - 1]) {
             left[i] = left[i - 1] + 1;
         }
+            // Else give only one candy
         else {
             left[i] = 1;
         }
