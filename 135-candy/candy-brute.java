@@ -9,18 +9,22 @@ class Solution {
        right[n - 1] = 1;
         // Step 1 : Give candies by considering only the left neighbour
        for (int i = 1; i < n; i++) {
+           // If rating is higher than left neighbour give one candy more than left neighbour
         if (ratings[i] > ratings[i - 1]) {
             left[i] = left[i - 1] + 1;
         }
+            // Else give only one candy
         else {
             left[i] = 1;
         }
        }
         // Step 2 : Give candies by considering only the right neighbour
        for (int i = n - 2; i >= 0; i--) {
+          // If rating is higher than right neighbour give one candy more than right neighbour
         if (ratings[i] > ratings[i + 1]) {
             right[i] = right[i + 1] + 1;
         }
+            // Else give only one candy
         else {
             right[i] = 1;
         }
