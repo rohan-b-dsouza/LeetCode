@@ -1,4 +1,4 @@
-// Optimal (Same as the problem N meetings in one room)
+// Optimal (Greedy) (Same as the problem N meetings in one room)
 
 class Solution {
     public int findLongestChain(int[][] pairs) {
