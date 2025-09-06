@@ -1,4 +1,4 @@
-// Optimal (Peak & Valley)
+// Optimal (Greedy) (Peak & Valley)
 
 class Solution {
     public int candy(int[] ratings) {
