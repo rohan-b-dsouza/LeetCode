@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Greedy)
 
 class Solution {
     public int eraseOverlapIntervals(int[][] intervals) {
