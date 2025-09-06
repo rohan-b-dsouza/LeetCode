@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Greedy)
 
 class Solution {
     public boolean lemonadeChange(int[] bills) {
