@@ -12,7 +12,6 @@ class Solution {
         }
         // If all elements are equal, then no operations are required
         return 0;
-        
     }
 }
 
