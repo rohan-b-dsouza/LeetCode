@@ -7,6 +7,7 @@ class Solution {
         // to sort the string
         char[] arr = s.toCharArray(); 
         Arrays.sort(arr); 
+        int n = arr.length;
         // Store the last character to count no. of operations reqd to convert last character to 'a'
         char lastChar = arr[n - 1];
         // If last char is a it clearly means no operations are reqd on the string as all chars are 'a'
@@ -18,7 +19,7 @@ class Solution {
             // If previous character is 'a' then skip this iteration as 'a' does'nt have to be converted 
             if (arr[i - 1] == 'a') continue;
             // If current character is not equal to previous, then calculate the no. of operations reqd to convert prev character to current character and add it to operations
-            if (arr[i] != arr[i - 1] {
+            if (arr[i] != arr[i - 1]) {
                 operations += arr[i] - arr[i - 1];
             }
         }
