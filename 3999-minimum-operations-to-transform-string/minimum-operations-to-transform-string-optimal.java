@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int minOperations(String s) {
         int n = s.length();
