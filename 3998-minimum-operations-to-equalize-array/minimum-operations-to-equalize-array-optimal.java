@@ -4,8 +4,8 @@ class Solution {
     public int minOperations(int[] nums) {
         int n = nums.length;
         for (int i = 0; i < n - 1; i++) {
-            // If all elements in the array are not equal, then we will require one operation to make all elements equal
-            // i.e Replace each element with the 'AND' of all elements ; taking subarray as entire array
+            // If at least one element is different, just take the entire array as the subarray:
+            // i.e Replace each element with the 'AND' of all elements ; taking subarray as entire array, hence requiring one operation
             if (nums[i] != nums[i + 1]) {
                 return 1;
             }
