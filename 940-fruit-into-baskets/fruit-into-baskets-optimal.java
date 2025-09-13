@@ -1,4 +1,4 @@
-// Better (Sliding Window)
+// Optimal (Sliding Window)
 
 class Solution {
     public int totalFruit(int[] fruits) {
@@ -11,7 +11,7 @@ class Solution {
     while (r < n) {
         // Put the current fruit in the map and update its frequency if already exists
         map.put(fruits[r], map.getOrDefault(fruits[r], 0) + 1);
-        // If map size goes beyond 2, shrink the window in the valid range
+        // If map size goes beyond 2, shrink the window only by 1 to limit the window size to maxlen encountered so far, and try to find a larger valid window in next iteration
         if (map.size() > 2) {
             // Remove the fruit at 'l' by updating its frequency in the map
             map.put(fruits[l], map.get(fruits[l]) - 1);
@@ -30,5 +30,5 @@ class Solution {
     }
 }
 
-// T.C => O(2 * n)
+// T.C => O(n)
 // S.C => O(1)
