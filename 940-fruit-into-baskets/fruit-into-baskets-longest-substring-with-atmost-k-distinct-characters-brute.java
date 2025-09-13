@@ -1,4 +1,4 @@
-// Brute (Same as the problem Longest Substring With At Most K Distinct Characters (T.C = O(n ^ 2), S.C = O(k))) (Just replace 2 with k)
+// Brute (Same as the problem Longest Substring With At Most K Distinct Characters (T.C = O(n ^ 2), S.C = O(k))) (Just replace 2 with k in code)
 
 class Solution {
     public int totalFruits(int[] fruits) {
