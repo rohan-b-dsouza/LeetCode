@@ -1,4 +1,4 @@
-// Optimal (Sliding Window)
+// Optimal (Sliding Window) (There is one more solution which doesn't use map and has a S.C of O(1) with the help of only variables however its extremely non-intuitive so study it later after completing all topics)
 
 class Solution {
     public int totalFruit(int[] fruits) {
