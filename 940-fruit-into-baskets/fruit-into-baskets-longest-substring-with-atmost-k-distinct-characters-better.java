@@ -1,4 +1,4 @@
-// Better (Sliding Window)
+// Better (Sliding Window) (Same as the problem Longest Substring With At Most K Distinct Characters (T.C = O(2 * n), S.C = O(k))) 
 
 class Solution {
     public int totalFruit(int[] fruits) {
