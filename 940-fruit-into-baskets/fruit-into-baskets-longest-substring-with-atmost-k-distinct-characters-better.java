@@ -1,4 +1,5 @@
 // Better (Sliding Window) (Same as the problem Longest Substring With At Most K Distinct Characters (T.C = O(2 * n), S.C = O(k))) 
+// Just replace 2 with k in code
 
 class Solution {
     public int totalFruit(int[] fruits) {
