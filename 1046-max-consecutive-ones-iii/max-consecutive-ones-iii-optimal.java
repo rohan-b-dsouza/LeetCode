@@ -13,7 +13,7 @@ class Solution {
         while (r < n) {
             // If current element is a 0, increment zeroes
             if (nums[r] == 0) zeroes++;
-            // If zeroes exceed k, shrink the window by 1 using 'l' to limit the window to maxlen and try to find a larger possible substring
+            // If zeroes exceed k, shrink the window by 1 using 'l' to limit the window to maxlen discovered so far and try to find a larger possible substring in next iteration
             if (zeroes > k) {
                 // If a zero is found decrement zeroes
                 if (nums[l] == 0) zeroes--;
@@ -29,5 +29,5 @@ class Solution {
     }
 }
 
-// T.C => O(2 * n)
+// T.C => O(n)
 // S.C => O(1)
