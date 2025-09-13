@@ -31,4 +31,4 @@ class Solution {
 }
 
 // T.C => O(2 * n)
-// S.C => O(1)
+// S.C => O(3) = o(1)
