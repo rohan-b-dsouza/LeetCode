@@ -6,17 +6,26 @@ class Solution {
        int l = 0;
        int r = 0;
        int maxlen = 0;
+        // HashMap to store the fruit type and its frequency of occurence
     HashMap<Integer, Integer> map = new HashMap<>();
     while (r < n) {
+        // Put the current fruit in the map and update its frequency if already exists
         map.put(fruits[r], map.getOrDefault(fruits[r], 0) + 1);
+        // If map size goes beyond 2, shrink the window in the valid range
         while (map.size() > 2) {
+            // Remove the fruit at 'l' by updating its frequency in the map
             map.put(fruits[l], map.get(fruits[l]) - 1);
+            // If a fruit's freq becomes 0 remove it from the map
             if (map.get(fruits[l]) == 0) map.remove(fruits[l]);
+            // Increment left pointer 'l' in each step
             l++;
         }
+        // Update maxlen
         maxlen = Math.max(r - l + 1, maxlen);
+        // Expand the window using 'r' pointer
         r++;
     }
+    // Return maxlen
     return maxlen;
     }
 }
