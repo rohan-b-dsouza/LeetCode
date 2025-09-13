@@ -1,5 +1,5 @@
 // Optimal (Sliding Window) (There is one more solution which doesn't use map and has a S.C of O(1) with the help of only variables however its extremely non-intuitive so study it later after completing all topics; however not important)
-// (Same as the problem Longest Substring With At Most K Distinct Characters (T.C = O(n), S.C = O(256)))
+// (Same as the problem Longest Substring With At Most K Distinct Characters (T.C = O(n), S.C = O(256))) (Just replace 2 with k in code)
 
 class Solution {
     public int totalFruit(int[] fruits) {
