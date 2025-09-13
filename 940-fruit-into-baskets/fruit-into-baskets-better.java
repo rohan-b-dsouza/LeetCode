@@ -1,3 +1,5 @@
+// Better (Sliding Window)
+
 class Solution {
     public int totalFruit(int[] fruits) {
        int n = fruits.length;
@@ -19,20 +21,5 @@ class Solution {
     }
 }
 
-
-
-// class Solution {
-//     public int totalFruit(int[] fruits) {
-//         int n = fruits.length;
-//         int maxlen = 0;
-//         for (int i = 0; i < n; i++) {
-//             HashSet<Integer> st = new HashSet<>();
-//             for (int j = i; j < n; j++) {
-//                 st.add(fruits[j]);
-//                 if (st.size() > 2) break;
-//                 maxlen = Math.max(j - i + 1, maxlen);
-//             }
-//         }
-//         return maxlen;
-//     }
-// }
+// T.C => O(2 * n)
+// S.C => O(1)
