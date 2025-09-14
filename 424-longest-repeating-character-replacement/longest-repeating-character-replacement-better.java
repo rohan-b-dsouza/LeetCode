@@ -39,22 +39,3 @@ class Solution {
 
 // T.C => O(n + (n * 26)) = O(n)
 // S.C => O(26)
-
-// class Solution {
-//     public int characterReplacement(String s, int k) {
-//         int n = s.length();
-//         int maxlen = 0;
-//         for (int i = 0; i < n; i++) {
-//             int[] hash = new int[26];
-//             int maxFreq = 0;
-//             for (int j = i; j < n; j++) {
-//                 hash[s.charAt(j) - 'A']++;
-//                 maxFreq = Math.max(maxFreq, hash[s.charAt(j) - 'A']); 
-//                 int replacements = (j - i + 1) - maxFreq;
-//                 if (replacements > k) break;
-//                 maxlen = Math.max(maxlen, j - i + 1);
-//             }
-//         }
-//         return maxlen;
-//     }
-// }
