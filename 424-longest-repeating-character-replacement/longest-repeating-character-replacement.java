@@ -1,4 +1,4 @@
-// Optimal Solution using Sliding Window
+// Optimal Solution (Sliding Window)
 
 class Solution {
     public int characterReplacement(String s, int k) {
