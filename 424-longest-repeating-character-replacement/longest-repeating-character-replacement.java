@@ -1,39 +1,40 @@
-
-// Better (Sliding Window)
+// Optimal Solution using Sliding Window
 
 class Solution {
     public int characterReplacement(String s, int k) {
         int n = s.length();
-        int l = 0;
-        int r = 0;
-        // maxFreq stores the maximum frequency discovered so far
-        int maxFreq = 0;
-        int maxlen = 0;
-        // Hash array to store frequency of each Uppercase Character
-        int[] hash = new int[26];
-        // Traverse till r is within bounds
+        int l = 0, r = 0;
+        int maxFreq = 0;       // stores the maximum frequency of a single character in the current window
+        int maxlen = 0;        // stores the length of the longest valid substring
+        int[] hash = new int[26]; // frequency array for uppercase characters
+
         while (r < n) {
-          // Increment freq of current character
-          hash[s.charAt(r) - 'A']++;
-          // Update maxFreq
-          maxFreq = Math.max(maxFreq, hash[s.charAt(r) - 'A']);
-          // If no. of replacements reqd is greater than k, decrement freq of character at 'l' by 1, and try to find larger valid substring in next iteration
-          if (((r - l + 1) - maxFreq) > k) {
-            // Decrement freq of Character at 'l'
-            hash[s.charAt(l) - 'A']--;
-            // Shrink window using 'l' pointer
-            l++;
-            // Unlike the 'Better' Solution, don't update maxFreq as its not reqd because we require a larger substring than current maxlen encountered so far so we require larger maxFreq too. Decreasing maxFreq won't help, as keeping it as it is will also not bring about any anomalies (DRY RUN ON TESTCASE :- Input : s = "BAABAABBBAAA" , k = 2 TO UNDERSTAND BETTER)
-          }
-          // Update maxlen
-          maxlen = Math.max(maxlen, r - l + 1); 
-          // Expand the window using 'r' pointer
-          r++;
+            // Increment frequency of the current character
+            hash[s.charAt(r) - 'A']++;
+            // Update the maximum frequency seen so far in the window
+            maxFreq = Math.max(maxFreq, hash[s.charAt(r) - 'A']);
+
+            // If the number of replacements needed exceeds k, shrink the window
+            if ((r - l + 1 - maxFreq) > k) {
+                // Decrement frequency of the character at the left pointer
+                hash[s.charAt(l) - 'A']--;
+                // Move left pointer to shrink the window
+                l++;
+                // Note: We do NOT update maxFreq here because it won't affect correctness.
+                // maxFreq represents the max frequency seen so far, which is enough for this logic.
+                // 
+                // DRYRUN on TESTCASE - Input : s = "BAABAABBBAAA" , k = 2 to understand better.
+            }
+
+            // Update the maximum length of valid substring
+            maxlen = Math.max(maxlen, r - l + 1);
+
+            // Expand the window by moving the right pointer
+            r++;
         }
-        // Return maxlen
         return maxlen;
     }
 }
 
-// T.C => O(n + (n * 26)) = O(n)
-// S.C => O(26)
+// T.C => O(n)
+// S.C => O(1)
