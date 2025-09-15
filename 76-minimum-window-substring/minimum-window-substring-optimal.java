@@ -47,3 +47,6 @@ class Solution {
         return (start == -1) ? "" : s.substring(start, end + 1);
     }
 }
+
+// T.C => O(2 * n) = O(n)
+// S.C => O(256)
