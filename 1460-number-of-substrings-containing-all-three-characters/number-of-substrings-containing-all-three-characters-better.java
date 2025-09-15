@@ -37,25 +37,5 @@ class Solution {
   }
 }
 
-
-// class Solution {
-//   public int numberOfSubstrings(String s) {
-//     int n = s.length();
-//     int ans = 0;
-//     for (int i = 0; i < n; i++) {
-//       int[] hash = new int[3];
-//       int cnt = 0;
-//       for (int j = i; j < n; j++) {
-//         if (hash[s.charAt(j) - 'a'] != 1) {
-//           cnt++;
-//         }
-//         hash[s.charAt(j) - 'a'] = 1;
-//         if (cnt == 3) {
-//             ans += n - j;
-//             break;
-//         }
-//       }
-//     }
-//     return ans;
-//   }
-// }
+// T.C => O(2 * n)
+// S.C => O(3)
