@@ -15,7 +15,7 @@ class Solution {
       // substrings optimally using n - r
       while (hash[0] > 0 && hash[1] > 0 && hash[2] > 0) {
         ans += n - r;
-        // Shrink the window by decrementing frequency of character at 'l' and incrementing 'l
+        // Shrink the window by decrementing frequency of character at 'l' and incrementing 'l. This is done to explore other possible substrings. Incase we get into invalid state i.e either of a, b, c becomes zero then this inner loop breaks and we expand window further to get back into valid states
         hash[s.charAt(l) - 'a']--;
         l++;
       }
