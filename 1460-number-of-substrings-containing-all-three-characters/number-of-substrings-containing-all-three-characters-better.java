@@ -3,36 +3,26 @@
 class Solution {
   public int numberOfSubstrings(String s) {
     int n = s.length();
-    int ans = 0;
-    int l = 0;
-    int r = 0;
-    // Hash array to store frequency of characters
+    int ans = 0, l = 0;
+    // Hash Array to store the frequency of characters
     int[] hash = new int[3];
-    int cnt = 0; 
-    // Traverse till r is within bounds
+    int r = 0;
+    // Traverse till 'r' is within bounds
     while (r < n) {
-      // If current character is appearing first time increment counter
-      if (hash[s.charAt(r) - 'a'] == 0) {
-        cnt++;
-      }
-      // Also increment frequency of the character in the map
+      // Increment frequency of current character
       hash[s.charAt(r) - 'a']++;
-      // If all 3 elements have arrived
-      while (cnt == 3) {
-        // Compute the no. of valid substrings
+      // If all 3 characters are present in current window then compute the maximum possible valid
+      // substrings optimally using n - r
+      while (hash[0] > 0 && hash[1] > 0 && hash[2] > 0) {
         ans += n - r;
-        // Decrement frequency of character at 'l'
+        // Shrink the window by decrementing frequency of character at 'l' and incrementing 'l
         hash[s.charAt(l) - 'a']--;
-        // If the frequency of this character becomes zero, it means we are back to invalid state hence decrement counter to end this inner loop and explore characters on right of 'r' to go back into valid state
-        if (hash[s.charAt(l) - 'a'] == 0) {
-          cnt--;
-        }
-        // Shrink window using left pointer 'l'
         l++;
       }
-      // Expand the window using right pointer
+      // Expand window to explore further possible substrings
       r++;
     }
+    // Return the ans
     return ans;
   }
 }
