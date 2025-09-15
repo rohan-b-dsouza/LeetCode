@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {    
     public int numberOfSubstrings(String s) {
         int n = s.length();
@@ -14,3 +16,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n)
+// S.C => O(3)
