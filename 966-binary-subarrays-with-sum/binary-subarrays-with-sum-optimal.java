@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Sliding Window)
 
 class Solution {
     // Function to count the subarrays <= goal
