@@ -39,5 +39,5 @@ class Solution {
     }
 }
 
-// T.C => O(2 * n) = O(n)
+// T.C => O(4 * n) = O(n)
 // S.C => O(1)
