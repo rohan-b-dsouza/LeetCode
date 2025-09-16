@@ -1,56 +1,38 @@
 class Solution {
-    /* Function to find the number of 
-    subarrays with sum equal to `goal` */
-    public int numSubarraysWithSum(int[] nums, int goal) {
-        
-        /* Calculate the number of subarrays with 
-        sum exactly equal to `goal` by using the 
-        difference between subarrays with sum
-        less than or equal to `goal` and those with sum
-        less than or equal to `goal-1` */
-        return numSubarraysWithSumLessEqualToGoal(nums, goal) - numSubarraysWithSumLessEqualToGoal(nums, goal - 1);
-    }
-    
-    /* Helper function to find the number of 
-    subarrays with sum less than or equal to `goal` */
-    private int numSubarraysWithSumLessEqualToGoal(int[] nums, int goal) {
-        
-        /* If goal is negative, there 
-        can't be any valid subarray sum */
+    // Function to count the subarrays <= goal
+    public int countSubarrays(int[] nums, int goal) {
+        int n = nums.length;
+        // If goal is < 0 then return 0 
         if (goal < 0) return 0;
-        
-        // Pointers to maintain the current window
-        int l = 0, r = 0; 
-        
-        /* Variable to track the current
-        sum of elements in the window*/
-        int sum = 0;      
-        
-        // Variable to count the number of subarrays
-        int count = 0;   
-        
-        // Iterate through the array 
-        while (r < nums.length) {
-            sum += nums[r]; 
-            
-            /* Shrink the window from the left
-            side if the sum exceeds `goal` */
+        // Assign left pointer to 0
+        int l = 0;
+        // Assign right pointer to 0
+        int r = 0;
+        // Assign a counter to count the no. of subarrays <= goal
+        int cnt = 0;
+        // Assign a variable sum to compute running sum
+        int sum = 0;
+        // Traverse till r is within bounds
+        while (r < n) {
+            // Add current element to sum
+            sum += nums[r];
+            // If sum is > goal, then shrink the window till sum is again <= goal
             while (sum > goal) {
-                sum -= nums[l];  
-                
-                // Move the left pointer `l` forward
-                l++;            
+                // Decrement element at 'l' from sum
+                sum -= nums[l];
+                // Increment 'l' pointer
+                l++;
             }
-            
-            /* Count all subarrays ending at
-            `r` that satisfy the sum condition */
-            count += (r - l + 1);
-            
-            // Move the right pointer `r` forward 
-            r++; 
+            // Count the no. of subarrays <= goal within current window
+            cnt += r - l + 1;
+            // Expand the window using 'r' pointer
+            r++;
         }
-        
-        // Return the total count of subarrays
-        return count;
+        // Return the cnt
+        return cnt;
+    }
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        // Return the (count of subarrays <= goal) - (count of subarrays <= goal - 1)
+        return countSubarrays(nums, goal) - countSubarrays(nums, goal - 1);
     }
 }
