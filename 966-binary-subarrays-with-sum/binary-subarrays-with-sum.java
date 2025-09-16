@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     // Function to count the subarrays <= goal
     public int countSubarrays(int[] nums, int goal) {
@@ -36,3 +38,6 @@ class Solution {
         return countSubarrays(nums, goal) - countSubarrays(nums, goal - 1);
     }
 }
+
+// T.C => O(2 * n) = O(n)
+// S.C => O(1)
