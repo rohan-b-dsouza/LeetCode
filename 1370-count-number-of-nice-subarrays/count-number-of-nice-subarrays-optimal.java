@@ -13,7 +13,7 @@ class Solution {
         int cnt = 0; // Initialize no. of nice subarrays to zero
         // Traverse till r is within bounds
         while (r < n) {
-            // Add current element's parity (1 for even, 0 for odd) to the sum to track the no. of odd nos. in current window
+            // Add current element's parity (1 for odd, 0 for even) to the sum to track the no. of odd nos. in current window
             sum += nums[r] % 2;
             // If no. of odd numbers exceed k, shrink the window till sum is again within k bounds
             while (sum > k) {
