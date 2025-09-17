@@ -35,3 +35,6 @@ class Solution {
         return countSubarrays(nums, k) - countSubarrays(nums, k - 1);
     }
 }
+
+// T.C => O(4 * n) = O(n)
+// S.C => O(1)
