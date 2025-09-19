@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Sliding Window)
 
 class Solution {
     public int lengthOfLongestSubstring(String s) {
