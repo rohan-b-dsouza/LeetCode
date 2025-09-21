@@ -1,4 +1,4 @@
-import java.util.*;
+// Optimal
 
 class Solution {
     public int[] maxKDistinct(int[] nums, int k) {
@@ -19,3 +19,6 @@ class Solution {
         return res;
     }
 }
+
+// T.C => O(n * log(n)) + O(min(k, set.size())
+// S.C => O(n) + O(min(k, set.size())
