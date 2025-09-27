@@ -47,4 +47,4 @@ class Solution {
 // Then a right moving asteroid 1 can't collide with it as it is on right of left moving asteroid in the array. Hence, in this case actually both these asteroids are moving away from each other.
 
 // T.C => O(2 * n) = O(n)
-// S.C => O(2 * n) for the stack and 'ans' array = O(n)
+// S.C => O(2 * n) for the stack and 'ans' array, hence => O(n)
