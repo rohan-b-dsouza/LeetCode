@@ -27,4 +27,4 @@ class Solution {
 }
 
 // T.C => O(2 * n) for outer loop and in worst case inner loop can also go upto O(2 * n) hence O(4 * n) = O(n)
-// S.C => O(n)
+// S.C => O(2 * n) in worst case for stack + O(n) for the ans = O(n)
