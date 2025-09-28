@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Monotonic Decreasing Stack)
 
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
