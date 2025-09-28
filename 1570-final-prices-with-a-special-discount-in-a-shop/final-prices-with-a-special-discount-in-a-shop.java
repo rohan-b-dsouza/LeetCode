@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Similar to the problem 'Next Smaller Element') (Monotonic Increasing Stack)
 
 class Solution {
     public int[] finalPrices(int[] prices) {
