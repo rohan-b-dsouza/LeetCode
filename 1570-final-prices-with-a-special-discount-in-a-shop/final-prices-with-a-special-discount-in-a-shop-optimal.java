@@ -1,4 +1,5 @@
-// Optimal (Similar to the problem 'Next Smaller Element') (Monotonic Increasing Stack)
+// Optimal  (Monotonic Increasing Stack)
+// Similar to the problem 'Next Smaller Element' just change while (!stack.isEmpty() && stack.peek() >= prices[i]) to (!stack.isEmpty() && stack.peek() > prices[i]) 
 
 class Solution {
     public int[] finalPrices(int[] prices) {
