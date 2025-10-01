@@ -42,15 +42,22 @@ class Solution {
     public int sumSubarrayMins(int[] arr) {
         int n = arr.length;
         final int MOD = 1000000007;
+        // Get PSE and NSE arrays of 'arr'
         int[] pse = findPSEE(arr);
         int[] nse = findNSE(arr);
+        // Initialize sum to zero
         long sum = 0;
         for (int i = 0; i < n; i++) {
+             // Get subarray of left type
             int left = i - pse[i];
+            // Get subarrays of right type
             int right = nse[i] - i;
+            // Calculate total subarrays with current element as the minimum element
             long contrib = ((long) left * right % MOD) * arr[i] % MOD;
+            // Update the sum
             sum = (sum + contrib) % MOD;
         } 
+        // Return the sum
         return (int) sum;
     }
 }
