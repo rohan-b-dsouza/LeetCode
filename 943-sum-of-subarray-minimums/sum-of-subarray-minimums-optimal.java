@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int[] findPSEE(int[] arr) {
         int n = arr.length;
@@ -52,3 +54,6 @@ class Solution {
         return (int) sum;
     }
 }
+
+// T.C => O(2 * n) + O(2 * n) + O(n) = O(5 * n) = O(n)
+// S.C => O(4 * n)
