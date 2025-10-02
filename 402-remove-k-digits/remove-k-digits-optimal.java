@@ -25,7 +25,7 @@ class Solution {
             k--;
         }
     
-        // Remove leading zeros in overall O(n), not by repeated inbuilt deleteCharAt() func that takes O(n) every time
+        // Remove leading zeros in overall O(n), not by repeated inbuilt deleteCharAt() func that takes O(n) every time to remove first character every time
         int idx = 0;
         // Traverse over the StringBuilder and increment idx till a non - zero element is found to eliminate all leading zeroes
         while (idx < sb.length() && sb.charAt(idx) == '0') idx++;
