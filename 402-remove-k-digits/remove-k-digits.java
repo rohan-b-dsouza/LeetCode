@@ -1,4 +1,4 @@
-// Optimal (Monotonic Increasing Stack)
+// Optimal (Monotonic Increasing Stack + Greedy)
 // Here, we used StringBuilder like a stack as this is the most efficient way to solve this problem. Otherwise if we use a Deque (Stack) it would anyways require a StringBuilder too
 
 class Solution {
@@ -11,7 +11,7 @@ class Solution {
 
         for (int i = 0; i < n; i++) {
             // If stack (StringBuilder) is not empty and k is not zero and current character is smaller than stack's top, pop the stack's top and decrement k
-            while (sb.length() > 0 && k > 0 && nums.charAt(i) < sb.charAt(sb.length() - 1) {
+            while (sb.length() > 0 && k > 0 && nums.charAt(i) < sb.charAt(sb.length() - 1)) {
                 sb.deleteCharAt(sb.length() - 1);
                 k--;
             }
