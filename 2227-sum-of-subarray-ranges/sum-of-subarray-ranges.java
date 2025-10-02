@@ -1,4 +1,7 @@
+// Optimal
+
 class Solution {
+  
   public int[] findPSEE(int[] arr) {
     int n = arr.length;
     int[] pse = new int[n];
@@ -39,19 +42,25 @@ class Solution {
     // Return the list
     return nse;
   }
-
+  
   public long sumSubarrayMins(int[] arr) {
-    int n = arr.length;
-    int[] pse = findPSEE(arr);
-    int[] nse = findNSE(arr);
-    long sum = 0;
-    for (int i = 0; i < n; i++) {
-      int left = i - pse[i];
-      int right = nse[i] - i;
-      sum += (long) left * right * arr[i];
+        int n = arr.length;
+        // Get PSE and NSE arrays of 'arr'
+        int[] pse = findPSEE(arr);
+        int[] nse = findNSE(arr);
+        // Initialize sum to zero
+        long sum = 0;
+        for (int i = 0; i < n; i++) {
+            // Count subarray of left type
+            int left = i - pse[i];
+            // Count subarrays of right type
+            int right = nse[i] - i;
+            // Update the sum
+            sum += (long) left * right * arr[i];
+        }
+        // Return the sum
+        return sum;
     }
-    return sum;
-  }
 
   public int[] findPGEE(int[] arr) {
     int n = arr.length;
@@ -97,19 +106,29 @@ class Solution {
 
   public long sumSubarrayMaxs(int[] arr) {
     int n = arr.length;
+    // Get the pgee and nge array of 'arr'
     int[] pgee = findPGEE(arr);
     int[] nge = findNGE(arr);
     long sum = 0;
     for (int i = 0; i < n; i++) {
+      // Count subarrays of 'left' type
       int left = i - pgee[i];
+      // Count subarrays of 'right' type
       int right = nge[i] - i;
+      // Update the sum
       sum += (long) left * right * arr[i]; 
     }
+    // Return the sum
     return sum;
   }
 
   public long subArrayRanges(int[] nums) {
     int n = nums.length;
+    // Compute the answer by subtracting sum of subarray minimums from sum of subarray maximums
     return sumSubarrayMaxs(nums) - sumSubarrayMins(nums);
   }
 }
+
+
+// T.C => O(10 * n) = O(n)
+// S.C => O(8 * n) = O(n)
