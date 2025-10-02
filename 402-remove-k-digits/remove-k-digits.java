@@ -34,3 +34,6 @@ class Solution {
         return idx == sb.length() ? "0" : sb.substring(idx);
     }
 }
+
+// T.C => O(n + k) + O(k) + O(n) = O(2 * (n + k)) = O(n)
+// S.C => O(n - k) = O(n)
