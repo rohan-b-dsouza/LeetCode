@@ -1,4 +1,4 @@
-// Optimal
+// Brute
 
 class MinStack {
 // Stack of int[] to store pairs of {Element, Minimum element seen so far}
