@@ -21,5 +21,5 @@ class Solution {
     }
 }
 
-// T.C => O((n - k + 1) * k) = O(n)
+// T.C => O((n - k + 1) * k) = O(n * k)
 // S.C => O(n - k + 1) = O(n)
