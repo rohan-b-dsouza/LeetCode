@@ -1,0 +1,57 @@
+// Brute
+
+class Solution {
+    public int[] findPSE(int[] arr) {
+        int n = arr.length;
+        int[] pse = new int[n];
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            // If stack is not empty and stack's peek is greater than current element, pop the stack's top
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+                stack.pop();
+            }
+            // If stack is empty then set PSE as -1, to calculate correct 'left'
+            if(stack.isEmpty()) pse[i] = -1; 
+            // Else add stack's top as PSE of current element
+            else pse[i] = stack.peek();
+            // Push current element's index to the stack
+            stack.push(i);
+        }
+        // Return the answer
+        return pse;
+    }
+    public int[] findNSE(int[] arr) {
+        int n = arr.length;
+       int[] nse = new int[n];
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = n - 1; i >= 0; i--) {
+            // If stack is not empty and stack's peek is greater than or equal to current element, then pop the stack's top
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+                stack.pop();
+            }
+            // If stack is empty, then set NSE as n for calculating correct 'right'
+            if (stack.isEmpty()) nse[i] = n;
+            // Else NSE of the current element is stack's top
+            else nse[i] = stack.peek();
+            // Push current element's index to the stack
+            stack.push(i);
+        }
+        // Return the list
+        return nse;
+    }
+    public int largestRectangleArea(int[] heights) {
+       int n = heights.length;
+        // Get the pse and nse of all elements
+       int[] pse = findPSE(heights);
+       int[] nse = findNSE(heights);
+       int maxArea = 0;
+      // For each element, compute the area and update maxArea
+       for (int i = 0; i < n; i++) {
+        maxArea = Math.max(maxArea, heights[i] * (nse[i] - pse[i] - 1));
+       }
+       return maxArea;
+    }
+}
+
+// T.C : O(2 * n) + O(2 * n) + O(n) = O(5 * n)
+// S.C => O(4 * n)
