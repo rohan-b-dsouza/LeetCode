@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     // Function that returns the maxarea possible in the histogram
     public int largestRectangleArea(int[] heights) {
