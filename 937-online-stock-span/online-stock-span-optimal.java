@@ -28,5 +28,5 @@ class StockSpanner {
  * int param_1 = obj.next(price);
  */
 
-// T.C => O(n)
+// T.C => O(n) in worst-case, but O(1) amortized per call
 // S.C => O(n)
