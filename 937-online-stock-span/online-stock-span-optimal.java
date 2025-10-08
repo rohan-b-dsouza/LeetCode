@@ -1,4 +1,5 @@
 // Optimal (Refer GFG version of this problem to understand better as the leetcode one is poorly described and also unnecessary twist of design has been made which makes it confusing)
+// (Monotonic Decreasing Stack)
 
 class StockSpanner {
     private Deque<int[]> stack; // pair = {price, span}
