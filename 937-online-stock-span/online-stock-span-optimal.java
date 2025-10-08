@@ -10,7 +10,7 @@ class StockSpanner {
          // Initialize span to 1
         int span = 1;
         // If stack is not empty, and current stock price is greater than peek stock price, add peek's span to span
-        while (!stack.isEmpty() && price >= stack.peek()[0) {
+        while (!stack.isEmpty() && price >= stack.peek()[0]) {
             span += stack.pop()[1];
         }
         // Push the current price to the stack
