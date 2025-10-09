@@ -25,5 +25,5 @@ class Solution {
 
 }
 
-// T.C => O(n ^ 2) + O(n) = O(n ^ 2)
+// T.C => O(n) + O(n) = O(2 * n)
 // S.C => O(2 * n) = O(n)
