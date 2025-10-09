@@ -1,4 +1,4 @@
-// Brute
+// Brute (Refer the GFG problem 'The Celebrity Problem' too, its same with a difference in how the input is given)
 
 class Solution {
     public int findJudge(int n, int[][] trust) {
