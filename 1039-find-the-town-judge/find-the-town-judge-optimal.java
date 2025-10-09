@@ -1,3 +1,6 @@
+// Optimal 
+// VVIMP : Refer the GFG Problem 'The Celebrity Problem' in which the input is given in a different way but it changes the solutions significantly, so its very important to solve that problem too.
+
 class Solution {
     public int findJudge(int n, int[][] trust) {
         if (n == 1) return 1; // Special case: single person
@@ -15,7 +18,9 @@ class Solution {
                 return i; // judge found
             }
         }
-
         return -1; // no judge
     }
 }
+
+// T.C => O(n) + O(n) = O(2 * n)
+// S.C => O(n)
