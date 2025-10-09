@@ -3,7 +3,6 @@
 
 class Solution {
     public int findJudge(int n, int[][] trust) {
-
         // Array that tracks how many people trust a person
         int[] trustsMe = new int[n + 1];
         // Array that tracks how many people a person trusts
