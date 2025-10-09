@@ -1,4 +1,5 @@
-// Brute (VVIMP : Refer the GFG problem 'The Celebrity Problem' too, its same with a difference in how the input is given)
+// Brute 
+// VVIMP : Refer the GFG Problem 'The Celebrity Problem' in which the input is given in a different way but it changes the solutions significantly, so its very important to solve that problem too.
 
 class Solution {
     public int findJudge(int n, int[][] trust) {
