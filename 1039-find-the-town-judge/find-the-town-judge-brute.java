@@ -26,4 +26,4 @@ class Solution {
 }
 
 // T.C => O(n) + O(n) = O(2 * n) = O(n)
-// S.C => O(2 * n) = O(n)
+// S.C => O(n) + O(n) = O(2 * n) = O(n)
