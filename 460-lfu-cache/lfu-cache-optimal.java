@@ -84,6 +84,7 @@ class LFUCache {
     minFreq = 0;
   }
   // This function is called only when the get / put operation on a node is not for the first time
+  // It ensures that LFU is maintained
   public void updateFreqDList(Node node) {
     // Get the current list of this node from the freqDList map and delete it from this list
     freqDList.get(node.cnt).deleteNode(node);
