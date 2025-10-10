@@ -149,7 +149,7 @@ class LFUCache {
       // Hence, minFreq will also become 1 now
         minFreq = 1;
         // Get the new list to store this newNode, if a list with minFreq 1 already exists then use that list itself, else create new list
-        DList newDList = freqDList.getOrDefault(minFreq, new List());
+        DList newDList = freqDList.getOrDefault(minFreq, new DList());
         // Create a newNode with the given key and value
         Node newNode = new Node(key, value);
         // Insert this new node after the head of newDList
