@@ -110,5 +110,5 @@ class LRUCache {
  * obj.put(key,value);
  */
 
-// T.C => O(1) per operation
+// T.C => O(1) per operation, O(n) to process all queries
 // S.C => O(n) + O(n) for the map and the DLL = O(2 * n) = O(n)
