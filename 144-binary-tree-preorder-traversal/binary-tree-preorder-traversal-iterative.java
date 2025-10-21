@@ -1,3 +1,5 @@
+// Iterative
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,6 +15,7 @@
  *     }
  * }
  */
+
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         // List to store the answer
@@ -43,4 +46,3 @@ class Solution {
 
 // T.C => O(n)
 // S.C => O(n) for skewed B.T and O(log (n)) for balanced B.T
-
