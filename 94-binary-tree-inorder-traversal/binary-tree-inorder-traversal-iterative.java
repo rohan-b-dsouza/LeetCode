@@ -33,11 +33,11 @@ class Solution {
               // If root becomes null
             else {
                 // Backtrack to the previous node
-                TreeNode node = st.pop();
+                root = st.pop();
                 // Add its value to the 'ans' list
-                ans.add(node.val);
+                ans.add(root.val);
                // Traverse right
-                root = node.right;
+                root = root.right;
             }
         }
       // Return ans
