@@ -1,0 +1,51 @@
+// Iterative
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        // Stack to handle backtracking
+        Deque<TreeNode> st = new ArrayDeque<>();
+      // List to store the answer  
+      List<Integer> ans = new ArrayList<>();
+      // Keep looping infinitely  
+      while (true) { 
+          // If root is not null
+            if (root != null) {
+                // Push current node to the stack
+                st.push(root);
+              // Move to the left
+                root = root.left;
+            }
+              // If root becomes null
+            else {
+                // If stack is empty, it means all nodes are traversed hence break the loop
+                if (st.isEmpty()) break;
+                // Backtrack to the previous node
+                TreeNode node = st.pop();
+                // Add its value to the 'ans' list
+                ans.add(node.val);
+                // Move to the right
+                root = node.right;
+            }
+        }
+      // Return ans
+        return ans; 
+    }
+}
+
+// T.C => O(n)
+// S.C => O(n) for the stack if its a skewed tree and O(log (n)) for a balanced tree
