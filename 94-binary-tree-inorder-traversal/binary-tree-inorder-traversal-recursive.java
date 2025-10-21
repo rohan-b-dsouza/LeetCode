@@ -1,3 +1,5 @@
+// Recursive
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,16 +15,24 @@
  *     }
  * }
  */
+
 class Solution {
     public void recursiveInorder(TreeNode node, List<Integer> ans) {
+        // If node is null, return 
         if (node == null) return;
+        // Recursively go left
         recursiveInorder(node.left, ans);
+        // Add the node to the ans
         ans.add(node.val);
+        // Recursively go right
         recursiveInorder(node.right, ans);
     }
     public List<Integer> inorderTraversal(TreeNode root) {
+        // List to store the answer
         List<Integer> ans = new ArrayList<>();
+        // Call the recursive function
         recursiveInorder(root, ans);
+        // Return the ans
         return ans;
     }
 }
