@@ -1,3 +1,5 @@
+// Recursive
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -26,3 +28,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n)
+// S.C => O(n) for skewed B.T and O(log (n)) for balanced B.T
