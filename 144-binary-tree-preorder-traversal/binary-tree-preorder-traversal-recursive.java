@@ -36,5 +36,5 @@ class Solution {
     }
 }
 
-// T.C => O(n)
+// T.C => O(n) as we visit every node
 // S.C => O(n) for skewed B.T and O(log (n)) for balanced B.T
