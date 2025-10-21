@@ -27,7 +27,7 @@ class Solution {
             if (root != null) {
                 // Push current node to the stack
                 st.push(root);
-              // Move to the left
+              // Traverse left
                 root = root.left;
             }
               // If root becomes null
@@ -36,7 +36,7 @@ class Solution {
                 TreeNode node = st.pop();
                 // Add its value to the 'ans' list
                 ans.add(node.val);
-                // Move to the right
+               // Traverse right
                 root = node.right;
             }
         }
