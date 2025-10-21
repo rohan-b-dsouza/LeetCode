@@ -22,7 +22,7 @@ class Solution {
       // List to store the answer  
       List<Integer> ans = new ArrayList<>();
       // Keep looping until stack is empty and root is also null, this condition denotes that all nodes are traversed
-      while (!stack.isEmpty() || root != null) { 
+      while (!st.isEmpty() || root != null) { 
           // If root is not null
             if (root != null) {
                 // Push current node to the stack
