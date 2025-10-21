@@ -21,8 +21,8 @@ class Solution {
         Deque<TreeNode> st = new ArrayDeque<>();
       // List to store the answer  
       List<Integer> ans = new ArrayList<>();
-      // Keep looping infinitely  
-      while (true) { 
+      // Keep looping until stack is empty and root is also null, this condition denotes that all nodes are traversed
+      while (!stack.isEmpty() || root != null) { 
           // If root is not null
             if (root != null) {
                 // Push current node to the stack
@@ -32,8 +32,6 @@ class Solution {
             }
               // If root becomes null
             else {
-                // If stack is empty, it means all nodes are traversed hence break the loop
-                if (st.isEmpty()) break;
                 // Backtrack to the previous node
                 TreeNode node = st.pop();
                 // Add its value to the 'ans' list
