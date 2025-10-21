@@ -48,4 +48,4 @@ class Solution {
 }
 
 // T.C => O(n)
-// S.C => O(n) for the stack if its a skewed tree and O(log (n)) for a balanced tree
+// S.C => O(n) for the stack if its a skewed tree and O(log (n)) for a balanced tree -------{Space reqd for ans list is for output, hence ignored here}
