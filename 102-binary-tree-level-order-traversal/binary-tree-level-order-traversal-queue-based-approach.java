@@ -1,4 +1,4 @@
-// Queue Based Approach
+// Queue Based Approach (BFS)
 
 /**
  * Definition for a binary tree node.
