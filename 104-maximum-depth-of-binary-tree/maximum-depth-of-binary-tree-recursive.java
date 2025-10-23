@@ -1,4 +1,9 @@
-// Recursive
+// Recursive (Postorder Traversal)
+
+// Why Postorder pattern is observed here? -> 
+// 1. Go left first → maxDepth(root.left)
+// 2. Go right next → maxDepth(root.right)
+// 3. Process current node → 1 + Math.max(left, right)
 
 /**
  * Definition for a binary tree node.
