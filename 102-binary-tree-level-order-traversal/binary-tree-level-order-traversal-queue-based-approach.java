@@ -51,4 +51,4 @@ class Solution {
 }
 
 // T.C => O(n)
-// S.C => O(n) for the queue i.e in the worst case when all leaf nodes are present ------- {O(n) for the ans list is output space so not counted here}
+// S.C => O(n / 2) = O(n) => for the queue i.e in the worst case when all leaf nodes are present ------- {O(n) for the ans list is output space so not counted here}
