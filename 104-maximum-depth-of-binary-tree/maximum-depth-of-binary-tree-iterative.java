@@ -38,4 +38,4 @@ class Solution {
 }
 
 // T.C => O(n) as we visit all the nodes
-// S.C => O(n) as in the worst case all leaf nodes will be present (i.e last level will be complete)
+// S.C => O(n / 2) = O(n) => as in the worst case all leaf nodes will be present (i.e last level will be complete)
