@@ -1,3 +1,5 @@
+// Recursive
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -15,7 +17,12 @@
  */
 class Solution {
     public int maxDepth(TreeNode root) {
+        // If root is null, return 0
         if (root == null) return 0;
+        // Count the current node + max of left and right subtree
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 }
+
+// T.C => O(n) as we visit all the nodes
+// S.C => O(n) for recursive stack space in worst case (i.e skewed B.T) and O(log (n)) for Balanced B.T
