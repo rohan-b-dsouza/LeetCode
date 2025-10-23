@@ -27,4 +27,4 @@ class Solution {
 }
 
 // T.C => O(n) as we visit all nodes in the worst case i.e both trees are identical
-// S.C => O(n) in worst case (skewed B.T) or O(log (n)) for balanced tree 
+// S.C => O(n) in worst case (skewed B.T) or O(log (n)) in best case (balanced B.T) 
