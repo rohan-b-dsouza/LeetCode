@@ -1,4 +1,5 @@
 // Optimal (Greedy Approach)
+// Refer 3633. Earliest Finish Time for Land and Water Rides I for brute solution of same solution with easier constraints
 
 class Solution {
     public int earliestFinishTime(int[] landStartTime, int[] landDuration, int[] waterStartTime, int[] waterDuration) {
@@ -34,5 +35,5 @@ class Solution {
     }
 }
 
-// T.C => O(2 * (n + m)) = O(n + m)
+// T.C => O((2 * n) + m)) = O(n + m)
 // S.C => O(1)
