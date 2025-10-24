@@ -35,7 +35,9 @@ class Solution {
     }
 }
 
+// We need to take care of the case where minLand < waterStartTime[j] or minWater < landStartTime[j], hence in the minTime code line we have used Math.max(waterStartTime[j], minLand) and Math.max(landStartTime[j], minWater) respectively 
+// inside Math.min()
+
 // T.C => O((2 * n) + m)) = O(n + m)
 // S.C => O(1)
 
-// We need to take care of the case where minLand < waterStartTime[j] or minWater < landStartTime[j], hence in the minTime code line we have used Math.max(waterStartTime[j], minLand) and Math.max(landStartTime[j], minWater) resp inside Math.min()
