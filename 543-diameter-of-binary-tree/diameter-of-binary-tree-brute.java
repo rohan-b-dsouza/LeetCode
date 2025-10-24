@@ -35,4 +35,5 @@ class Solution {
 }
 
 // T.C => O(n ^ 2) as for each node we compute the height of its left and right subtree
-// S.C => O(2 * n) = O(n) as two recursion stacks will be reqd one for maxDepth func calls and one for diameterOfBinaryTree() func calls
+// S.C => O(2 * n) = O(n) as two recursion stacks will be reqd one for maxDepth func calls and one for diameterOfBinaryTree() func calls ---------{Worst Case : Skewed B.T}
+// Best Case S.C => O(2 * log(n)) for Balanced B.T
