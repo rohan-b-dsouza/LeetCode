@@ -1,5 +1,5 @@
 // Optimal (Greedy Approach)
-// Refer 3633. Earliest Finish Time for Land and Water Rides I for brute solution of same solution with easier constraints
+// Refer 3633. Earliest Finish Time for Land and Water Rides I for brute solution of same problem with easier constraints
 
 class Solution {
     public int earliestFinishTime(int[] landStartTime, int[] landDuration, int[] waterStartTime, int[] waterDuration) {
