@@ -1,5 +1,5 @@
 // Brute - Works for the given constraints
-// Refer 3633. Earliest Finish Time for Land and Water Rides II to see optimal solution for more tight constraints
+// Refer 3633. Earliest Finish Time for Land and Water Rides II to see optimal solution for same problem with more tight constraints
 
 class Solution {
     public int earliestFinishTime(int[] landStartTime, int[] landDuration, int[] waterStartTime, int[] waterDuration) {
