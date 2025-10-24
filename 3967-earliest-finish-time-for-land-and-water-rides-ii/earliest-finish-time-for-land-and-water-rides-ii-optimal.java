@@ -24,7 +24,7 @@ class Solution {
 
         // Case 2 : First Water, then Land
         // We have computed the water ride with minimum reqd completion time in previous loop itself
-        // Now, Find the land ride which adds least possible time to the this time
+        // Now, Find the land ride which adds least possible time to this time
 
         for (int j = 0; j < l1; j++) {
             minTime = Math.min(minTime, Math.max(landStartTime[j], minWater) + landDuration[j]);
