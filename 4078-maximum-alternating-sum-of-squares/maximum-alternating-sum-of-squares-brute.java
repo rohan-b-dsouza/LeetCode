@@ -1,4 +1,4 @@
-// Optimal
+// Brute
 
 class Solution {
     public long maxAlternatingSum(int[] nums) {
