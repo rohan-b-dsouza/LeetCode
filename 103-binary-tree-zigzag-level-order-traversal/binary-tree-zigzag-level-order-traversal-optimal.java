@@ -81,4 +81,4 @@ class Solution {
 }
 
 // T.C => O(n) as we visit each node once
-// S.C => O(n) for skewed B.T and O(log (n)) for balanced B.T 
+// S.C => O(n) as in the worst case last level can have all nodes present i.e n / 2 nodes approx.
