@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Level order traversal)
 
 /**
  * Definition for a binary tree node.
