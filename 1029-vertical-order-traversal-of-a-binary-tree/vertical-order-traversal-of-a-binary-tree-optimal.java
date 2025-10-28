@@ -19,7 +19,7 @@
 class Solution {
     // Recursive Inorder Traversal Function
     public void recursiveInorder(TreeNode node, int row, int col,
-            TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map) {
+         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map) {
         // If node equals null then return
         if (node == null)
             return;
@@ -64,3 +64,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(N * log (N)) overall
+// S.C => O(N) for skewed B.T and O(log (N)) for balanced B.T
