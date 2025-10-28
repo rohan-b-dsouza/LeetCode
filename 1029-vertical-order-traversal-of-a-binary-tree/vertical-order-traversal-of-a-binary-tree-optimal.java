@@ -1,5 +1,6 @@
-// Optimal
-
+// Optimal (Depth - first traversal (Inorder))
+// This problem can be solved using preorder, postorder and level order traversal too. Everything remains same just the traversal differs
+ 
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
