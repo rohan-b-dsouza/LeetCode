@@ -36,6 +36,7 @@ class Tuple {
       // First add the root node along with its row and col as 0 
       queue.offer(new Tuple(root, 0, 0));
       // While queue is not empty, perform level order traversal
+      // We don't require the inner for loop used in level order traversal problem since here we don't require grouping of nodes of each level 
       while(!queue.isEmpty()) {
         // Get the tuple from the front of the queue
         Tuple tuple = queue.poll();
