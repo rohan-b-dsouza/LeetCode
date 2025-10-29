@@ -89,4 +89,4 @@ class Tuple {
 }
 
 // T.C => O(N * log (N))
-// S.C => O(N) for TreeMap + O(3 * N) for the queue (As in worst case, last level has N / 2 Nodes and each node has a tuple of nodevalue, row, col) 
+// S.C => O(N) for TreeMap + O(N) for the queue (As in worst case, last level has N / 2 Nodes) 
