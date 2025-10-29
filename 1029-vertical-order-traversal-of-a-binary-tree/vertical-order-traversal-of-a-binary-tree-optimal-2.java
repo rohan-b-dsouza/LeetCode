@@ -1,4 +1,4 @@
-// Optimal - 2 (BFS- Level Order Traversal)
+// Optimal - 2 (BFS - Level Order Traversal)
 
 /**
  * Definition for a binary tree node.
