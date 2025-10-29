@@ -15,6 +15,7 @@
  *     }
  * }
  */
+
 class Solution {
     public void rightSideView(TreeNode node, int level, List<Integer> ans) {
         // If node is null, return
