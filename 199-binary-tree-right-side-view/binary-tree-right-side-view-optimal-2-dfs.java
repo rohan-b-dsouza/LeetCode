@@ -1,5 +1,4 @@
-// Optimal
-// DFS (Preorder)
+// Optimal - Depth First Search (Preorder)
 
 /**
  * Definition for a binary tree node.
