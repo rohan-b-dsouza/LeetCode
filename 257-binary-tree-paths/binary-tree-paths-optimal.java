@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (DFS - Inorder) (It's important to refer GFG version of this problem which is same but has List<Integer> as output)
 
 /**
  * Definition for a binary tree node.
@@ -15,6 +15,7 @@
  *     }
  * }
  */
+
 class Solution {
    public void getAllPaths(TreeNode node, List<String> ans, StringBuilder path) {
         int len = path.length(); // stores current length for backtracking
