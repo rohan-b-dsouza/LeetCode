@@ -42,5 +42,5 @@ class Solution {
     }
 }
 
-// T.C => O(2 * N) = O(N) in the worst case as we have to find both the paths
-// S.C => O(2 * N) = O(N) for the recursive stacks for path1 and path2
+// T.C => O(2 * N) = O(N) in the worst case as we have to find both the paths and may need to visit all the nodes
+// S.C => O(H1 + H2) = O(H) where H = N in Skewed B.T and H = log (N) in Balanced B.T 
