@@ -1,3 +1,5 @@
+// Optimal
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -46,3 +48,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n) + O(L * h) where O(n) is reqd for traversal and O(L * h) is reqd for toString() func at each leaf node
+// S.C => O(n) for skewed tree and O(log (n)) for balanced tree - Recursive Stack + O(n) for StringBuilder
