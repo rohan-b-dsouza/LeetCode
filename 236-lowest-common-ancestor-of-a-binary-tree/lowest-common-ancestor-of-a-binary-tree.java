@@ -25,7 +25,7 @@ class Solution {
         else if (right == null) {
             return left;
         }
-        // If both are not null, it means the current node is the lca hence return it
+        // If both left and right are not null, it means p and q lie in different subtrees — hence, current node is their LCA
         else return root;
     }
 }
