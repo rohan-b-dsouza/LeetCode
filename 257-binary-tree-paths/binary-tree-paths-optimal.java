@@ -1,4 +1,4 @@
-// Optimal (DFS - Inorder) (It's important to refer GFG version of this problem which is same but has List<Integer> as output)
+// Optimal (DFS - Preorder) (It's important to refer GFG version of this problem which is same but has List<Integer> as output)
 
 /**
  * Definition for a binary tree node.
