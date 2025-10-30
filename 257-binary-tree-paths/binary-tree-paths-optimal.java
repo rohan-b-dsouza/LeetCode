@@ -51,4 +51,9 @@ class Solution {
 }
 
 // T.C => O(n) + O(L * h) where O(n) is reqd for traversal and O(L * h) is reqd for toString() func at each leaf node
-// S.C => O(n) for skewed tree and O(log (n)) for balanced tree - Recursive Stack + O(n) for StringBuilder
+// S.C =>
+// • Recursion stack → O(h)
+// • StringBuilder (temporary path) → O(h)
+// • Auxiliary space = O(h)
+//  • Balanced tree → O(log n)
+//  • Skewed tree   → O(n)
