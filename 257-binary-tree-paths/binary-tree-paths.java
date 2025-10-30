@@ -14,22 +14,26 @@
  * }
  */
 class Solution {
-    public void getAllPaths(TreeNode node, List<String> ans, StringBuilder path) {
-    if (node.left == null && node.right == null) {
-        ans.add(path.toString() + node.val);
-        return;
-    }
-    int len = path.length();
-    path.append(node.val).append("->");
-    if (node.left != null) getAllPaths(node.left, ans, path);
-    if (node.right != null) getAllPaths(node.right, ans, path);
-    path.setLength(len); // backtrack
-}
+   public void getAllPaths(TreeNode node, List<String> ans, StringBuilder path) {
+        int len = path.length(); // store current length for backtracking
+        path.append(node.val);
 
-public List<String> binaryTreePaths(TreeNode root) {
-    List<String> ans = new ArrayList<>();
-    if (root == null) return ans;
-    getAllPaths(root, ans, new StringBuilder());
-    return ans;
-}
+        // If it's a leaf node, add the current path to the answer list
+        if (node.left == null && node.right == null) {
+            ans.add(path.toString());
+        } else {
+            path.append("->");
+            if (node.left != null) getAllPaths(node.left, ans, path);
+            if (node.right != null) getAllPaths(node.right, ans, path);
+        }
+
+        path.setLength(len); // backtrack to previous state
+    }
+
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> ans = new ArrayList<>();
+        if (root == null) return ans;
+        getAllPaths(root, ans, new StringBuilder());
+        return ans;
+    }
 }
