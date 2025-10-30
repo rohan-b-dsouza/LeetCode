@@ -55,5 +55,6 @@ class Solution {
 // • Recursion stack → O(h)
 // • StringBuilder (temporary path) → O(h)
 // • Auxiliary space = O(h)
-//  • Balanced tree → O(log n)
-//  • Skewed tree   → O(n)
+// Also, 
+//  • Balanced tree → O(log n) = h
+//  • Skewed tree   → O(n) = h
