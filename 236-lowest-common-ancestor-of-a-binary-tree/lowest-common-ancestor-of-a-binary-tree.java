@@ -25,7 +25,7 @@ class Solution {
         else if (right == null) {
             return left;
         }
-        // If both are null, it means the current node is the lca hence return it
+        // If both are not null, it means the current node is the lca hence return it
         else return root;
     }
 }
