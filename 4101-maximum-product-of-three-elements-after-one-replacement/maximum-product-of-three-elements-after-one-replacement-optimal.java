@@ -12,7 +12,7 @@ class Solution {
             int num = Math.abs(nums[i]);
             if (num >= maxAbs) {
                 smaxAbs = maxAbs;
-                max = num;
+                maxAbs = num;
             }
             else if (num > smaxAbs) {
                 smaxAbs = num;
@@ -24,8 +24,8 @@ class Solution {
     }
 }
 
-// NOTE :- Since we require the maximum product and we must replace one element with an element in the range [10^5,10^-5] we will obv take the maximum in this range i.e 10^5. Also, since prod of two numbers may give us negative but anyways since we
-// have third element as -10^5 we can turn into positive or if two numbers gave us positive result then we can take 10^5 as third number. From this we can conclude that we don't need to consider signs as we can guaranteed have a positive product. Therefore, 
+// NOTE :- Since we require the maximum product and we must replace one element with an element in the range [10^5,10^-5] ,we will obviously take the maximum in this range i.e 10^5. Also, since prod of two numbers may give us negative result but anyways since we
+// have third element as -10^5 we can turn this into positive or if two numbers gave us positive result then we can take 10^5 as third number. From this we can conclude that we don't need to consider signs as we can guaranteed have a positive product. Therefore, 
 // we consider absolute values in the code
 
 // T.C => O(n)
