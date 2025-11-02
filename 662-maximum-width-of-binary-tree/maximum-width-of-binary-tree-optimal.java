@@ -15,6 +15,8 @@
  *     }
  * }
  */
+
+// IMPORTANT NOTE :- In online judges, Pair is an inbuilt class storing a {key:value} pair and having functions getKey() & getValue() 
 class Solution {
     public int widthOfBinaryTree(TreeNode root) {
         if (root == null) return 0;
