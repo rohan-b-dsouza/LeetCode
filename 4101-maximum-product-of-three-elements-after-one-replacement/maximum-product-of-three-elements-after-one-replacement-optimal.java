@@ -5,21 +5,21 @@ class Solution {
         int n = nums.length;
         // Get the max and second max element
         // Note :- Since we need maximum product its possible that the array may have max element mroe than once which means second max can be same as max so to ensure we don't miss that we need to use = sign too in num >= max
-        long max = Math.abs(nums[0]);
-        long smax = -1;
+        long maxAbs = Math.abs(nums[0]);
+        long smaxAbs = -1;
         // Get the largest 2 elements in the array
         for (int i = 1; i < n; i++) {
             int num = Math.abs(nums[i]);
-            if (num >= max) {
-                smax = max;
+            if (num >= maxAbs) {
+                smaxAbs = maxAbs;
                 max = num;
             }
-            else if (num > smax) {
-                smax = num;
+            else if (num > smaxAbs) {
+                smaxAbs = num;
             }
         }
         // Get the maximum product by multiple max, smax and 10^5
-        long prod = max * smax * 100000;
+        long prod = maxAbs * smaxAbs * 100000;
         return prod;
     }
 }
