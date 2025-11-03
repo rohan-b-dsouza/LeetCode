@@ -1,4 +1,5 @@
 // Optimal (Same as Leetcode Problem : All Nodes Distance K in Binary Tree with with minimal changes)
+// (Same as the GFG Problem : Burning Tree)
 
 /**
  * Definition for a binary tree node.
