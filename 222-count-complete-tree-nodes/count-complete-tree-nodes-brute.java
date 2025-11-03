@@ -26,4 +26,4 @@ class Solution {
 }
 
 // T.C => O(N)
-// S.C => O(N) for skewed B.T and O(log (N)) for balanced B.T
+// S.C => O(N) for skewed B.T and O(log(N)) for balanced B.T
