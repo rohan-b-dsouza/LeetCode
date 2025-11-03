@@ -49,4 +49,4 @@ class Solution {
 }
 
 // T.C => O(log(n)) * O(log(n)) = O((log(n))^2)
-// S.C => O(log (n)) for recursion stack
+// S.C => O(log(n)) for recursion stack
