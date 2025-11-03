@@ -103,4 +103,4 @@ class Solution {
 }
 
 // T.C => O(2 * N) = O(N)
-// S.C => O(4 * N) = O(N)
+// S.C => O(3 * N) = O(N)
