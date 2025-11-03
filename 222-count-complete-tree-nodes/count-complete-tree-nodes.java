@@ -1,3 +1,5 @@
+// Optimal (Preorder Traversal)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,9 +15,15 @@
  *     }
  * }
  */
+
 class Solution {
     public int countNodes(TreeNode root) {
+        // If root is null return 0
         if (root == null) return 0;
+        // Recursively add 1 going deep to the left and then right
         return 1 + countNodes(root.left) + countNodes(root.right);
     }
 }
+
+// T.C => O(N)
+// S.C => O(N)
