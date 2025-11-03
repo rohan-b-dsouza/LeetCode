@@ -1,4 +1,4 @@
-// Optimal (Preorder Traversal)
+// Brute (Preorder Traversal)
 
 /**
  * Definition for a binary tree node.
