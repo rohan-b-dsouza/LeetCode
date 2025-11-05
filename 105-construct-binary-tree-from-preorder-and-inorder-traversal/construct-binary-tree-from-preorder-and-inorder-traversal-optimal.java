@@ -52,4 +52,4 @@ class Solution {
 }
 
 // T.C => O(N) + O(N) = O(2 * N) = O(N)
-// S.C => O(N) + O(H) = O(N + H) = O(2 * N) ---------{as in worst case i.e skewed B.T, H = N whereas in best case i.e balanced B.T, H = log (N)}
+// S.C => O(N) + O(H) = O(N + H) = O(2 * N) = O(N) ---------{as in worst case i.e skewed B.T, H = N whereas in best case i.e balanced B.T, H = log (N)}
