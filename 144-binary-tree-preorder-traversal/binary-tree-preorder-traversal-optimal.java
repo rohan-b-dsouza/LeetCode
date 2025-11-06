@@ -16,7 +16,7 @@
  * }
  */
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         // List to store the answer
         List<Integer> ans = new ArrayList<>();
         // Initialize curr to root
