@@ -60,5 +60,5 @@ public class Codec {
     }
 }
 
-// T.C => O(3 * N) = O(N) 
-// S.C => O(2 * N) = O(N)
+// T.C => O(N) for both serialize and deserialize functions
+// S.C => O(N) for both serialize and deserialize functions
