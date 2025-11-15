@@ -29,5 +29,5 @@ class Solution {
     }
 }
 
-// T.C => O(log (n))
+// T.C => O(h)  [O(log n) for balanced BST, O(n) worst case]
 // S.C => O(1)
