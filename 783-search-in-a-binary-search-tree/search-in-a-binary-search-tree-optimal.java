@@ -1,3 +1,5 @@
+// Optimal
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -15,10 +17,17 @@
  */
 class Solution {
     public TreeNode searchBST(TreeNode root, int val) {
+        // Get the root node
         TreeNode node = root;
+        // If node is not null and node's val is not equal to target value
         while (node != null && node.val != val) {
+            // If target is smaller than current node's val move left else move right
             node = (val < node.val) ? node.left : node.right;
         }
+        // Return node
         return node;
     }
 }
+
+// T.C => O(log (n))
+// S.C => O(1)
