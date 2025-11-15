@@ -1,4 +1,4 @@
-// Optimal
+// Recursive
 
 /**
  * Definition for a binary tree node.
