@@ -6,7 +6,7 @@ class Solution {
         int min = nums[0];
         int max = nums[0];
         int smax = Integer.MIN_VALUE;
-        // Get the largest 2 elements in the array
+        // Get the largest 2 elements in the array and the minimum element
         for (int i = 1; i < n; i++) {
             int num = nums[i];
             min = Math.min(min, num);
