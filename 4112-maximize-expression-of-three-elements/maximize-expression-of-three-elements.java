@@ -1,3 +1,5 @@
+// Optimal (This problem is an extension of the GFG Problem : Second Largest)
+
 class Solution {
     public int maximizeExpressionOfThree(int[] nums) {
         int n = nums.length;
@@ -19,3 +21,6 @@ class Solution {
         return ((max + smax) - min);
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
