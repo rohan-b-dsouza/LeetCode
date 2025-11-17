@@ -63,7 +63,7 @@ class Solution {
     }
     inorder(root.right, k, ans, cnt);
   }
-
+  // For getting the kth greatest element apply inorder traversal in reversal manner i.e R-N-L
   public void reverseInorder(TreeNode root, int k, List<Integer> ans, int[] cnt) {
     if (root == null) return;
     reverseInorder(root.right, k, ans, cnt);
