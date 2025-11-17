@@ -102,6 +102,7 @@ class Solution {
        List<Integer> ans = new ArrayList<>();
        int cnt[] = new int[1];
        ans.add(getInorder(root, k, cnt));
+       // For kth greatest element, call the inorder function with to get n - k + 1 element
        ans.add(getInorder(root, cnt[0] - k + 1, cnt));
     return ans;
     }
