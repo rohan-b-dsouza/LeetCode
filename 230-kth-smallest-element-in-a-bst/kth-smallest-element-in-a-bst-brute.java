@@ -1,3 +1,5 @@
+// Brute (We use the fact that inorder traversal of a BST is in sorted order)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,6 +16,7 @@
  * }
  */
 class Solution {
+    // Get the inorder traversal of the BST
     public void inorder(TreeNode root, List<Integer> tree) {
         if (root == null) return;
         inorder(root.left, tree);
@@ -23,6 +26,10 @@ class Solution {
     public int kthSmallest(TreeNode root, int k) {
         List<Integer> tree = new ArrayList<>();
         inorder(root, tree);
+        // Return the kth element int the inorder traversal
         return tree.get(k - 1);
     }
 }
+
+// T.C => O(n)
+// S.C => O(n) + O(n) = O(2 * n) = O(n)
