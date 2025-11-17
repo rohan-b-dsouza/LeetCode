@@ -58,16 +58,6 @@ class Solution {
 
 // Kth greatest element in a bst
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int data;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int val) { data = val; left = null, right = null }
- * }
- **/
-
 class Solution {
     public int getInorder(TreeNode root, int k, int[] cnt) {
         cnt[0] = 0;
