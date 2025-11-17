@@ -28,7 +28,7 @@ class Solution {
         if (curr.left == null || curr.right == null) {
             // Get the child node of curr node
             TreeNode child = curr.left != null ? curr.left : curr.right;
-            // Next line also covers following Case 3 : Tree has only the root node which is also the key, hence return child which will be null in this case
+            // Next line also covers following Case 3 : Tree has only the root node which is also the key, hence return child
             if (parent == null) return child;
             // If parent's left is curr node then link curr's child to parent's left
             if (parent.left == curr) parent.left = child;
@@ -41,7 +41,7 @@ class Solution {
         // Set Predecessor's parent to curr and Predecessor as curr's left
         TreeNode preParent = curr;
         TreeNode predecessor = curr.left;
-        // While predecessor's right exist move predecessor to right
+        // While predecessor's right exists move predecessor to right
         while (predecessor.right != null) {
             // Set predecessor's parent to predecessor
             preParent = predecessor;
@@ -50,7 +50,7 @@ class Solution {
         }
         // Now replace curr's val (i.e key node) with predecessor's val
         curr.val = predecessor.val;
-        // If prePparent's left is predecessor
+        // If preParent's left is predecessor
         if (preParent.left == predecessor) {
             // Set preParent's left as predecessor's left
             preParent.left = predecessor.left;
