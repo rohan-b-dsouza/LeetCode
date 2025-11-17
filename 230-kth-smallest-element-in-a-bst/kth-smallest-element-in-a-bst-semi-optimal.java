@@ -1,5 +1,5 @@
 // Semi - Optimal  (We simply use the fact that inorder traversal of a BST is in sorted order)
-
+// For the Problem Kth Greatest element in a bst refer end of this page
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -48,3 +48,44 @@ class Solution {
 
 // T.C => O(n) as we visit all nodes in the worst case 
 // S.C => O(h) for the recursive stack --------- {h = log (n) for balanced BST, h = n for skewed BST}
+
+
+// Kth largest element in a bst
+
+/**
+ * Definition for a binary tree node. public class TreeNode { int data; TreeNode left; TreeNode
+ * right; TreeNode(int val) { data = val; left = null, right = null } }
+ */
+class Solution {
+  public void inorder(TreeNode root, int k, List<Integer> ans, int[] cnt) {
+    if (root == null) return;
+    inorder(root.left, k, ans, cnt);
+    cnt[0]++;
+    if (cnt[0] == k) {
+      ans.add(root.data);
+      return;
+    }
+    inorder(root.right, k, ans, cnt);
+  }
+
+  public void reverseInorder(TreeNode root, int k, List<Integer> ans, int[] cnt) {
+    if (root == null) return;
+    reverseInorder(root.right, k, ans, cnt);
+    cnt[0]++;
+    if (cnt[0] == k) {
+        ans.add(root.data);
+        return;
+    }
+    reverseInorder(root.left, k, ans, cnt);
+  }
+
+  public List<Integer> kLargesSmall(TreeNode root, int k) {
+    int[] cnt = new int[1];
+    List<Integer> ans = new ArrayList<>();
+    inorder(root, k, ans, cnt);
+    cnt[0] = 0;
+    reverseInorder(root, k, ans, cnt);
+    return ans;
+  }
+}
+
