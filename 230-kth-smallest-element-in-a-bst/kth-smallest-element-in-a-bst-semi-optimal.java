@@ -1,4 +1,4 @@
-// Semi - Optimal
+// Semi - Optimal  (We simply use the fact that inorder traversal of a BST is in sorted order)
 
 /**
  * Definition for a binary tree node.
