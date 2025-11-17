@@ -1,3 +1,5 @@
+// Optimal (We simply use the fact that inorder traversal of a BST is in sorted order)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,6 +16,7 @@
  * }
  */
 class Solution {
+    // Call Morris Inorder Traversal function and get the kth node
     public int getInorder(TreeNode root, int k) {
         int cnt = 0;
         TreeNode curr = root;
@@ -44,6 +47,10 @@ class Solution {
         return ans;
     }
     public int kthSmallest(TreeNode root, int k) {
+        // Return the kth node
        return getInorder(root, k);
     }
 }
+
+// T.C => O(n) 
+// S.C => O(1)
