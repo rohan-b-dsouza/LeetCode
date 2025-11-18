@@ -34,4 +34,4 @@ class Solution {
 }
 
 // T.C => O(n) as we visit each node once
-// S.C => O(n) for the recursive stack
+// S.C => O(h) for the recursive stack where h = log (n) for a balanced BST, h = n for a skewed BST
