@@ -40,5 +40,5 @@ class Solution {
     }
 }
 
-// T.C => O(h) + O(h) = O(2 * h) = O(h) ---------- {h = log (n) for balanced BST, h = n for skewed BST}
+// T.C => O(2 * h) + O(h) = O(3 * h) = O(h) ---------- {h = log (n) for balanced BST, h = n for skewed BST}
 // S.C => O(2 * h) = O(h) ----------------------- {h = log (n) for balanced BST, h = n for skewed BST} 
