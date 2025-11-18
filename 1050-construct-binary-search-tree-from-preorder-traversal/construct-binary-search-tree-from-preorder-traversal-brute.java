@@ -35,4 +35,4 @@ class Solution {
 }
 
 // T.C => O(n * h) ----------- {h = log (n) for balanced BST, h = n for skewed BST}
-// S.C => O(1)
+// S.C => O(h) ----------------- {h = log (n) for balanced BST, h = n for skewed BST}
