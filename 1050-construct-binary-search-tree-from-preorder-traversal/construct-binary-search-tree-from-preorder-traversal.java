@@ -16,6 +16,7 @@
  *     }
  * }
  */
+
 class Solution {
     // These first 3 functions are nothing but the program to build a tree when preorder and inorder traversals are given
     public void inorderToIndexMapping(int[] inorder, HashMap<Integer, Integer> inorderToIndexMap) {
