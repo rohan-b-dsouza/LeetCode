@@ -1,3 +1,5 @@
+// Brute
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,6 +16,7 @@
  * }
  */
 class Solution {
+    // Two sum function
     public boolean twoSum(List<Integer> nums, int target) {
     int n = nums.size();
     int i = 0;
@@ -26,6 +29,7 @@ class Solution {
     }
     return false;
   }
+    // Morris Inorder Traversal
     public List<Integer> getInorder(TreeNode root, List<Integer> ans) {
     TreeNode curr = root;
     while (curr != null) {
@@ -50,8 +54,14 @@ class Solution {
     return ans;
   }
     public boolean findTarget(TreeNode root, int k) {
+        // List that stores the inorder traversal of a BST
         List<Integer> inorder = new ArrayList<>();
+        // Call the inorder traversal function
         getInorder(root, inorder);
+        // Call the two sum function on this inorder traversal
         return twoSum(inorder, k);
     }
 }
+
+// T.C => O(n) + O(n) = O(2 * n) = O(n)
+// S.C => O(n)
