@@ -1,3 +1,5 @@
+// Optimal
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,29 +16,39 @@
  * }
  */
 class BSTIterator {
-
+    // Stack to simulate inorder traversal
     private Deque<TreeNode> stack = new ArrayDeque<>();
         public void pushAll(TreeNode root) {
+            // If root is not null, push root and all the left subtree's left elements to simulate inorder traversal
             while (root != null) {
                 stack.push(root);
                 root = root.left;
             }
         }
+        // Push the first left elements in the stack
         public BSTIterator(TreeNode root) {
            pushAll(root);
         }
 
         public boolean hasNext() {
+            // If stack is not empty, return true
             if (!stack.isEmpty()) return true;
+            // Return false
             return false;
         }
 
         public int next() {
+            // Get the stack's top
             TreeNode temp = stack.pop();
+            // Push all its right subtree's left elements to the stack
             pushAll(temp.right);
+            // Return popped element's data
             return temp.val;
         }
 }
+
+// T.C => Amortised O(1)
+// S.C => O(h) ------- {h = log (n) for balanced BST, h = n for skewed BST}
 
 /**
  * Your BSTIterator object will be instantiated and called as such:
