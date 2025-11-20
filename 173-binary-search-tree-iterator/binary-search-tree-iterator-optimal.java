@@ -47,7 +47,7 @@ class BSTIterator {
         }
 }
 
-// T.C => Amortised O(1)
+// T.C => Amortised O(1) for next() and O(1) for hasNext() 
 // S.C => O(h) ------- {h = log (n) for balanced BST, h = n for skewed BST}
 
 /**
