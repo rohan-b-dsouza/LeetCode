@@ -43,7 +43,7 @@ class Solution {
         }
         return ans;
     }
-    // Morris Traversal to replace the actual tree's node values with the sorted inorder of this tree
+    // Morris Inorder Traversal to replace the actual tree's node values with the sorted inorder of this tree
     public void restoreTree(TreeNode root, List<Integer> inorder) {
         int index = 0;
         TreeNode curr = root;
