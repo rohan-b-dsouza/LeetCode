@@ -1,3 +1,5 @@
+// Brute
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,7 +16,7 @@
  * }
  */
 class Solution {
-    
+    // Morris Inorder Traversal to get the inorder traversal
     public List<Integer> getInorder(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         TreeNode curr = root;
@@ -41,6 +43,7 @@ class Solution {
         }
         return ans;
     }
+    // Morris Traversal to replace the actual tree's node values with the sorted inorder of this tree
     public void restoreTree(TreeNode root, List<Integer> inorder) {
         int index = 0;
         TreeNode curr = root;
@@ -67,9 +70,16 @@ class Solution {
         }
     }
     public TreeNode recoverTree(TreeNode root) {
+        // Get the inorder traversal
         List<Integer> inorder = getInorder(root);
+        // Sort it to get the correct node sequence as we need to swap 2 incorrect node placments
         inorder.sort(null);
+        // Now while doing inorder traversal on the tree, replace the node's values with this sorted inorder values
         restoreTree(root, inorder);
+        // Return root
         return root;
     }
 }
+
+// T.C => O(n) + O(n) + O(n * log (n)) = O(2 * n) + O(n * log (n)) = O(n * log (n)) 
+// S.C => O(n) 
