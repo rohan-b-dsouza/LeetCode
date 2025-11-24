@@ -32,4 +32,4 @@ class Solution {
 }
 
 // T.C => O(4 * n) = O(n) as in the worst case i.e 10^5 number we will require 4 operations to calculate waviness
-// S.C => O(6) = O(1) as in worst case String can hold the number 10^5 i.e 100000
+// S.C => O(1) as in worst case String can hold the number 10^5 i.e 100000
