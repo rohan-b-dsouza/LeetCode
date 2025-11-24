@@ -1,14 +1,18 @@
 class Solution {
     public int minimumFlips(int n) {
-        StringBuilder binary = new StringBuilder(Integer.toBinaryString(n)); 
-        StringBuilder binaryRev = new StringBuilder(binary).reverse();
-        int size = binary.length();
-        int flips = 0;
-        for (int i = 0; i < size; i++) {
-            if (binary.charAt(i) != binaryRev.charAt(i)) {
-                flips++;
+        int len = 32 - Integer.numberOfLeadingZeros(n);
+        int L = len - 1;
+        int R = 0;
+        int res = 0;
+        while (L > R) {
+            int leftBit = (n >> L) & 1;
+            int rightBit = (n >> R) & 1;
+            if (leftBit != rightBit) {
+                res+=2;
             }
+            L--;
+            R++;
         }
-        return flips;
+        return res;
     }
 }
