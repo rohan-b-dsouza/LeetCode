@@ -3,15 +3,20 @@ class Solution {
         int n = nums.length;
         Arrays.sort(nums);
         int ans = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < n; i++) {
-            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
-        } 
-        for (int i = 0; i < n; i++) {
-            if (i != 0 && nums[i] == nums[i - 1]) continue;
-            if ((n - i - 1) - (map.get(nums[i]) - 1) >= k) {
-                ans += map.get(nums[i]);
-            } 
+        int i = 0;
+        int freq = 1;
+        while (i < n) {
+            if (i == n - 1 || nums[i] != nums[i + 1]) {
+                int greater = n - i - 1;
+                if (greater >= k) {
+                    ans += freq;
+                    freq = 1;
+            }
+            }
+            else {
+                freq++;
+            }
+            i++;
         }
         return ans;
     }
