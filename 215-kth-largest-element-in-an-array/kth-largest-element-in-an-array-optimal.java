@@ -46,5 +46,5 @@ class Solution {
     }
 }
 
-// T.C => O(n) as in each step its like we are dividing the array into 2 parts....{n + n/2 + n/4 ... = n}
+// T.C => Avg. Case :- O(n) as in each step its like we are dividing the array into 2 parts....{n + n/2 + n/4 ... = n}, Worst Case:- O(n^2) when pivot is extreme hence leading to n + n-1 + n-2 ........ = O(n^2) (High Unlikely as we use random pivot)
 // S.C => O(1)
