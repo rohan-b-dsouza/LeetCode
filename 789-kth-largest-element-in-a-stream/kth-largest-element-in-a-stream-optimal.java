@@ -45,5 +45,5 @@ class KthLargest {
  * int param_1 = obj.add(val);
  */
 
-// T.C => O(n * log(k))
+// T.C => O(n * log(k)) for the constructor and O(log(k)) per add()
 // S.C => O(k)
