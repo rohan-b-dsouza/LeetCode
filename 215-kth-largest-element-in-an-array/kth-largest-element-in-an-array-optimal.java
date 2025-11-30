@@ -1,4 +1,8 @@
+// Optimal (Quick Select Algorithm)
+// This problem uses quick sort but unlike quicksort which sorts entire array and recursively calls both left and right array, here we choose whether we want to go to left array or right array
+
 class Solution {
+    // Quick Sort Random Pivot Partition Function for descending order
     public int partition(int[] nums, int low, int high) {
     int i = low;
     int j = high;
@@ -20,19 +24,27 @@ class Solution {
     nums[j] = temp;
     return j;
   }
-    public int findKthLargest(int[] nums, int k) {
-        int n = nums.length;
+ public int findKthLargest(int[] nums, int k) {
+    int n = nums.length;
     int low = 0;
     int high = n - 1;
+    // Run a while with true
     while (true) {
+      // Get the partitionIdx
       int partitionIdx = partition(nums, low, high);
+      // If partitionIdx is equal to k - 1 return the element at this index 
       if (partitionIdx == k - 1) return nums[partitionIdx];
+      // Else if (k - 1) is smaller than partitionIdx it means element lies on left side, hence shrink array from right
       else if ((k - 1) < partitionIdx) {
         high = partitionIdx - 1;
       }
+      // Else shrink array from left
       else {
         low = partitionIdx + 1;
       }
     }
     }
 }
+
+// T.C => O(n) as in each step its like we are dividing the array into 2 parts....{n + n/2 + n/4 ... = n}
+// S.C => O(1)
