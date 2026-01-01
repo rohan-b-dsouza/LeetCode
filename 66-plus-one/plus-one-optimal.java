@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int[] plusOne(int[] digits) {
         int n = digits.length;
@@ -13,3 +15,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n)
+// S.C => O(n) extra space reqd for edge case where all values are 9
