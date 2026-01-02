@@ -1,30 +1,21 @@
-
 class Solution {
-    public void getCombinationsOfSumTarget(int index, List<Integer> combination, int target, int n, int[] candidates,
-            List<List<Integer>> ans) {
-        if (target == 0) { // Base Case : If valid combination is found add to ans list
-            ans.add(new ArrayList<>(combination));
+    public void combination(int idx, int sum, int[] candidates, int target, List<Integer> current, List<List<Integer>> ans) {
+        if (sum == target) {
+            ans.add(new ArrayList<>(current));
             return;
         }
-        if (target < 0 || index == n) { // no valid combination found
-            return;
+        for (int i = idx; i < candidates.length; i++) {
+            if (sum + candidates[i] > target) break;
+            current.add(candidates[i]);
+            combination(i, sum + candidates[i], candidates, target, current, ans);
+            current.remove(current.size() - 1);
         }
-        // Recursive Case : Include current element and decrement from target, and recurse on same index
-        // (Left Recursion Tree)
-        combination.add(candidates[index]);
-        getCombinationsOfSumTarget(index, combination, target - candidates[index], n, candidates, ans);
-        // Backtrack by removing the last added element
-        // (Right Recursion Tree) Recursively call the function by excluding the element
-        combination.remove(combination.size() - 1);
-
-        getCombinationsOfSumTarget(index + 1, combination, target, n, candidates, ans);
     }
-
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        int n = candidates.length;
         List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
-        getCombinationsOfSumTarget(0, list, target, n, candidates, ans);
+        List<Integer> current = new ArrayList<>();
+        Arrays.sort(candidates);
+        combination(0, 0, candidates, target, current, ans);  
         return ans;
     }
 }
