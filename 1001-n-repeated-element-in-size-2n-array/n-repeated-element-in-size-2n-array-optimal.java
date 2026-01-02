@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public int repeatedNTimes(int[] nums) {
         int n = nums.length;
@@ -9,3 +11,6 @@ class Solution {
         return nums[n - 1];
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
