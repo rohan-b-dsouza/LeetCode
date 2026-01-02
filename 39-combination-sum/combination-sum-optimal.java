@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public void combination(int idx, int sum, int[] candidates, int target, List<Integer> current, List<List<Integer>> ans) {
         if (sum == target) {
@@ -19,3 +21,7 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n * log(n)) + Exponential
+// S.C => O(no. of valid combs * k) where k is size of the combination + O(k) recursion depth
+ 
