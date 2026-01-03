@@ -8,6 +8,7 @@ class Solution {
         }
         for (int i = idx; i < candidates.length; i++) {
             if (i > idx && candidates[i] == candidates[i - 1]) continue;
+            // pruning condition
             if (sum + candidates[i] > target) break;
             current.add(candidates[i]);
             combinations(i + 1, sum + candidates[i], candidates, target, ans, current);
