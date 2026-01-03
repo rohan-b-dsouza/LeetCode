@@ -30,5 +30,5 @@ class Solution {
 // Important logic here:- 
 /*
     if (i > idx && candidates[i] == candidates[i - 1]) continue;
-    This ensures : same value is used only once per level,duplicates are skipped horizontally, not vertically
+    This ensures : same value is used only once per level, duplicates are skipped horizontally, not vertically
 */
