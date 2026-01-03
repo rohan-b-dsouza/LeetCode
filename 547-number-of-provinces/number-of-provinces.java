@@ -1,3 +1,5 @@
+// Optimal (Same as the problem "Count the number of connected components")
+
 class Solution {
     public void bfs(int sourceNode, int V, int[][] isConnected, int[] visited) {
         Deque<Integer> queue = new ArrayDeque<>();
@@ -41,4 +43,3 @@ class Solution {
 // T.C => DFS / BFS:- O(V^2)
 // S.C => DFS:- O(V) visited array + O(V) recursion stack
 //        BFS:- O(V) visited array + O(V) queue
-
