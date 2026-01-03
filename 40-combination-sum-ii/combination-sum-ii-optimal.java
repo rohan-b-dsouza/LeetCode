@@ -1,51 +1,33 @@
 // Optimal
 
 class Solution {
-
-    // Recursive helper function to find combinations
-    private void func(int ind, int sum, List<Integer> nums, 
-                      int[] candidates, List<List<Integer>> ans) {
-        // If the sum is zero, add the current combination to the result
-        if (sum == 0) {
-            ans.add(new ArrayList<>(nums));
+    public void combinations(int idx, int sum, int[] candidates, int target, List<List<Integer>> ans, List<Integer> current) {  
+        if (sum == target) {
+            ans.add(new ArrayList<>(current));
             return;
         }
-
-        // If the sum is negative or we have exhausted the candidates, return
-        if (sum < 0 || ind == candidates.length) return; 
-
-        // Include the current candidate
-        nums.add(candidates[ind]);
-
-        // Recursively call with updated sum and next index
-        func(ind + 1, sum - candidates[ind], nums, candidates, ans);
-
-        // Backtrack by removing the last added candidate
-        nums.remove(nums.size() - 1);
-
-        // Skip duplicates: if not picking the current candidate, 
-        // ensure the next candidate is different
-        for(int i = ind + 1; i < candidates.length; i++) {
-            if(candidates[i] != candidates[ind]) {
-                func(i, sum, nums, candidates, ans);
-                break;
-            }
+        for (int i = idx; i < candidates.length; i++) {
+            if (i > idx && candidates[i] == candidates[i - 1]) continue;
+            if (sum + candidates[i] > target) break;
+            current.add(candidates[i]);
+            combinations(i + 1, sum + candidates[i], candidates, target, ans, current);
+            current.remove(current.size() - 1);
         }
     }
-
-    // Main function to find all unique combinations
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> nums = new ArrayList<>();
-
-        // Sort candidates to handle duplicates
-        Arrays.sort(candidates);
-
-        // Start the recursive process
-        func(0, target, nums, candidates, ans);
-        return ans;
+     Arrays.sort(candidates);
+     List<Integer> current = new ArrayList<>();
+     List<List<Integer>> ans = new ArrayList<>();
+     combinations(0, 0, candidates, target, ans, current);   
+     return ans;
     }
 }
 
-// T.C => O(2^n * k) where 2^n is no of combinations and k is avg len of each combination
-// S.C => O(x * k) + O(n) ------------- where x is no of unique combinations and k is avg len of each combination and O(n) for recursive stack space
+    // T.C => O(2^n * k) where 2^n is no of combinations and k is avg len of each combination
+    // S.C => O(x * k) + O(n) ------------- where x is no of unique combinations and k is avg len of each combination and O(n) for recursive stack space
+
+// Important logic here:- 
+/*
+    if (i > idx && candidates[i] == candidates[i - 1]) continue;
+    This ensures : same value is used only once per level,duplicates are skipped horizontally, not vertically
+*/
