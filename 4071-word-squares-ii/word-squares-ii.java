@@ -5,34 +5,27 @@ class Solution {
         for (int i = 0; i < n; i++) {
             String top = words[i];
             for (int j = 0; j < n; j++) {
-                if (i == j)
-                    continue;
+                if (i == j) continue;
                 String left = words[j];
-                if (left.charAt(0) != top.charAt(0))
-                    continue;
+                if (left.charAt(0) != top.charAt(0)) continue;
                 for (int k = 0; k < n; k++) {
-                    if (i == k || j == k)
-                        continue;
+                    if (k == i || k == j) continue;
                     String right = words[k];
-                    if (right.charAt(0) != top.charAt(3))
-                        continue;
+                    if (right.charAt(0) != top.charAt(3)) continue;
                     for (int l = 0; l < n; l++) {
-                        if (i == l || j == l || k == l)
-                            continue;
+                        if (l == i || l == j || l == k) continue;
                         String bottom = words[l];
-                        if (bottom.charAt(0) != left.charAt(3) || bottom.charAt(3) != right.charAt(3))
-                            continue;
+                        if (bottom.charAt(0) != left.charAt(3) || bottom.charAt(3) != right.charAt(3)) continue;
                         List<String> temp = Arrays.asList(top, left, right, bottom);
                         ans.add(temp);
                     }
                 }
             }
         }
-        ans.sort((a, b) -> {
+        ans.sort((a, b)->{
             for (int i = 0; i < 4; i++) {
                 int cmp = a.get(i).compareTo(b.get(i));
-                if (cmp != 0)
-                    return cmp;
+                if (cmp != 0) return cmp;
             }
             return 0;
         });
