@@ -1,1 +1,1 @@
-<h2>word-squares-ii Notes</h2><hr>[ Time taken: 9 m 22 s ]
+<h2>word-squares-ii Notes</h2><hr>[ Time taken: 6 m 21 s ]
