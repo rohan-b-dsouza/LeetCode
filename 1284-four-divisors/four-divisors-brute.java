@@ -1,5 +1,7 @@
 // Brute (Optimal Requires Sieves, so do once learned)
 
+// Logic:- Maintain a variable sum and add divisors of all numbers having exactly 4 divisors. Use optimized brute force method to compute divisors of a number i.e iterating upto sqrt(num) and using num / i.
+
 class Solution {
     public int getDivisors(int num) {
         int cnt = 0;
