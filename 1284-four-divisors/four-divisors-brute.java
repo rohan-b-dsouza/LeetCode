@@ -1,3 +1,5 @@
+// Brute (Optimal Requires Sieves, so do once learned)
+
 class Solution {
     public int getDivisors(int num) {
         int cnt = 0;
@@ -25,3 +27,6 @@ class Solution {
         return sum;
     }
 }
+
+// T.C => O(N * sqrt(M)) where N = size of array, M = element in nums array
+// S.C => O(1)
