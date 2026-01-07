@@ -1,3 +1,7 @@
+// Optimal
+
+// Logic:- Pure BFS traversal
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,6 +17,7 @@
  *     }
  * }
  */
+
 class Solution {
     public int maxLevelSum(TreeNode root) {
         Deque<TreeNode> queue = new ArrayDeque<>();
@@ -42,3 +47,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n) as we visit each node exactly once
+// S.C => O(n / 2) = O(n) when last level is completely filled
