@@ -1,29 +1,53 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+*/
+
 class Solution {
-  static long totalSum;
-  static long maxProduct;
-  static final int MOD = 1_000_000_007;
+    public int getSumOfBT(TreeNode root) {
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        int sum = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            TreeNode node = queue.poll();
+            sum += node.val;
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        return sum;
+    }
 
-  public int maxProduct(TreeNode root) {
-    maxProduct = 0;
-    totalSum = dfs(root);
-    dfsMaxProduct(root);
-    return (int) (maxProduct % MOD);
-  }
+    public int getMaxProd(TreeNode root, long[] maxProd, int totalSum) {
+        if (root == null)
+            return 0;
+        int leftSum = getMaxProd(root.left, maxProd, totalSum);
+        int rightSum = getMaxProd(root.right, maxProd, totalSum);
+        int sum = leftSum + rightSum + root.val;
+        maxProd[0] = Math.max(maxProd[0], sum * 1L * (totalSum - sum));
+        return sum;
+    }
 
-  private long dfs(TreeNode node) {
-    if (node == null) return 0;
-    return node.val + dfs(node.left) + dfs(node.right);
-  }
-
-  private long dfsMaxProduct(TreeNode node) {
-    if (node == null) return 0;
-
-    long left = dfsMaxProduct(node.left);
-    long right = dfsMaxProduct(node.right);
-
-    long subtreeSum = node.val + left + right;
-    maxProduct = Math.max(maxProduct, subtreeSum * (totalSum - subtreeSum));
-
-    return subtreeSum;
-  }
+    public int maxProduct(TreeNode root) {
+        int MOD = 1000000007;
+        long[] maxProd = new long[1];
+        int totalSum = getSumOfBT(root);
+        getMaxProd(root, maxProd, totalSum);
+        return (int) (maxProd[0] % MOD);
+    }
 }
