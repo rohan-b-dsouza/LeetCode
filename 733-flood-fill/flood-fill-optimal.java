@@ -1,3 +1,5 @@
+// Optimal
+
 class Pair {
   int row;
   int col;
@@ -7,6 +9,9 @@ class Pair {
     col = c;
   }
 }
+
+// Logic:- // Just do whats asked..start from the starting node and fill adjacent 4 nodes by checking whether they have the same color as the starting node's initial color.
+// Edge Case:- If starting node's color is same as newColor, return the image as it is, as otherwise it will lead to infinite looping. 
 
 class Solution {
   public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
