@@ -47,3 +47,6 @@ class Solution {
     return image;
   }
 }
+
+// T.C => O(n * m * 4)
+// S.C => O(n * m) for the queue
