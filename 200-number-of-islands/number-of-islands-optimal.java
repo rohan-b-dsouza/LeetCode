@@ -1,4 +1,5 @@
-// Optimal
+// Optimal 
+// Note:- Instead of BFS, DFS can also be used, its very simple just keep all same and change bfs func to dfs func
 
 class Pair {
   int row;
