@@ -62,5 +62,5 @@ class Solution {
   }
 }
 
-// T.C => O(n * m * 4) as we visit each node exactly once
+// T.C => O(n * m * 4) as we visit each node exactly once with 4 checks each
 // S.C => O(n * m) for visited array + O(n * m) for queue
