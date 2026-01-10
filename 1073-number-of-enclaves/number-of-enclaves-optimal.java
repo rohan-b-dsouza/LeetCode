@@ -62,5 +62,5 @@ class Solution {
   }
 }
 
-// T.C => O(n * m) as we visit each node exactly once
+// T.C => O(n * m * 4) as we visit each node exactly once
 // S.C => O(n * m) for visited array + O(n * m) for queue
