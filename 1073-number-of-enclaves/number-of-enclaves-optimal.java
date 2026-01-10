@@ -1,4 +1,7 @@
-import java.util.*;
+// Optimal
+
+// Logic:- Traverse through each cell, ifs its not visited call the bfs on it. In bfs, keep visiting its connected nodes and at any step if its possible to go off boundary mark flag as false. Also during the bfs count the nodes 
+// Once bfs is completed, check whether flag is false..If yes return count as 0. If its true, it means the land cells didn't lead to off boundary hence return the count of these cells.
 
 
 class Pair {
@@ -58,3 +61,6 @@ class Solution {
     return cnt;
   }
 }
+
+// T.C => O(n * m)
+// S.C => O(n * m)
