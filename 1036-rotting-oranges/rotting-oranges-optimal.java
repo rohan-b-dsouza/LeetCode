@@ -1,3 +1,10 @@
+// Optimal
+
+
+// Logic:- First we put all rotten oranges positions into the queue as a Tuple {row, col, current time}. Using BFS, we visit level - wise each adjacent fresh orange for every rotten orange and make it rotted and putting it into the 
+// queue as a Tuple {row, col, time + 1} as this happens the next minute. Finally, we return the max time encountered.
+
+
 class Tuple {
     int row, col, time;
     Tuple(int row, int col, int time) {
@@ -48,4 +55,5 @@ class Solution {
     }
 }
 
-
+// T.C => O(n * m) + O(n * m * 4)
+// S.C => O(n * m) for visited array + O(n * m) for queue 
