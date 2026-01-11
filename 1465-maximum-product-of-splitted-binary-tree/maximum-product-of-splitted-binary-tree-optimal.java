@@ -1,3 +1,5 @@
+// Optimal
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,6 +15,9 @@
  *     }
  * }
 */
+
+// Logic:- First compute total Sum of the tree. Now, for each subtree compute the sum & multiply it with (totalSum - sum) ----- {Sum of rest of the tree = totalSum - sum}
+// Maintain a maxProd variable and update it at each step. Finally, return the maximum product
 
 class Solution {
     public int getSumOfBT(TreeNode root) {
