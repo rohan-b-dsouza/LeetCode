@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- For each subarray check if its sum is present in that subarray as an element. This can be done using a nested loop with set and running sum.
+// For each subarray add the current element to the sum and the set. Check if the sum exists in the set, if yes increment counter 'ans'
+
 class Solution {
     public int centeredSubarrays(int[] nums) {
         int n = nums.length;
@@ -16,3 +21,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n ^ 2)
+// S.C => O(n)
