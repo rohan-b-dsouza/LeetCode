@@ -56,3 +56,6 @@ class Solution {
         return (int) (maxProd[0] % MOD);
     }
 }
+
+// T.C => O(n) + O(n) = O(2 * n) = O(n)
+// S.C => O(n) for recursion stack + O(n) for the queue
