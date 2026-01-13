@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- Normalize each string to such that each string starts from a. Hence, characters are shifted backwards such that first character of each string becomes 'a'. 
+// The map stores the frequency of the new normalized strings and accordingly the similar pairs are computed.
+
 class Solution {
     public long countPairs(String[] words) {
         int n = words.length;
@@ -17,3 +22,7 @@ class Solution {
     return ans;
     }
 }
+
+// T.C => O(n * m)
+// S.C => O(n)
+
