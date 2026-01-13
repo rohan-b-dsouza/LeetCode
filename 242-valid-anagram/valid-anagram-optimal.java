@@ -1,3 +1,5 @@
+// Optimal
+
 class Solution {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
@@ -12,3 +14,6 @@ class Solution {
         return true;
     }
 }
+
+// T.C => O(n)
+// S.C => O(26) = O(1)
