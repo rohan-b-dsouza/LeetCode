@@ -26,5 +26,5 @@ class Solution {
 }
 
 // T.C => O(n * m)
-// S.C => O(n * m) as there are n strings of length m
+// S.C => O(n * m) as there are n strings of length m stored in the map in the worst case
 
