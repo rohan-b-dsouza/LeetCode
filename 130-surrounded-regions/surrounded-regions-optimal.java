@@ -1,3 +1,5 @@
+// Optimal
+
 class Pair {
   int row;
   int col;
@@ -6,6 +8,9 @@ class Pair {
     this.col = col;
   }
 }
+
+// Logic:- Traverse through the 4 boundaries of the matrix and whenever 'O' occurs, mark all its connected Os as Z. Now, traverse again through the matrix marking all 'Z's as Os. This works because all 
+// connected groups forming from boundary Os will be always unchanged as they are not considered as 'surrounded regions'
 
 class Solution {
   public void bfs(int i, int j, char[][] board, int n, int m) {
@@ -59,3 +64,6 @@ class Solution {
     }
     } 
 }
+
+// T.C => O(n * m)
+// S.C => O(n * m)
