@@ -66,4 +66,4 @@ class Solution {
 }
 
 // T.C => O(n * m)
-// S.C => O(n * m)
+// S.C => O(n * m) for the queue in the worst case
