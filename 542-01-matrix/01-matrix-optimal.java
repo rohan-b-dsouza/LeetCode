@@ -1,3 +1,5 @@
+// Optimal
+
 class Tuple {
     int row;
     int col;
@@ -9,6 +11,7 @@ class Tuple {
     }
 }
 
+// Logic:- Similar to the problem rotten oranges
 
 class Solution {
   public int[][] updateMatrix(int[][] mat) {
@@ -41,3 +44,6 @@ class Solution {
     return visited;
   }
 }
+
+// T.C => O(n * m) + O(n * m * 4) = O(n * m)
+// S.C => O(n * m) + O(n * m) = O(2 * n * m) = O(n * m)
