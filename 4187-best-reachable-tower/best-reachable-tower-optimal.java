@@ -1,3 +1,7 @@
+// Optimal
+
+// Logic:- Just simulate what's asked in the problem
+
 class Solution {
     public int[] bestTower(int[][] towers, int[] center, int radius) {
         int n = towers.length;
@@ -24,3 +28,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
