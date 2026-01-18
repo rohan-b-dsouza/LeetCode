@@ -1,3 +1,9 @@
+// Optimal
+
+// Logic:- Since we want the largest number, we will remove the digits from the end if its not even.
+// At any point, if we get even number just break early.
+// Return the substring
+
 class Solution {
     public String largestEven(String s) {
         int n = s.length();
@@ -11,3 +17,6 @@ class Solution {
         return i == -1 ? "" : s.substring(0, i + 1);
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
