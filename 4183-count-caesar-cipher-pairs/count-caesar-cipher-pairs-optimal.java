@@ -1,7 +1,7 @@
 // Optimal
 
 // Logic:- 
-// Two strings are similar iff the difference between corresponding characters is the same
+// Two strings are similar if the difference between corresponding characters is the same
 // Normalize each string to such that each string starts from a. Hence, characters are shifted backwards such that first character of each string becomes 'a'.Then identical normalized strings form similar pairs.
 // The map stores the frequency of the new normalized strings and accordingly the similar pairs are computed.
 
