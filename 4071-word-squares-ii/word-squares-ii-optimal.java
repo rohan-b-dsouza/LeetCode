@@ -1,3 +1,13 @@
+// Optimal
+
+/* Logic:- 
+    First we set a top, now since left depends on top we assign a left using the given rules.
+    Now, since right also depends on top, we assign right using the given rules. 
+    Now, finally since bottom depends on both left and right, we assign it using the given rules.
+    We use 4 nested loops for this to ensure we cover all possible combinations.
+
+    Now, once all distinct words squares are stored in the list, we sort it lexicographically 
+*/
 class Solution {
     public List<List<String>> wordSquares(String[] words) {
         List<List<String>> ans = new ArrayList<>();
@@ -32,3 +42,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n ^ 4) 
+// S.C => O(1)
