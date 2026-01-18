@@ -1,3 +1,7 @@
+// Optimal
+
+// Logic:- Just simulate what's asked
+
 class Solution {
   public int vowelConsonantScore(String s) {
     int v = 0;
@@ -14,3 +18,6 @@ class Solution {
     return c > 0 ? v / c : 0;
   }
 }
+
+// T.C => O(n)
+// S.C => O(1)
