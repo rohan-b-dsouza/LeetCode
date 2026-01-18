@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- Ask LLM or dry run
+
+
 class Solution {
     public long minimumCost(String s, String t, int flipCost, int swapCost, int crossCost) {
         int n = s.length();
@@ -17,3 +22,6 @@ class Solution {
         return cost;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
