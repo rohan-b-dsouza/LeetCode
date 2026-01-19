@@ -1,6 +1,6 @@
 ## ⚖️ License & Copyright
 
-© 2025 **Rohan Dsouza**. All rights reserved.
+© 2026 **Rohan Dsouza**. All rights reserved.
 
 This repository and its contents are my original work unless stated otherwise.  
 You may view and reference the code for **educational or personal use**,  
