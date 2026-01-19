@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- Try to color the graphs with exactly two color such that no two adjacent nodes have the same color.
+// If at any step this is violated, i.e we find that two adjacent nodes have the same color, return false.
+
 class Solution {
   public boolean dfs(int sourceNode, int[][] graph, int[] visited, int color) {
     visited[sourceNode] = color == 1 ? 2 : 1;
@@ -26,3 +31,6 @@ class Solution {
     return true;
   }
 }
+
+// T.C => O(V + E)
+// S.C => O(V)
