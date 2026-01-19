@@ -35,3 +35,6 @@ class Solution {
     return true;
   }
 }
+
+// T.C => O(V + E)
+// S.C => O(V)
