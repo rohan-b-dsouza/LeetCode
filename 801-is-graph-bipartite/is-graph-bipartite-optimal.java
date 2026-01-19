@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- Try to color the graphs with exactly two color such that no two adjacent nodes have the same color.
+// If at any step this is violated, i.e we find that two adjacent nodes have the same color, return false.
+
 class Solution {
   public boolean bfs(int sourceNode, int V, int[][] graph, int[] visited) {
     Deque<Integer> queue = new ArrayDeque<>();
