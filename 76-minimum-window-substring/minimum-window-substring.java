@@ -23,10 +23,10 @@ class Solution {
           start = l;
           end = r;
         }
-        if (hash[s.charAt(l)] >= 0) {
+        hash[s.charAt(l)]++;
+        if (hash[s.charAt(l)] > 0) {
           cnt--;
         }
-        hash[s.charAt(l)]++;
         l++;
       }
     }
