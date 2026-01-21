@@ -19,7 +19,7 @@ class Solution {
               }
               hash[ch]--;
           }
-          while(cnt == n) {
+          while(cnt == n && l < m) {
             if (r - l + 1 < minlen) {
               minlen = r - l + 1;
               start = l;
