@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- First build a prefix sum array. Now, for each element apply monotonic stack + contribution technique.
+// In each step compute the min - product sum, updating the max value seen so far.
+
 class Solution {
   public int maxSumMinProduct(int[] nums) {
     int n = nums.length;
@@ -38,3 +43,6 @@ class Solution {
     return (int) (ans % MOD);
   }
 }
+
+// T.C => O(2 * n) = O(n)
+// S.C => O(2 * n) = O(n)
