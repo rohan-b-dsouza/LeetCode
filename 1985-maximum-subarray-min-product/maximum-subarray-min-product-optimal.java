@@ -1,7 +1,8 @@
 // Optimal
 
 // Logic:- First build a prefix sum array. Now, for each element apply monotonic stack + contribution technique.
-// In each step compute the min - product sum, updating the max value seen so far.
+// In each step, keep the current element as minimum and get the subarray left and right bounds ensuring current element is minimum. 
+// Compute the min - product sum, updating the max value seen so far.
 
 class Solution {
   public int maxSumMinProduct(int[] nums) {
