@@ -2,8 +2,7 @@
 
 // Logic:
 // Build prefix sum array.
-// Use monotonic increasing stack to find Previous Smaller Element (PSE)
-// and Next Smaller Element (NSE) for each index, but do this on the fly (Not pre-computation). Checkout largest histogram optimal soln or sum of subarray mins optimal soln to know this on the fly technique.
+// Find PSE and NSE on-the-fly using monotonic stack (no separate precomputation), similar to Largest Rectangle in Histogram and Sum of Subarray Minimums.
 // Treat each element as minimum of its valid subarray range and compute its contribution.
 
 class Solution {
