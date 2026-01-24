@@ -1,4 +1,4 @@
-// Optimal (Monotonic Increasing Stack)
+// Better (Monotonic Increasing Stack)
 
 class Solution {
     public int[] findPSEE(int[] arr) {
