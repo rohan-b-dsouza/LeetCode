@@ -24,8 +24,10 @@ class Solution {
         int pse = stack.isEmpty() ? -1 : stack.peek();
         int left = pse + 1;
         int right = nse - 1;
-        long subarraySum = prefixSum[right] - (left == 0 ? 0 : prefixSum[left - 1]);
-        ans = Math.max(arr[i] * 1L * subarraySum);
+        if (left == 0)
+          ans = Math.max(nums[idx] * 1L * prefixSum[right], ans);
+        else
+          ans = Math.max(nums[idx] * 1L * (prefixSum[right] - prefixSum[left - 1]), ans);
       }
       stack.push(i);
     }
