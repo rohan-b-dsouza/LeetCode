@@ -1,4 +1,4 @@
-// Time - Optimal (Monotonic Stack + Contribution Technique)
+// Time Optimal (Monotonic Stack + Contribution Technique)
 // (Similar to largest histogram, sum of subarray minimums, maximum subarray min-product)
 
 // Logic:
