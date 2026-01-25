@@ -1,4 +1,5 @@
 // Time - Optimal (Monotonic Stack + Contribution Technique)
+// (Similar to largest histogram, sum of subarray minimums, maximum subarray min-product)
 
 // Logic:
 // Treat each element as the minimum of a subarray.
@@ -9,16 +10,6 @@
 // For each such range [left..right], check if it contains index k.
 // If yes, compute:
 // score = nums[idx] * (right - left + 1)
-
-// This is equivalent to Largest Rectangle in Histogram,
-// with the extra constraint that the rectangle must include k.
-
-// Time Complexity: O(n)
-// Each index is pushed and popped at most once.
-
-// Space Complexity: O(n)
-// Stack used to maintain monotonic order.
-
 
 class Solution {
     public int maximumScore(int[] nums, int k) {
