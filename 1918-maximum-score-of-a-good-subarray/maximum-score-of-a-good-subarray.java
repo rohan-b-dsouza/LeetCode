@@ -5,7 +5,7 @@ class Solution {
         int j = k;
         int currMin = nums[k];
         long ans = currMin;
-        while (i - 1 > 0 || j + 1 < n) {
+        while (i - 1 >= 0 || j + 1 < n) {
             if (i - 1 >= 0 && j + 1 < n) {
                 if (nums[i - 1] >= nums[j + 1]) {
                     currMin = Math.min(nums[i - 1], currMin);
