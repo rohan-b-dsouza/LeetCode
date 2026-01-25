@@ -1,27 +1,31 @@
 class Solution {
     public int maximumScore(int[] nums, int k) {
         int n = nums.length;
-        Deque<Integer> stack = new ArrayDeque<>();
-        long ans = 0;
-        for (int i = 0; i < n; i++) {
-            while(!stack.isEmpty() && nums[stack.peek()] > nums[i]) {
-                int idx = stack.pop();
-                int nse = i;
-                int pse = stack.isEmpty() ? -1 : stack.peek();
-                int left = pse + 1; int right = nse - 1;
-                if (left > k || right < k) continue;
-                ans = Math.max(nums[idx] * 1L * (right - left + 1), ans); 
+        int i = k;
+        int j = k;
+        int currMin = nums[k];
+        long ans = currMin;
+        while (i - 1 > 0 || j + 1 < n) {
+            if (i - 1 >= 0 && j + 1 < n) {
+                if (nums[i - 1] >= nums[j + 1]) {
+                    currMin = Math.min(nums[i - 1], currMin);
+                    i--;
+                }
+                else {
+                   currMin = Math.min(nums[j + 1], currMin);
+                   j++;
+                }
             }
-            stack.push(i);
+            else if (i - 1 < 0) {
+                currMin = Math.min(nums[j + 1], currMin);
+                j++;
+            }
+            else {
+                currMin = Math.min(nums[i - 1], currMin);
+                i--;
+            }
+            ans = Math.max(ans, currMin * 1L * (j - i + 1));
         }
-        while(!stack.isEmpty()) {
-            int idx = stack.pop();
-            int nse = n;
-            int pse = stack.isEmpty() ? -1 : stack.peek();
-            int left = pse + 1; int right = nse - 1;
-            if (left > k || right < k) continue;
-            ans = Math.max(nums[idx] * 1L * (right - left + 1), ans); 
-        } 
         return (int) ans;
     }
 }
