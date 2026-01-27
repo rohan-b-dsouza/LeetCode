@@ -1,3 +1,7 @@
+// Optimal
+
+// Logic:- If a cycle exists in the graph, we can't finish all courses, else we can.
+
 class Solution {
     public boolean dfs(int node, List<List<Integer>> adj, int[] visited) {
       visited[node] = 2;
@@ -33,3 +37,6 @@ class Solution {
         return true;
     }
 }
+
+// T.C => O(V + E) 
+// S.C => O(V + E)
