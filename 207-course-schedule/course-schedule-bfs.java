@@ -5,7 +5,6 @@
 class Solution {
     public int topoSort(int V, List<List<Integer>> adj) {
     int[] indegree = new int[V];
-    int[] visited = new int[V];
     int ans = 0;
     Deque<Integer> queue = new ArrayDeque<>();
     for (int i = 0; i < V; i++) {
@@ -22,12 +21,9 @@ class Solution {
     while (!queue.isEmpty()) {
       int node = queue.poll();
       ans++;
-      visited[node] = 1;
       for (int currNode : adj.get(node)) {
-        if (visited[currNode] != 1) {
           indegree[currNode]--;
           if (indegree[currNode] == 0) queue.offer(currNode);
-        }
       }
     }
     return ans;
