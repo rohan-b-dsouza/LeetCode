@@ -1,3 +1,7 @@
+// Optimal (Kahn's Algorithm)
+
+// Logic:- If the graph has a cycle, then we can't finish all courses, else we can.
+
 class Solution {
     public int topoSort(int V, List<List<Integer>> adj) {
     int[] indegree = new int[V];
@@ -47,3 +51,6 @@ class Solution {
         return true;
     }
 }
+
+// T.C => O(V + E)
+// S.C => O(V + E)
