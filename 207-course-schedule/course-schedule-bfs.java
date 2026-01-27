@@ -41,7 +41,7 @@ class Solution {
         for (int[] edge : prerequisites) {
             int u = edge[0];
             int v = edge[1];
-            adj.get(u).add(v);
+            adj.get(v).add(u);
         }
         if (isCyclic(numCourses, adj)) return false;
         return true;
