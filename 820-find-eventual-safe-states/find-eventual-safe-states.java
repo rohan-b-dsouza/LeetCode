@@ -1,3 +1,7 @@
+// Optimal
+
+// Logic:- 
+
 class Solution {
     public List<Integer> topoSort(int V, List<List<Integer>> graph) {
         int[] indegree = new int[V];
@@ -41,3 +45,6 @@ class Solution {
         return topoSort;
     }
 }
+
+// T.C => O(V + E) + O(V * log(V))
+// S.C => O(V + E)
