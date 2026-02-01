@@ -1,3 +1,7 @@
+// Optimal
+
+// Logic:- First element will always be nums[0], second and third element will be the minimum and second minimum in the subarray 1 to n - 1.
+
 class Solution {
     public int minimumCost(int[] nums) {
         int n = nums.length;
@@ -14,3 +18,6 @@ class Solution {
         return (first + second + third);
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
