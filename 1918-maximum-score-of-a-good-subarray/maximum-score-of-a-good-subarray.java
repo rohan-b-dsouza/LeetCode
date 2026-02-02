@@ -16,11 +16,11 @@ class Solution {
                     min = Math.min(min, nums[j]);
                 }
             }
-            else if (j == n - 1 && i > 0) {
+            else if (i - 1 >= 0) {
                 i--;
                 min = Math.min(min, nums[i]);
             }
-            else if (i == 0 && j < n - 1) {
+            else {
                 j++;
                 min = Math.min(min, nums[j]);
             }
