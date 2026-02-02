@@ -1,30 +1,31 @@
 class Solution {
     public int maximumScore(int[] nums, int k) {
-        // code here
         int n = nums.length;
-        long ans = 0;
-        Deque<Integer> stack = new ArrayDeque<>();
-        for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && nums[i] < nums[stack.peek()]) {
-                int idx = stack.pop();
-                int nse = i;
-                int pse = stack.isEmpty() ? -1 : stack.peek();
-                int l = pse + 1;
-                int r = nse - 1;
-                if (l <= k && r >= k)
-                    ans = Math.max(ans, nums[idx] * 1L * (r - l + 1));
+        int i = k;
+        int j = k;
+        int min = nums[k];
+        int ans = min;
+        while (i > 0  || j < n - 1) {
+            if (i > 0 && j < n - 1) {
+                if (nums[i - 1] >= nums[j + 1]) {
+                    i--;
+                    min = Math.min(min, nums[i]);
+                }
+                else {
+                    j++;
+                    min = Math.min(min, nums[j]);
+                }
             }
-            stack.push(i);
+            else if (j == n - 1 && i > 0) {
+                i--;
+                min = Math.min(min, nums[i]);
+            }
+            else if (i == 0 && j < n - 1) {
+                j++;
+                min = Math.min(min, nums[j]);
+            }
+            ans = Math.max(ans, min * (j - i + 1));
         }
-        while (!stack.isEmpty()) {
-            int idx = stack.pop();
-            int nse = n;
-            int pse = stack.isEmpty() ? -1 : stack.peek();
-            int l = pse + 1;
-            int r = nse - 1;
-            if (l <= k && r >= k)
-                    ans = Math.max(ans, nums[idx] * 1L * (r - l + 1));
-        }
-        return (int) ans;
-    } 
+        return ans;
+    }
 }
