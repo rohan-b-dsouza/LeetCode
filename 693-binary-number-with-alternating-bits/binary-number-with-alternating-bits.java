@@ -1,9 +1,11 @@
 class Solution {
     public boolean hasAlternatingBits(int n) {
-     String bits = Integer.toBinaryString(n);
-     for (int i = 0; i < bits.length() - 1; i++) {
-        if (bits.charAt(i) == bits.charAt(i + 1)) return false;
-     }   
-     return true;
+    int bit = n & 1;
+    n = n >> 1;
+    while (n > 0) {
+        if ((n & 1) == bit) return false;
+        bit = n & 1;
+        n = n >> 1;
     }
-}
+    return true;
+}}
