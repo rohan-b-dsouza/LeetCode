@@ -7,6 +7,7 @@ class Solution {
             if (nums[i + 1] == nums[i]) return false;
             if (nums[i + 1] < nums[i]) {
                 p = i;
+                i++;
                 break;
             }
             i++;
@@ -17,6 +18,7 @@ class Solution {
             if (nums[i + 1] == nums[i]) return false;
             if (nums[i + 1] > nums[i]) {
                 q = i;
+                i++;
                 break;
             }
             i++;
