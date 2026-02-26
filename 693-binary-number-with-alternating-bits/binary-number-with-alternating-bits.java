@@ -1,11 +1,7 @@
 class Solution {
     public boolean hasAlternatingBits(int n) {
-        int bit = n & 1;
-        n >>= 1;
-        while (n != 0) {
-            if ((n & 1) == bit) return false;
-            bit = n & 1;
-            n >>= 1;
-        }
-        return true;
+        int rightShiftBy1 = n >> 1;
+        int xor = n ^ rightShiftBy1;
+        if ((xor & (xor + 1)) == 0) return true;
+        return false; 
 }}
