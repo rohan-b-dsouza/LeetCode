@@ -1,5 +1,4 @@
 class Solution {
-
     public char findKthBit(int n, int k) {
 
         if (n == 1) return '0';
@@ -8,12 +7,10 @@ class Solution {
         int mid = len / 2 + 1;
 
         if (k == mid) return '1';
-
         if (k < mid) {
             return findKthBit(n - 1, k);
         }
-        char ch = findKthBit(n - 1, len - k + 1);
-
-        return ch == '0' ? '1' : '0';
+        char ch = findKthBit(n, len - k + 1);
+        return ch == '1' ? '0' : '1';
     }
 }
