@@ -9,9 +9,9 @@ class Solution {
             map.merge(nums[i], 1, Integer::sum);
             min1 = Math.min(min1, nums[i]);
         };
-        for (int i = 0; i < n; i++) {
-            if (nums[i] != min1 && map.get(nums[i]) != map.get(min1) && nums[i] < min2) {
-                min2 = nums[i];
+        for (int key: map.keySet()) {
+            if (map.get(key) != map.get(min1) && key < min2) {
+                min2 = key;
             }
         }
         if (min2 == Integer.MAX_VALUE) return new int[] {-1, -1};
