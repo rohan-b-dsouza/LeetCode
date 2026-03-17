@@ -1,29 +1,20 @@
 class Solution {
     public int[] minDistinctFreqPair(int[] nums) {
         int n = nums.length;
-        int[] ans = new int[] {Integer.MAX_VALUE, Integer.MAX_VALUE};
+        int[] ans = new int[n];
+        int min1 = Integer.MAX_VALUE;
+        int min2 = Integer.MAX_VALUE;
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             map.merge(nums[i], 1, Integer::sum);
-        }
+            min1 = Math.min(min1, nums[i]);
+        };
         for (int i = 0; i < n; i++) {
-            int x = nums[i];
-            for (int j = 0; j < n; j++) {
-                int y = nums[j];
-                if (i == j || x >= y || map.get(x) == map.get(y)) continue;
-                if (x < ans[0]) {
-                    ans[0] = x;
-                    ans[1] = y;
-                }
-                else if (x == ans[0] && y < ans[1]) {
-                    ans[0] = x;
-                    ans[1] = y;
-                }
+            if (nums[i] != min1 && map.get(nums[i]) != map.get(min1) && nums[i] < min2) {
+                min2 = nums[i];
             }
         }
-        if (ans[0] == Integer.MAX_VALUE) {
-            ans[0] = ans[1] = -1;
-        } 
-        return ans;
+        if (min2 == Integer.MAX_VALUE) return new int[] {-1, -1};
+        return new int[] {min1, min2};
     }
 }
