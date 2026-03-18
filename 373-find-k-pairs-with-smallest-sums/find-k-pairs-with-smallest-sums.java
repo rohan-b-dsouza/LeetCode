@@ -4,8 +4,11 @@ class Solution {
         if (nums1.length == 0 || nums2.length == 0) return ans;
 
         PriorityQueue<int[]> pq = new PriorityQueue<>(
-            (a, b) -> (nums1[a[0]] + nums2[a[1]]) - (nums1[b[0]] + nums2[b[1]])
-        );
+    (a, b) -> Integer.compare(
+        nums1[a[0]] + nums2[a[1]],
+        nums1[b[0]] + nums2[b[1]]
+    )
+);
 
         // initial push
         for (int i = 0; i < Math.min(k, nums1.length); i++) {
