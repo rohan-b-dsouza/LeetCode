@@ -18,20 +18,26 @@ class Solution {
         while (p1 != null) {
             p2 = p1.next;
             if (p2 == null || p2.val != p1.val) {
-                ListNode a = new ListNode(p1.val);
-                if (temp == null) {
-                    dummy.next = a;
-                    temp = a;
+                if (p2 == null) {
+                    if (temp != null) temp.next = p1;
+                    else dummy.next = p1;
+                }
+                else if (temp == null) {
+                    dummy.next = p1;
+                    temp = p1;
                 }
                 else {
-                    temp.next = a;
-                    temp = a;
+                    temp.next = p1;
+                    temp = p1;
                 }
                 p1 = p1.next;
             }
             else {
                 while (p2 != null && p2.val == p1.val) {
                     p2 = p2.next;
+                }
+                if (p2 == null) {
+                   if (temp != null) temp.next = null;
                 }
                 p1 = p2;
             }
