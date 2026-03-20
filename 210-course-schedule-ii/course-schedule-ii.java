@@ -1,36 +1,43 @@
-class Solution {
-  
-  public int[] findOrder(int N, int[][] arr) {
-    List<List<Integer>> adj = new ArrayList<>();
+class Solution { 
+  public boolean dfs(int sourceNode, List<List<Integer>> adj, int[] visited, Deque<Integer> stack, int[] pathvisited) {
+    visited[sourceNode] = 1;
+    pathvisited[sourceNode] = 1;
+    for (int node : adj.get(sourceNode)) {
+        if (visited[node] != 1) {
+            if (dfs(node, adj, visited, stack, pathvisited)) return true;
+        } 
+        else if (pathvisited[node] == 1) {
+            return true;
+        }
+    }
+    pathvisited[sourceNode] = 0;
+    stack.push(sourceNode);
+    return false;
+  }
+  public int[] getTopoSort(List<List<Integer>> adj, int N) {
+    int[] visited = new int[N];
+    int[] pathvisited = new int[N];
+    Deque<Integer> stack = new ArrayDeque<>();
     for (int i = 0; i < N; i++) {
-      adj.add(new ArrayList<>());
+        if (visited[i] != 1) {
+            if (dfs(i, adj, visited, stack, pathvisited)) return new int[] {};
+        }
     }
     int[] ans = new int[N];
-    for (int i = 0; i < arr.length; i++) {
-      adj.get(arr[i][1]).add(arr[i][0]);
-    }
-    int[] indegree = new int[N];
-    for (int i = 0; i < adj.size(); i++) {
-      for (int node : adj.get(i)) {
-        indegree[node]++;
-      }
-    }
-    Deque<Integer> queue = new ArrayDeque<>();
-    for (int i = 0; i < N; i++) {
-      if (indegree[i] == 0) queue.offer(i);
-    }
     int idx = 0;
-    int count = 0;
-    while (!queue.isEmpty()) {
-      int curr = queue.poll();
-      ans[idx++] = curr;
-      count++;
-      for (int node : adj.get(curr)) {
-        indegree[node]--;
-        if (indegree[node] == 0) queue.offer(node);
-      }
+    while (!stack.isEmpty()) {
+        ans[idx++] = stack.pop();
     }
-    if (count != N) return new int[] {};
     return ans;
+  } 
+  public int[] findOrder(int N, int[][] arr) {
+    List<List<Integer>> adj = new ArrayList<>();
+    for (int i = 0; i < N; i++) adj.add(new ArrayList<>());
+    for (int[] edge : arr) {
+      int u = edge[0];
+      int v = edge[1];
+      adj.get(v).add(u);
+    }
+    return getTopoSort(adj, N);
   }
 }
