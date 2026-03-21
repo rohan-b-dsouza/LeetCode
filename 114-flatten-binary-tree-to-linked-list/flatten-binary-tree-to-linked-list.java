@@ -20,8 +20,15 @@ class Solution {
             if (curr.left == null) curr = curr.right;
             else {
                 TreeNode temp = curr.left;
-                while (temp.right != null) {
-                    temp = temp.right;
+                while (temp.right != null || temp.left != null) {
+                    if (temp.right == null) {
+                        temp.right = temp.left;
+                        temp.left = null;
+                        temp = temp.right;
+                    }
+                    else {
+                        temp = temp.right;
+                    }
                 }
                 temp.right = curr.right;
                 curr.right = curr.left;
