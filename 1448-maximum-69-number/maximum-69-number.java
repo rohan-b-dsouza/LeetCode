@@ -11,11 +11,11 @@ class Solution {
             cnt++;
             n = n / 10;
        }
+        if (idx == -1) return num;
        long pow = 1;
        for (int i = 1; i <= idx; i++) {
         pow *= 10;
        }
-        if (idx == -1) return num;
 
         return (int) (num + (3 * pow));
          
