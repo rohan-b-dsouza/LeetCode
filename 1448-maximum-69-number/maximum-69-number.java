@@ -10,9 +10,14 @@ class Solution {
             }
             cnt++;
             n = n / 10;
-        }
+       }
+       long pow = 1;
+       for (int i = 1; i <= idx; i++) {
+        pow *= 10;
+       }
         if (idx == -1) return num;
-        return  num + (int) (3 * Math.pow(10, idx));
+
+        return (int) (num + (3 * pow));
          
     }
 }
