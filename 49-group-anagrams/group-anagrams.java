@@ -14,11 +14,7 @@ class Solution {
                 sb.append(freq[j]).append(',');
             }
             String freqStr = sb.toString();
-            if (!map.containsKey(freqStr)) {
-                map.put(freqStr, new ArrayList<>());
-                map.get(freqStr).add(s);
-            }
-            else map.get(freqStr).add(s);
+            map.computeIfAbsent(freqStr, k -> new ArrayList()).add(s);
         }
         return new ArrayList<>(map.values());
     }
