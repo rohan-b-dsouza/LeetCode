@@ -1,25 +1,21 @@
 class Solution {
-    public void dfs(int idx, int or, int[] max, int[] nums, int[] ans) {
-        if (idx == nums.length) {
-            if (or > max[0]) {
-                max[0] = or;
-                ans[0] = 1;
-            } else if (or == max[0]) {
-                ans[0] += 1;
-            }
+    public void dfs(int idx, int or, int n, int[] nums, int maxor, int[] count) {
+        if (or == maxor) {
+            count[0] += (1 << (n - idx));
             return;
         }
-        dfs(idx + 1, or | nums[idx], max, nums, ans);
-        dfs(idx + 1, or, max, nums, ans);
+        if (idx == n) return;
+        dfs(idx + 1, or | nums[idx], n, nums, maxor, count);
+        dfs(idx + 1, or, n, nums, maxor, count);
     }
-
     public int countMaxOrSubsets(int[] nums) {
         int n = nums.length;
-        int[] max = new int[1];
-        max[0] = -1;
-        int[] ans = new int[1];
-        ans[0] = 0;
-        dfs(0, 0, max, nums, ans);
-        return ans[0];
+        int[] count = new int[n];
+        int maxor = 0;
+        for (int i = 0; i < n; i++) {
+            maxor |= nums[i];
+        }
+        dfs(0, 0, n, nums, maxor, count);
+        return count[0];
     }
 }
