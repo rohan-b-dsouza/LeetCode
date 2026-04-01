@@ -1,13 +1,15 @@
 class Solution {
     public void dfs(int idx, int or, int[] max, int[] nums, int[] ans) {
         if (idx == nums.length) {
-            if (or > max[0]) {
+            if (or != 0 && or > max[0]) {
                 max[0] = or;
                 ans[0] = 1;
             } else if (or == max[0]) {
                 ans[0] += 1;
             }
-            return;
+            if (idx == nums.length) {
+                return;
+            }
         }
         dfs(idx + 1, or | nums[idx], max, nums, ans);
         dfs(idx + 1, or, max, nums, ans);
