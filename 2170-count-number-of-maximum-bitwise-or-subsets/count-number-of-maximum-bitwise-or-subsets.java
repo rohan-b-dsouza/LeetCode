@@ -1,7 +1,7 @@
 class Solution {
     public void dfs(int idx, int or, int[] max, int[] nums, int[] ans) {
         if (idx == nums.length) {
-            if (or != 0 && or > max[0]) {
+            if (or > max[0]) {
                 max[0] = or;
                 ans[0] = 1;
             } else if (or == max[0]) {
