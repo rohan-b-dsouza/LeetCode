@@ -7,9 +7,7 @@ class Solution {
             } else if (or == max[0]) {
                 ans[0] += 1;
             }
-            if (idx == nums.length) {
-                return;
-            }
+            return;
         }
         dfs(idx + 1, or | nums[idx], max, nums, ans);
         dfs(idx + 1, or, max, nums, ans);
@@ -21,7 +19,6 @@ class Solution {
         max[0] = -1;
         int[] ans = new int[1];
         ans[0] = 0;
-        int or = 0;
         dfs(0, 0, max, nums, ans);
         return ans[0];
     }
