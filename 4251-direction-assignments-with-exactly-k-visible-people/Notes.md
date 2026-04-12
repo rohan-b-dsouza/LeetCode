@@ -1,1 +1,1 @@
-<h2>direction-assignments-with-exactly-k-visible-people Notes</h2><hr>[ Time taken: 44m 54s ]
+<h2>direction-assignments-with-exactly-k-visible-people Notes</h2><hr>[ Time taken: 1hr 30m 35s ]
