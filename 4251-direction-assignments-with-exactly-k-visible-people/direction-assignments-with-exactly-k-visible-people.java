@@ -1,31 +1,30 @@
 class Solution {
-    int MOD = 1000000007;
-
-    long power(long a, long b) {
-        long res = 1;
-        a %= MOD;
-        while (b > 0) {
-            if ((b & 1) == 1) res = (res * a) % MOD;
-            a = (a * a) % MOD;
-            b >>= 1;
+    public long inverseMod(long base, long exp, long MOD) {
+        long ans = 1;
+        while (exp > 0) {
+            if ((exp & 1) == 1) {
+                exp = exp - 1;
+                ans = (ans * base) % MOD;
+            }
+            else {
+                exp >>= 1;
+                base = (base * base) % MOD;
+            }
         }
-        return res;
-    }
-
-    long modInverse(long x) {
-        return power(x, MOD - 2);
+        return ans;
     }
 
     public long combination(long n, long k) {
+        int MOD = 1000000007;
         long combs = 1;
         for (int i = 0; i < k; i++) {
-            combs = (combs * (n - i)) % MOD;
-            combs = (combs * modInverse(i + 1)) % MOD;
+            combs = (((combs * (n - i)) % MOD) * inverseMod(i + 1, MOD - 2, MOD)) % MOD;
         }
         return combs;
     }
 
     public int countVisiblePeople(int n, int pos, int k) {
+        int MOD = 1000000007;
         return (int) ((2 * combination(n - 1, k)) % MOD);
     }
 }
