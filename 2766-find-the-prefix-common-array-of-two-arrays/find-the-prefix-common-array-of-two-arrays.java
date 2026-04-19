@@ -5,16 +5,12 @@ class Solution {
         int cnt = 0;
         int[] ans = new int[n];
         for (int i = 0; i < n; i++) {
-            if (A[i] == B[i])
+            freq[A[i]]++;
+            if (freq[A[i]] > 1)
                 cnt++;
-            else {
-                freq[A[i]]++;
-                freq[B[i]]++;
-                if (freq[A[i]] > 1)
-                    cnt++;
-                if (freq[B[i]] > 1)
-                    cnt++;
-            }
+            freq[B[i]]++;
+            if (freq[B[i]] > 1)
+                cnt++;
             ans[i] = cnt;
         }
         return ans;
