@@ -14,23 +14,23 @@
  * }
  */
 class Solution {
-    public TreeNode buildMaxTree(int l, int r, int[] nums) {
-        if (l > r) return null;
-        int max = -1;
-        int idx = -1;
-        for (int i = l; i <= r; i++) {
-            if (nums[i] > max) {
-                max = nums[i];
-                idx = i;
-            }
-        }
-        TreeNode node = new TreeNode(max);
-        node.left = buildMaxTree(l, idx - 1, nums);
-        node.right =  buildMaxTree(idx + 1, r, nums);
-        return node;
-    }
     public TreeNode constructMaximumBinaryTree(int[] nums) {
-        int n = nums.length;
-        return buildMaxTree(0, n - 1, nums);
+        Stack<TreeNode> stack = new Stack<>();
+
+        for (int num : nums) {
+            TreeNode curr = new TreeNode(num);
+
+            while (!stack.isEmpty() && stack.peek().val < num) {
+                curr.left = stack.pop();
+            }
+
+            if (!stack.isEmpty()) {
+                stack.peek().right = curr;
+            }
+
+            stack.push(curr);
+        }
+
+        return stack.firstElement();
     }
 }
