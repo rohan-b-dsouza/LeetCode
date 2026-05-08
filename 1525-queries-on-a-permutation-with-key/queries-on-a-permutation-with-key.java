@@ -13,7 +13,7 @@ class Solution {
                 if (list.get(j) == curr) {
                     ans[idx++] = j;
                     list.remove(j);
-                    list.addFirst(curr);
+                    list.add(0, curr);
                     break;
                 }
             }
