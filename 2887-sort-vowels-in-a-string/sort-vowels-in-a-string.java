@@ -1,25 +1,36 @@
 class Solution {
+    public boolean isVowel(char c) {
+        char ch = Character.toLowerCase(c);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            return true;
+        }
+        return false;
+    }
     public String sortVowels(String s) {
         int n = s.length();
-        char[] arr = new char[n];
-        List<Character> list = new ArrayList<>();
+        String range = "AEIOUaeiou";
+        int[] freq = new int[128];
+        char[] ans = new char[n];
         for (int i = 0; i < n; i++) {
-            char ch = Character.toLowerCase(s.charAt(i));
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                list.add(s.charAt(i));
-            }
+            char ch = s.charAt(i);
+            if (isVowel(ch)) {
+                freq[ch]++;
+            } 
             else {
-                arr[i] = s.charAt(i);
+                ans[i] = ch;
             }
         }
-        list.sort(null);
         int idx = 0;
         for (int i = 0; i < n; i++) {
-            if (arr[i] == 0) {
-                arr[i] = list.get(idx++);
+            if (ans[i] == 0) {
+                while (freq[range.charAt(idx)] == 0) {
+                    idx++;
+                }
+                ans[i] = range.charAt(idx);
+                freq[range.charAt(idx)]--;
             }
         }
-        String ans = new String(arr);
-        return ans;
+        String result = new String(ans);
+        return result;
     }
 }
