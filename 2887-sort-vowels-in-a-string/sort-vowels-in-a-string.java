@@ -2,7 +2,7 @@ class Solution {
     public String sortVowels(String s) {
         int n = s.length();
         char[] arr = new char[n];
-        List<Character> list = new LinkedList<>();
+        List<Character> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             char ch = Character.toLowerCase(s.charAt(i));
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
@@ -13,9 +13,10 @@ class Solution {
             }
         }
         list.sort(null);
+        int idx = 0;
         for (int i = 0; i < n; i++) {
             if (arr[i] == 0) {
-                arr[i] = list.removeFirst();
+                arr[i] = list.get(idx++);
             }
         }
         String ans = new String(arr);
