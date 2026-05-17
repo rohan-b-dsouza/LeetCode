@@ -1,22 +1,23 @@
 class Solution {
-    public void dfs(String tiles, Set<String> st, StringBuilder temp, boolean[] used, int n) {
-        st.add(temp.toString());
+    public void dfs(String tiles, int[] freq, int n, int[] ans) {
+        ans[0]++;
 
-        for (int i = 0; i < n; i++) {
-            if (used[i]) continue;
-            used[i] = true;
-            temp.append(tiles.charAt(i));
-            dfs(tiles, st, temp, used, n);
-            used[i] = false;
-            temp.deleteCharAt(temp.length() - 1);
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] == 0) continue;
+            freq[i]--;
+            dfs(tiles, freq, n, ans);
+            freq[i]++;
         }
     }
     public int numTilePossibilities(String tiles) {
         int n = tiles.length();
-        Set<String> st = new HashSet<>();
         StringBuilder temp = new StringBuilder();
-        boolean[] used = new boolean[n];
-        dfs(tiles, st, temp, used, n);
-        return st.size() - 1;
+        int[] freq = new int[26];
+        for (int i = 0; i < n; i++) {
+            freq[tiles.charAt(i) - 'A']++;
+        }
+        int[] ans = new int[1];
+        dfs(tiles, freq, n, ans);
+        return ans[0] - 1;
     }
 }
