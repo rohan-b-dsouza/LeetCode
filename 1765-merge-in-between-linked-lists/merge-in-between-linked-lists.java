@@ -15,8 +15,6 @@ class Solution {
         int cnt = 0;
         ListNode head = null;
         while (temp != null) {
-            if (head == null && cnt != a && cnt != b) head = temp;
-            
             if (cnt == a - 1) {
                 ath = temp;
             }
@@ -33,7 +31,7 @@ class Solution {
             tail2 = tail2.next;
         }
         tail2.next = bth;
-        return head;
+        return list1;
 
     }
 }
