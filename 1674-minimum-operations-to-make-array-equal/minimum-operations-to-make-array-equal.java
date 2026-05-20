@@ -1,12 +1,20 @@
 class Solution {
     public int minOperations(int n) {
-        int i = 1; int j = 2 * (n - 1) + 1;
-        int sum = 0;
-        while (i < j) {
-            sum += (j - i);
-            j -= 2; i += 2;
+        if (n % 2 == 0) {
+        int firstTerm = 2;
+        int lastTerm = 2 + ((n / 2 - 1) * 4);
+        int Sn = (firstTerm + lastTerm) * (n / 2) / 2;
+        return Sn / 2;
+
         }
-        return sum / 2;
-        
+        else {
+            int firstTerm = 4;
+            int lastTerm = 4 * (n / 2);
+            int Sn = (firstTerm + lastTerm) * (n / 2) / 2;
+            return Sn / 2;
+        }
     }
 }
+
+
+// fix for odd 'n'
