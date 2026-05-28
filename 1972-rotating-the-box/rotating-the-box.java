@@ -4,17 +4,15 @@ class Solution {
         int m = boxGrid[0].length;
         char[][] ans = new char[m][n];
         for (int i = 0; i < n; i++) {
+            int empty = m - 1;
             for (int j = m - 1; j >= 0; j--) {
-                if (boxGrid[i][j] == '.') {
-                    int k = j - 1;
-                    while (k >= 0 && (boxGrid[i][k] != '*' && boxGrid[i][k] != '#')) {
-                        k--;
-                    }
-                    if (k != -1 && boxGrid[i][k] == '#') {
-                        char temp = boxGrid[i][k];
-                        boxGrid[i][k] = boxGrid[i][j];
-                        boxGrid[i][j] = temp;                  
-                    }
+                if (boxGrid[i][j] == '*') {
+                    empty = j - 1;
+                }
+                else if (boxGrid[i][j] == '#') {
+                    boxGrid[i][j] = '.';
+                    boxGrid[i][empty] = '#';
+                    empty--;
                 }
             }
         }
