@@ -6,11 +6,11 @@ class Solution {
             long sum = 0;
             for (int j = i; j < n; j++) {
                 sum += nums[j];
-                long fdigit = sum % 10;
+                long ldigit = sum % 10;
                 long temp = sum;
-                long ldigit = -1;
+                long fdigit = -1;
                 while (temp != 0) {
-                    ldigit = temp % 10;
+                    fdigit = temp % 10;
                     temp = temp / 10;
                 }
                 if (fdigit == ldigit && fdigit == x) {
