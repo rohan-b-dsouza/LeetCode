@@ -1,5 +1,5 @@
 class Solution {
-    public void permutation(int idx, int n, List<Integer> temp, boolean[] visited, int[] nums, List<List<Integer>> ans) {
+    public void permutation(int n, List<Integer> temp, boolean[] visited, int[] nums, List<List<Integer>> ans) {
         if (temp.size() == n) {
             ans.add(new ArrayList<>(temp));
             return;
@@ -8,7 +8,7 @@ class Solution {
             if (!visited[i]) {
                 temp.add(nums[i]);
                 visited[i] = true;
-                permutation(idx + 1, n, temp, visited, nums, ans);
+                permutation(n, temp, visited, nums, ans);
                 visited[i] = false;
                 temp.remove(temp.size() - 1);
             }
@@ -19,7 +19,7 @@ class Solution {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         boolean[] visited = new boolean[n];
-        permutation(0, n, temp, visited, nums, ans);
+        permutation(n, temp, visited, nums, ans);
         return ans;
     }
 }
