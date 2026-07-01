@@ -29,10 +29,10 @@ class Solution {
                 i++;
                 continue;
             }
+            lastIdx = Math.max(lastIdx, range[1]);
             if (firstIdx == -1) {
                 firstIdx = range[0];
             }
-            lastIdx = Math.max(lastIdx, range[1]);
             if (lastIdx == firstIdx) {
                 ans.add(1);
                 firstIdx = -1;
