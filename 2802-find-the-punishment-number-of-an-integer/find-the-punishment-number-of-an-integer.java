@@ -1,25 +1,18 @@
 class Solution {
-    public boolean check(int idx, String sqr, int n, int num, int sum) {
-        if (idx == n) {
+    public boolean check(int curr, int num, int sum) {
+        if (curr == 0) {
             if (sum == num) {
                 return true;
             }
             return false;
         }
         if (sum > num) return false;
-        for (int i = idx; i < n; i++) {
-            String substr = sqr.substring(idx, i + 1);
-            int val = Integer.parseInt(substr);
-            if (check(i + 1, sqr, n, num, sum + val)) return true;
-        }
-        return false;
+        return check(curr / 10, num, sum + curr % 10) || check(curr / 100, num, sum + curr % 100) || check(curr / 1000, num, sum + curr % 1000) || check(curr / 10000, num, sum + curr % 10000);
     }
     public int punishmentNumber(int n) {
         int ans = 0;
         for (int i = 1; i <= n; i++) {
-            String sqr = String.valueOf(i * i);
-            if (check(0, sqr, sqr.length(), i, 0)) {
-                System.out.println(i);
+            if (check(i * i, i, 0)) {
                 ans += i * i;
             }
         }
