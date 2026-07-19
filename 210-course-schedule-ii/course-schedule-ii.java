@@ -1,43 +1,37 @@
-class Solution { 
-  public boolean dfs(int sourceNode, List<List<Integer>> adj, int[] visited, Deque<Integer> stack, int[] pathvisited) {
-    visited[sourceNode] = 1;
-    pathvisited[sourceNode] = 1;
-    for (int node : adj.get(sourceNode)) {
-        if (visited[node] != 1) {
-            if (dfs(node, adj, visited, stack, pathvisited)) return true;
-        } 
-        else if (pathvisited[node] == 1) {
-            return true;
+class Solution {
+    public boolean dfs(int source, List<List<Integer>> adj, int[] visited, int[] ans, int[] pathVisited, int[] idx) {
+        visited[source] = 1;
+        pathVisited[source] = 1;
+        for (int node: adj.get(source))  {
+            if (visited[node] != 1) {
+                if (dfs(node, adj, visited, ans, pathVisited, idx)) return true;
+            }
+            else if (pathVisited[node] == 1) {
+                return true;
+            }
         }
+        ans[idx[0]--] = source;
+        pathVisited[source] = 0;
+        return false;
     }
-    pathvisited[sourceNode] = 0;
-    stack.push(sourceNode);
-    return false;
-  }
-  public int[] getTopoSort(List<List<Integer>> adj, int N) {
-    int[] visited = new int[N];
-    int[] pathvisited = new int[N];
-    Deque<Integer> stack = new ArrayDeque<>();
-    for (int i = 0; i < N; i++) {
-        if (visited[i] != 1) {
-            if (dfs(i, adj, visited, stack, pathvisited)) return new int[] {};
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        int n = numCourses;
+        int[] visited = new int[n];
+        int[] pathVisited = new int[n];
+        List<List<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++) adj.add(new ArrayList<>());
+        for (int[] edge: prerequisites) {
+            adj.get(edge[1]).add(edge[0]);
         }
+        int[] ans = new int[n];
+        int[] idx = new int[1];
+        idx[0] = n - 1;
+        for (int i = 0; i < n; i++) {
+            if (visited[i] != 1) {
+                if (dfs(i, adj, visited, ans, pathVisited, idx)) return new int[] {};
+            }
+        }
+        return ans;
+
     }
-    int[] ans = new int[N];
-    int idx = 0;
-    while (!stack.isEmpty()) {
-        ans[idx++] = stack.pop();
-    }
-    return ans;
-  } 
-  public int[] findOrder(int N, int[][] arr) {
-    List<List<Integer>> adj = new ArrayList<>();
-    for (int i = 0; i < N; i++) adj.add(new ArrayList<>());
-    for (int[] edge : arr) {
-      int u = edge[0];
-      int v = edge[1];
-      adj.get(v).add(u);
-    }
-    return getTopoSort(adj, N);
-  }
 }
